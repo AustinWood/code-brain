@@ -16,7 +16,7 @@ I would like to build an SRS (spaced repetition system) app with a built in REPL
 [anki]: https://github.com/dae/anki
 
 ## Bonus features
-- Organize groups of information in a polytree - Eventually I would like to incorporate the main ideas from the [Hacking Auth app] [[hacking_auth]] (which I worked on several weeks ago with [Gilbert] and [Ryley]) into this app. Main idea: allow users to group collections of notes into a polytree to make their studies even more efficient by taking advantage of [chunking].
+- Organize groups of information in a polytree - Eventually I would like to incorporate the main ideas from the [Hacking Auth app] [hacking_auth] (which I worked on several weeks ago with [Gilbert] and [Ryley]) into this app. Main idea: allow users to group collections of notes into a polytree to make their studies even more efficient by taking advantage of [chunking].
 - Import/export notes using the Anki file format
 - Gamify the app
 - Social component
