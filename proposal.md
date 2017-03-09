@@ -36,7 +36,7 @@ I would like to build an SRS (spaced repetition system) app with a built in REPL
 [Codewars]: https://www.codewars.com/
 
 
-# Motivation
+## Motivation
 - One of the main reasons I became a software developer was to solve my own problems through technology. This is an app that I wish existed, and I will use it frequently once I complete it. Derek Sivers (founder of CDBaby.com) makes an excellent case for using SRS to learn coding in [this blog post] [sivers_blog].
 - The other reason I became a software engineer is because I felt limited in my role as an educator, only being able to help those people that I had time to teach personally. I want to incorporate what I know about learning into software, allowing my impact to scale. Furthermore, post App Academy I want to work at a tech company in the education industry. This full-stack project will demonstrate not only my skills as a software engineer, but also my expertise and passion for education.
 
