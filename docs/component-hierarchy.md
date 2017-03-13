@@ -20,8 +20,8 @@
  - NoteBody
   + NoteSkeleton
   + BodyRight
-   - Presents NoteAnswer in edit mode
-   - Presents Repl in quiz mode
+    * Presents NoteAnswer in edit mode
+    * Presents Repl in quiz mode
  - NoteFooter
   + Presents EditFooter in edit mode
   + Presents QuizFooter in quiz mode
