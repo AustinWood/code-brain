@@ -4,7 +4,9 @@
 
 Heroku link (pending)
 
-Trello link (pending)
+[Trello link] [trello]
+
+[trello]: https://trello.com/b/c0fTypyd/code-brain
 
 ## Minimum Viable Product
 
@@ -35,7 +37,7 @@ CodeBrain is a flashcard app for software developers built using Ruby on Rails a
 
 ### Phase 1: Backend setup and Front End User Authentication (w8d2)
 
-Functioning rails project with front-end Authentication
+Functioning rails project with front-end Authentication.
 
 ### Phase 2: Notes Model, API, and components (w8d3 - w8d4)
 
