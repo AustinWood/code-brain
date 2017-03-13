@@ -25,8 +25,8 @@ CodeBrain is a flashcard app for software developers built using Ruby on Rails a
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: (wireframes)
-[components]: (component-hierarchy.md)
-[sample-state]: (sample-state.md)
-[api-endpoints]: (api-endpoints.md)
-[schema]: (schema.md)
+[wireframes]: https://github.com/AustinWood/full-stack-project/tree/master/docs/wireframes
+[components]: https://github.com/AustinWood/full-stack-project/blob/master/docs/component-hierarchy.md
+[sample-state]: https://github.com/AustinWood/full-stack-project/blob/master/docs/sample-state.md
+[api-endpoints]: https://github.com/AustinWood/full-stack-project/blob/master/docs/api-endpoints.md
+[schema]: https://github.com/AustinWood/full-stack-project/blob/master/docs/schema.md
