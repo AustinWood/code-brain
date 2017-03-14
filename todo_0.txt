@@ -1,0 +1,11 @@
+### AUTH
+
+Center box in screen
+Отым colors
+
+
+
+### HOME
+
+Header component
+Create content

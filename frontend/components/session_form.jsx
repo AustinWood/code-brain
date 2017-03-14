@@ -62,7 +62,6 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <br/>
           {this.authHeader()}
           {this.renderErrors()}
           <div className="login-form">
