@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+.login-form-container {
+  background-color: green;
+  height: 100vh;
+}
+
+.login-form-box {
+  background-color: blue;
+}
+
+/*.login-form-container {
+  background-color: green;
+  display: flex;
+  height : 100% !important;
+  justify-content: center;
+  align-items: center;
+}*/
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
