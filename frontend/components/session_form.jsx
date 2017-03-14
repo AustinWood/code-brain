@@ -30,11 +30,19 @@ class SessionForm extends React.Component {
     this.props.processForm({user});
   }
 
-  navLink() {
+  authHeader() {
     if (this.props.formType === "login") {
-      return <Link to="/signup">sign up instead</Link>;
+      return <p>Log In:</p>;
     } else {
-      return <Link to="/login">log in instead</Link>;
+      return <p>Sign Up:</p>;
+    }
+  }
+
+  authFooter() {
+    if (this.props.formType === "login") {
+      return <p>No account yet?<br/><Link to="/signup">Sign up here!</Link></p>;
+    } else {
+      return <p>Already signed up?<br/><Link to="/login">Log in here!</Link></p>;
     }
   }
 
@@ -54,12 +62,10 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome!
           <br/>
-          Please {this.props.formType} or {this.navLink()}
+          {this.authHeader()}
           {this.renderErrors()}
           <div className="login-form">
-            <br/>
             <label> Username:
               <input type="text"
                 value={this.state.username}
@@ -75,6 +81,8 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <input type="submit" value="Submit" />
+            <br/>
+            {this.authFooter()}
           </div>
         </form>
       </div>
