@@ -23,25 +23,32 @@
 
 .auth-header {
   text-align: center;
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 14px;
+}
+
+.auth-error-container {
+  margin: -10px 0px 8px 0px;
+}
+
+.auth-error {
+  color: #fd51d9;
+  font-size: 16px;
+  text-align: center;
 }
 
 .login-row {
   background-color: #d1d1d1;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px 10px;
   margin: 5px;
   display: flex;
-  margin: 0px;
-  padding: 4px;
-  height: auto;
 }
 
 .login-img {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -51,20 +58,33 @@
   display: inline-block;
   background-color : #d1d1d1;
   color: #0A0B1A;
-  height: 30px;
+  height: 35px;
   margin: 0px;
-  padding: 0px 0px 0px 4px;
+  padding: 0px 0px 0px 8px;
+  font-size: 22px;
 }
 
 .auth-submit-container {
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .auth-submit {
+  max-width: 400px;
   border-radius: 8px;
-  padding: 6px 20px;
-  background-color : #2a6d9e;
   color: #E3F2FC;
+  background: #56b2ba;
+  font-size: 24px;
+  width: 160px;
+  height: 55px;
+}
+
+.auth-submit:hover {
+  background: #6956ec; /* For no gradient support */
+  background: -webkit-linear-gradient(bottom, #6956ec , #56b2ba); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, #6956ec, #56b2ba); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, #6956ec, #56b2ba); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top, #6956ec , #56b2ba); /* Standard syntax */
 }
 
 .auth-footer-container {
@@ -78,18 +98,23 @@
 .auth-footer-text {
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
+  color: #AEB6BF;
 }
 
 .auth-footer-link {
-  color: #64BAC1;
+  color: #56b2ba;
+}
+
+.auth-footer-link:hover {
+  color: #0b78e3;
 }
 
 
 // struct CustomColor {
 //
-//     static let gray = UIColor(red:0.180, green:0.184, blue:0.220, alpha:1.00) // Borders
+//     static let gray = UIColor(red:0.180, green:0.184, blue:0.220, alpha:1.00) // Borders #2E2F38
 //
 //     static let dark1 = UIColor(red:0.102, green:0.106, blue:0.145, alpha:1.00) // Main Dark #1A1B25
 //     static let dark2 = UIColor(red:0.039, green:0.043, blue:0.102, alpha:1.00) // Secondary Dark #0A0B1A

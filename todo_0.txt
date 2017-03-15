@@ -1,13 +1,4 @@
 ####################
-### AUTH
-spacing
-style errors
-font size
-ghost text
-link hover
-
-
-####################
 ### HOME
 header component
 logout button
@@ -22,3 +13,7 @@ add button to auth form
 ### CLEANUP
 restructure CSS, especially resets
 CSS consistent class names (auth vs login)
+
+####################
+### QUESTIONS
+where are error messages? ("Password is too short...")

@@ -60,17 +60,20 @@ class SessionForm extends React.Component {
     return(
       <div className="auth-footer-container">
         <p className="auth-footer-text">
-          {text}&nbsp;{link}
+          {text}&nbsp;&nbsp;{link}
         </p>
       </div>
     );
   }
 
   renderErrors() {
+    if (this.props.errors.length === 0) {
+      return (<div></div>);
+    }
     return(
-      <ul>
+      <ul className="auth-error-container">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} className="auth-error">
             {error}
           </li>
         ))}
@@ -83,7 +86,6 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.authHeader()}
-          {this.renderErrors()}
           <div className="login-form">
             <div className="login-row">
               <img src={"/assets/user.png"} className="login-img" />
@@ -101,6 +103,7 @@ class SessionForm extends React.Component {
                 className="auth-input" />
             </div>
             <br/>
+            {this.renderErrors()}
             <div className="auth-submit-container">
               <input
                 type="submit"
