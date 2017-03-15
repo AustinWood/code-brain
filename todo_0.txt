@@ -1,11 +1,8 @@
 ####################
 ### HEROKU
 redirect from '/'
+demo account
 update Trello, tell Luke
-
-####################
-### DEMO ACCOUNT
-add button to auth form
 
 ####################
 ### CLEANUP

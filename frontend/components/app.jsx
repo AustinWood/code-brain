@@ -10,11 +10,4 @@ const App = ({ children }) => (
   </div>
 );
 
-// const App = ({ children }) => (
-//   <div>
-//     <GreetingContainer />
-//     { children }
-//   </div>
-// );
-
 export default App;
