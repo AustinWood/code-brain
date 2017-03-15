@@ -13,17 +13,17 @@ const NavBar = ({ currentUser, logout }) => {
   return (
     <div className="nav-bar">
       <div className="nav-left">
-        <img src={"/assets/list_outline.png"} className="nav-img" />
-        <img src={"/assets/add_outline.png"} className="nav-img" />
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png"} className="nav-img" />
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/add_afa7gj.png"} className="nav-img" />
       </div>
       <div className="nav-center">
-        <img src={"/assets/play_outline.png"} className="play-img" />
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} className="play-img" />
         <p className="due-text">27 notes due</p>
       </div>
       <div className="nav-right">
-        <img src={"/assets/settings.png"} className="nav-img" />
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" />
         <button onClick={logout}>
-          <img src={"/assets/user_outline_light.png"} className="nav-img" />
+          <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/user_dnmke9.png"} className="nav-img" />
         </button>
       </div>
     </div>

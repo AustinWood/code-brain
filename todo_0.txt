@@ -1,6 +1,7 @@
 ####################
-### HOME
-study button
+### HEROKU
+fix images
+update Trello, tell Luke
 
 ####################
 ### DEMO ACCOUNT
@@ -13,5 +14,3 @@ CSS consistent class names (auth vs login)
 
 ####################
 ### QUESTIONS
-where are error messages? ("Password is too short...")
-const App = ({ children })

@@ -88,7 +88,7 @@ class SessionForm extends React.Component {
           {this.authHeader()}
           <div className="login-form">
             <div className="login-row">
-              <img src={"/assets/user_filled_dark.png"} className="login-img" />
+              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/user_dark_typzor.png"} className="login-img" />
               <input type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
@@ -96,7 +96,7 @@ class SessionForm extends React.Component {
             </div>
             <br/>
             <div className="login-row">
-              <img src={"/assets/password.png"} className="login-img" />
+              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/password_s4kwh0.png"} className="login-img" />
               <input type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
