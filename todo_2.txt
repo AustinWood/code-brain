@@ -15,3 +15,9 @@ images off-white (gear, user, etc)
 ### CREDITS
 https://icons8.com
  - user, password
+
+
+
+
+If Heroku is showing an old version of my app:
+ RAILS_ENV=production bundle exec rake assets:precompile
