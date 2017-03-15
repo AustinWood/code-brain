@@ -4,6 +4,7 @@
   background-color: #1A1B25;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -13,7 +14,7 @@
 .login-form-box {
   background-color: #0A0B1A;
   border-radius: 15px;
-  padding: 25px;
+  padding: 16px 26px;
 }
 
 //////////////////////
@@ -22,6 +23,9 @@
 
 .auth-header {
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 14px;
 }
 
 .login-row {
@@ -52,20 +56,33 @@
   padding: 0px 0px 0px 4px;
 }
 
-.auth-footer {
-  margin-top: 15px;
+.auth-submit-container {
   text-align: center;
 }
 
 .auth-submit {
-  padding: 5px;
+  border-radius: 8px;
+  padding: 6px 20px;
   background-color : #2a6d9e;
   color: #E3F2FC;
 }
 
-.auth-footer-link {
-  margin-top: 5px;
+.auth-footer-container {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-footer-text {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
   text-align: center;
+}
+
+.auth-footer-link {
   color: #64BAC1;
 }
 

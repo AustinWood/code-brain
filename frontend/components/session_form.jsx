@@ -38,26 +38,32 @@ class SessionForm extends React.Component {
     }
   }
 
+  // TODO: DRY
   authFooter() {
+    let text;
+    let link;
     if (this.props.formType === "login") {
-      return(
-        <div>
-          <p className="auth-footer">No account yet?</p>
-            <Link to="/signup">
-              <p className="auth-footer-link">Sign up here!</p>
-            </Link>
-        </div>
+      text = "No account yet?";
+      link = (
+        <Link to="/signup" className="auth-footer-link">
+          Sign up here!
+        </Link>
       );
     } else {
-      return(
-        <div>
-          <p className="auth-footer">Already signed up?</p>
-          <Link to="/login">
-            <p className="auth-footer-link">Log in here!</p>
-          </Link>
-        </div>
+      text = "Already signed up?";
+      link = (
+        <Link to="/login" className="auth-footer-link">
+          Log in here!
+        </Link>
       );
     }
+    return(
+      <div className="auth-footer-container">
+        <p className="auth-footer-text">
+          {text}&nbsp;{link}
+        </p>
+      </div>
+    );
   }
 
   renderErrors() {
@@ -94,17 +100,17 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 className="auth-input" />
             </div>
-
-
             <br/>
-            <input
-              type="submit"
-              value="Submit"
-              className="auth-submit" />
-            <br/>
-            {this.authFooter()}
+            <div className="auth-submit-container">
+              <input
+                type="submit"
+                value="Submit"
+                className="auth-submit" />
+              <br/>
+            </div>
           </div>
         </form>
+        {this.authFooter()}
       </div>
     );
   }

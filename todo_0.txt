@@ -6,6 +6,7 @@ font size
 ghost text
 link hover
 
+
 ####################
 ### HOME
 header component
@@ -20,3 +21,4 @@ add button to auth form
 ####################
 ### CLEANUP
 restructure CSS, especially resets
+CSS consistent class names (auth vs login)
