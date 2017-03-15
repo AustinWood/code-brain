@@ -1,2 +1,3 @@
 ### Before deployment
 Put 6 char limit on passwords
+Verify valid email

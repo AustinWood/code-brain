@@ -1,14 +1,23 @@
 ####################
 ### AUTH
-Rounding
-Font
+email/lock icons
+spacing
+style errors
+font size
+typeface
+ghost text
 
 ####################
 ### HOME
-Header component
-Logout button
-Add other buttons as placeholders
+header component
+logout button
+add other buttons as placeholders
+remove greeting component
 
 ####################
 ### DEMO ACCOUNT
-Add button to auth form
+add button to auth form
+
+####################
+### CLEANUP
+restructure CSS, especially resets

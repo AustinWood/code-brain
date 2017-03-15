@@ -32,17 +32,31 @@ class SessionForm extends React.Component {
 
   authHeader() {
     if (this.props.formType === "login") {
-      return <p>Log In:</p>;
+      return <p className="auth-header">Log in</p>;
     } else {
-      return <p>Sign Up:</p>;
+      return <p className="auth-header">Sign up</p>;
     }
   }
 
   authFooter() {
     if (this.props.formType === "login") {
-      return <p>No account yet?<br/><Link to="/signup">Sign up here!</Link></p>;
+      return(
+        <div>
+          <p className="auth-footer">No account yet?</p>
+            <Link to="/signup">
+              <p className="auth-footer-link">Sign up here!</p>
+            </Link>
+        </div>
+      );
     } else {
-      return <p>Already signed up?<br/><Link to="/login">Log in here!</Link></p>;
+      return(
+        <div>
+          <p className="auth-footer">Already signed up?</p>
+          <Link to="/login">
+            <p className="auth-footer-link">Log in here!</p>
+          </Link>
+        </div>
+      );
     }
   }
 
@@ -65,21 +79,21 @@ class SessionForm extends React.Component {
           {this.authHeader()}
           {this.renderErrors()}
           <div className="login-form">
-            <label> Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-                className="login-input" />
-            </label>
+            <p>Username</p>
+            <input type="text"
+              value={this.state.username}
+              onChange={this.update("username")}
+              className="auth-input" />
+            <p>Password</p>
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update("password")}
+              className="auth-input" />
             <br/>
-            <label> Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                className="login-input" />
-            </label>
-            <br/>
-            <input type="submit" value="Submit" />
+            <input
+              type="submit"
+              value="Submit"
+              className="auth-submit" />
             <br/>
             {this.authFooter()}
           </div>

@@ -1,3 +1,5 @@
+///////////////
+// Outer box //
 .login-form-container {
   background-color: #1A1B25;
   height: 100vh;
@@ -6,10 +8,42 @@
   align-items: center;
 }
 
+///////////////
+// Inner box //
 .login-form-box {
   background-color: #0A0B1A;
   border-radius: 15px;
   padding: 25px;
+}
+
+//////////////////////
+// Component pieces //
+//////////////////////
+
+.auth-header {
+  text-align: center;
+}
+
+.auth-input {
+  background-color : #d1d1d1;
+  color: #0A0B1A;
+}
+
+.auth-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.auth-submit {
+  padding: 5px;
+  background-color : #2a6d9e;
+  color: #E3F2FC;
+}
+
+.auth-footer-link {
+  margin-top: 5px;
+  text-align: center;
+  color: #64BAC1;
 }
 
 
