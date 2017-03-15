@@ -1,18 +1,13 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const NavBar = ({ currentUser, logout }) => (
+  <div className="nav-bar">
+    <img src={"/assets/settings.png"} className="login-img" />
+    <button onClick={logout}>
+      <img src={"/assets/user_outline_light.png"} className="login-img" />
+    </button>
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <p>hello, my friend</p>
-      </div>
-    );
-  }
-}
-
-export default withRouter(NavBar);
+export default NavBar;

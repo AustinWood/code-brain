@@ -1,11 +1,11 @@
 import React from 'react';
 import GreetingContainer from './greeting_container';
-import NavBar from './nav_bar';
+import NavBarContainer from './nav_bar_container';
 
 const App = ({ children }) => (
   <div className="background-component">
     <GreetingContainer />
-    <NavBar className="nav-bar" />
+    <NavBarContainer />
     { children }
   </div>
 );

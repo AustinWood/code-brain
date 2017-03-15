@@ -88,7 +88,7 @@ class SessionForm extends React.Component {
           {this.authHeader()}
           <div className="login-form">
             <div className="login-row">
-              <img src={"/assets/user.png"} className="login-img" />
+              <img src={"/assets/user_filled_dark.png"} className="login-img" />
               <input type="text"
                 value={this.state.username}
                 onChange={this.update("username")}

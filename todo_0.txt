@@ -1,10 +1,10 @@
 ####################
 ### HOME
-header component
-add bg styling to App
-logout button
-add other buttons as placeholders
+show form if not logged in
 remove greeting component
+align settings, user
+'add' and 'list' buttons
+study button
 
 ####################
 ### DEMO ACCOUNT

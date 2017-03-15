@@ -2,9 +2,14 @@
 ### AUTH
 clear errors on clicking "Already..?" <Link>
 
-### Before deployment
+####################
+### AUTH
 Put 6 char limit on passwords
 Verify valid email
+
+####################
+### STYLING
+images off-white (gear, user, etc)
 
 ####################
 ### CREDITS
