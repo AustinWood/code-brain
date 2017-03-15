@@ -1,7 +1,7 @@
 .nav-bar {
   background-color: #0A0B1A;
   width: 100%;
-  padding: 20px 0px;
+  padding: 16px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,14 +12,30 @@
 ///////////////////
 
 .nav-left {
-  margin-left: 15px;
+  margin-left: 22px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-center {
+  border-radius: 12px;
+  border: 1px solid #E3F2FC;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav-right {
-  margin-right: 20px;
+  margin-right: 22px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 //////////////////
@@ -30,6 +46,18 @@
   height: 35px;
   width: 35px;
   display: inline-block;
-  margin: 0px 12px;
+  margin: 0px 15px;
   padding: 0;
+}
+
+.play-img {
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  margin: 0px 12px 0px 15px;
+  padding: 0;
+}
+
+.due-text {
+  margin-right: 20px;
 }

@@ -2,3 +2,11 @@
 ### AUTH
 click anywhere in login-row, change focus
 hover login-row → change bg color
+
+####################
+### NAV BAR
+Change image on hover:
+http://stackoverflow.com/questions/35732916/onmouseover-not-working-with-react-js
+function rollover(image) {
+  image.src = "/assets/list_filled.png";
+}
