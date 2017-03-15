@@ -1,11 +1,10 @@
 .nav-bar {
   background-color: #0A0B1A;
-  padding: 20px 0px;
   width: 100%;
+  padding: 20px 0px;
   display: flex;
   flex-direction: row;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: space-between;
 }
 
 ///////////////////
@@ -13,16 +12,14 @@
 ///////////////////
 
 .nav-left {
-  background-color: green;
+  margin-left: 15px;
 }
 
 .nav-center {
-  background-color: pink;
 }
 
 .nav-right {
-  background-color: blue;
-
+  margin-right: 20px;
 }
 
 //////////////////
@@ -33,6 +30,6 @@
   height: 35px;
   width: 35px;
   display: inline-block;
-  margin: 0;
+  margin: 0px 12px;
   padding: 0;
 }

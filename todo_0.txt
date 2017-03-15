@@ -1,7 +1,7 @@
 ####################
 ### HOME
-align settings, user
 'add' and 'list' buttons
+button hover → fill
 study button
 
 ####################
