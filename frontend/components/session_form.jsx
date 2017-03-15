@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
     if (this.props.errors.length === 0) {
       return (<div></div>);
     }
-    return(
+    return (
       <ul className="auth-error-container">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`} className="auth-error">

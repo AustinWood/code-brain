@@ -1,6 +1,7 @@
 ####################
 ### HOME
 header component
+add bg styling to App
 logout button
 add other buttons as placeholders
 remove greeting component
@@ -17,3 +18,4 @@ CSS consistent class names (auth vs login)
 ####################
 ### QUESTIONS
 where are error messages? ("Password is too short...")
+const App = ({ children })
