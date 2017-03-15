@@ -1,12 +1,14 @@
+####################
 ### AUTH
-
-Отым colors
-Padding
 Rounding
+Font
 
-
-
+####################
 ### HOME
-
 Header component
-Create content
+Logout button
+Add other buttons as placeholders
+
+####################
+### DEMO ACCOUNT
+Add button to auth form
