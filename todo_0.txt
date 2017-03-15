@@ -1,11 +1,10 @@
 ####################
 ### AUTH
-email/lock icons
 spacing
 style errors
 font size
-typeface
 ghost text
+link hover
 
 ####################
 ### HOME

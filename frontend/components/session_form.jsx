@@ -79,16 +79,23 @@ class SessionForm extends React.Component {
           {this.authHeader()}
           {this.renderErrors()}
           <div className="login-form">
-            <p>Username</p>
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update("username")}
-              className="auth-input" />
-            <p>Password</p>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              className="auth-input" />
+            <div className="login-row">
+              <img src={"/assets/user.png"} className="login-img" />
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update("username")}
+                className="auth-input" />
+            </div>
+            <br/>
+            <div className="login-row">
+              <img src={"/assets/password.png"} className="login-img" />
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                className="auth-input" />
+            </div>
+
+
             <br/>
             <input
               type="submit"

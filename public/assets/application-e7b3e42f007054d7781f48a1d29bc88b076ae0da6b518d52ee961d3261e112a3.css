@@ -1,0 +1,146 @@
+/* line 3, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.login-form-container {
+  background-color: #1A1B25;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 13, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.login-form-box {
+  background-color: #0A0B1A;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+/* line 23, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.auth-header {
+  text-align: center;
+}
+
+/* line 27, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.auth-input {
+  background-color: #d1d1d1;
+  color: #0A0B1A;
+}
+
+/* line 32, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.auth-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* line 37, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.auth-submit {
+  padding: 5px;
+  background-color: #2a6d9e;
+  color: #E3F2FC;
+}
+
+/* line 43, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
+.auth-footer-link {
+  margin-top: 5px;
+  text-align: center;
+  color: #64BAC1;
+}
+/* line 1, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+/* line 19, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 24, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+p {
+  color: #E3F2FC;
+}
+
+/* line 28, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+a {
+  color: #64BAC1;
+}
+
+/* line 32, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+label {
+  color: #E3F2FC;
+}
+
+/* line 36, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+input {
+  color: #E3F2FC;
+}
+
+/* line 40, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 46, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 61, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+/* line 68, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/reset.scss */
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+}

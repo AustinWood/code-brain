@@ -1,3 +1,9 @@
 ### Before deployment
 Put 6 char limit on passwords
 Verify valid email
+
+
+####################
+### CREDITS
+https://icons8.com
+ - user, password
