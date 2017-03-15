@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
-  validates :password, length: { minimum: 2, allow_nil: true }
+  validates :password, length: { minimum: 2, allow_nil: true, message: "TOO SHORT" }
 
   after_initialize :ensure_session_token
 

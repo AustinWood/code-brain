@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form_container';
+import Home from './home';
+
 
 const Root = ({ store }) => {
 
@@ -30,6 +32,21 @@ const Root = ({ store }) => {
       </Router>
     </Provider>
   );
+
+  // return (
+  //   <Provider store={ store }>
+  //     <Router history={ hashHistory }>
+  //       <App>
+  //         <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn} />
+  //         <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn} />
+  //         <Route path="/" component={ Home } onEnter={_ensureLoggedIn} />
+  //       </App>
+  //     </Router>
+  //   </Provider>
+  // );
+
 };
+
+
 
 export default Root;
