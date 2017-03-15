@@ -1,7 +1,8 @@
 ### AUTH
 
-Center box in screen
 Отым colors
+Padding
+Rounding
 
 
 
