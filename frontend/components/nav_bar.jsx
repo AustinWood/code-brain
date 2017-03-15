@@ -9,10 +9,24 @@ const NavBar = ({ currentUser, logout }) => {
   }
   return (
     <div className="nav-bar">
-      <img src={"/assets/settings.png"} className="login-img" />
-      <button onClick={logout}>
-        <img src={"/assets/user_outline_light.png"} className="login-img" />
-      </button>
+      <div className="nav-left">
+        <img src={"/assets/settings.png"} className="login-img" />
+        <button onClick={logout}>
+          <img src={"/assets/user_outline_light.png"} className="login-img" />
+        </button>
+      </div>
+      <div className="nav-center">
+        <img src={"/assets/settings.png"} className="login-img" />
+        <button onClick={logout}>
+          <img src={"/assets/user_outline_light.png"} className="login-img" />
+        </button>
+      </div>
+      <div className="nav-right">
+        <img src={"/assets/settings.png"} className="login-img" />
+        <button onClick={logout}>
+          <img src={"/assets/user_outline_light.png"} className="login-img" />
+        </button>
+      </div>
     </div>
   );
 };

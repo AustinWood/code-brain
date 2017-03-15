@@ -1,7 +1,5 @@
 ####################
 ### HOME
-show form if not logged in
-remove greeting component
 align settings, user
 'add' and 'list' buttons
 study button
