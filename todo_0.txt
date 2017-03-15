@@ -1,6 +1,6 @@
 ####################
 ### HEROKU
-fix images
+redirect from '/'
 update Trello, tell Luke
 
 ####################

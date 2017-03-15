@@ -5,9 +5,9 @@ import { Link, withRouter } from 'react-router';
 
 const NavBar = ({ currentUser, logout }) => {
   if (!currentUser) {
-    return (
-      <div></div>
-    );
+    // return (
+    //   <div></div>
+    // );
   }
 
   return (
