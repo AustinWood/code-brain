@@ -18,7 +18,7 @@ const NavBar = ({ currentUser, logout }) => {
       </div>
       <div className="nav-center">
         <img src={"/assets/play_outline.png"} className="play-img" />
-        <p className="due-text">25 notes due</p>
+        <p className="due-text">27 notes due</p>
       </div>
       <div className="nav-right">
         <img src={"/assets/settings.png"} className="nav-img" />
