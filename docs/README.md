@@ -2,7 +2,8 @@
 
 (Note: pending better name idea with available domain...)
 
-Heroku link (pending)
+[Heroku link] [heroku]
+[heroku]: https://codebrain.herokuapp.com
 
 [Trello link] [trello]
 

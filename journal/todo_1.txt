@@ -20,6 +20,7 @@ On image/div hover -- show pointer hand
 ####################
 ### CLEANUP
 restructure CSS resets
+custom error messages
 
 ####
 Make an alias `fs` (or something similarly) short...
