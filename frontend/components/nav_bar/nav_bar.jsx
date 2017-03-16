@@ -5,18 +5,13 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.view = this.view.bind(this);
-    this.add = this.add.bind(this);
     this.study = this.study.bind(this);
   }
 
   view() {
     this.props.setMode('view');
   }
-
-  add() {
-    this.props.setMode('add');
-  }
-
+  
   study() {
     this.props.setMode('study');
   }
@@ -31,7 +26,7 @@ class NavBar extends React.Component {
           <button onClick={this.view}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png"} className="nav-img" />
           </button>
-          <button onClick={this.add}>
+          <button onClick={this.props.addNote}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/add_afa7gj.png"} className="nav-img" />
           </button>
         </div>
