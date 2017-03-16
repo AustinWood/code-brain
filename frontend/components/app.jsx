@@ -1,12 +1,11 @@
 import React from 'react';
-import Body from './body';
+import BodyContainer from './body_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
-
 
 const App = ({ children }) => (
   <div className="app">
     <NavBarContainer />
-    <Body className="body" />
+    <BodyContainer />
     { children }
   </div>
 );

@@ -1,6 +1,5 @@
 ####################
 ### NOTES
-mode is nested on initial lode
 render components according to state
 
 ####################

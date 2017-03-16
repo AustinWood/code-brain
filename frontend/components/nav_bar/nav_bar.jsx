@@ -11,12 +11,13 @@ class NavBar extends React.Component {
   view() {
     this.props.setMode('view');
   }
-  
+
   study() {
     this.props.setMode('study');
   }
 
   render() {
+    // debugger;
     const randomNum = Math.ceil(Math.random() * 45) + 2;
 
     return (
