@@ -1,7 +1,10 @@
 ####################
-### CLEANUP
-restructure CSS, especially resets
-CSS consistent class names (auth vs login)
+### NOTES
+create Search component
+clicking list toggles Search component
+
+create Note component
+clicking add toggles Note component
 
 ####################
 ### QUESTIONS

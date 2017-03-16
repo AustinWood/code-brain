@@ -1,9 +1,12 @@
 import React from 'react';
-import Home from './home';
+import Body from './body';
+import NavBarContainer from './nav_bar/nav_bar_container';
+
 
 const App = ({ children }) => (
-  <div className="background-component">
-    <Home />
+  <div className="app">
+    <NavBarContainer />
+    <Body className="body" />
     { children }
   </div>
 );

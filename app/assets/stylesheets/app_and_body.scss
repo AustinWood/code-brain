@@ -1,0 +1,12 @@
+.app {
+  background-color: #1A1B25;
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  height: 100%;
+}
+
+.body {
+  width: 100vw;
+  flex: 1 1 auto;
+}

@@ -1,15 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
-
-// TODO: This can;t be the best way to route this
 const NavBar = ({ currentUser, logout }) => {
-  if (!currentUser) {
-    // return (
-    //   <div></div>
-    // );
-  }
-
   const randomNum = Math.ceil(Math.random() * 45) + 2;
 
   return (
