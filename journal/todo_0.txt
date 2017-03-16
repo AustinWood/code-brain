@@ -1,10 +1,5 @@
 ####################
 ### NOTES
-create Note component
-
-style Search component
-style Note component
-
 clicking list toggles Search component
 clicking add toggles Note component
 
