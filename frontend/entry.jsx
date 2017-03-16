@@ -15,4 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
+  dynoPinger();
 });
+
+let dynoPinger = () => {
+  var http = require("http");
+  setInterval(function() {
+    const currentdate = new Date();
+    const hours = currentdate.getHours();
+    if (hours > 5 && hours < 22) {
+      http.get("https://codebrain.herokuapp.com");
+    }
+  }, 900000); // every 15 minutes
+};
