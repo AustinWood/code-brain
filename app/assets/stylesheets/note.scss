@@ -1,6 +1,5 @@
 .note {
-  // background-color: #0A0B1A;
-  background-color: blue;
+  background-color: #0A0B1A;
 
   // full height of body
   display: inline-block;
@@ -9,7 +8,9 @@
   // take up the remainder of width
   flex: 1 1 auto;
 
-  // width:150px;
-  // padding:10px;
-  // margin-left: 10px;
+  margin: 20px 20px 20px 0px;
+
+
+  border-radius: 12px;
+  border: 1px solid gray;
 }
