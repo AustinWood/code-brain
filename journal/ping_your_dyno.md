@@ -1,6 +1,15 @@
+# Dyno Coffee
+
+Even the best developers need to consistently consume coffee in order to keep doing their job. Your app's dyno is the same way 🐲 ☕
+
+Heroku's free hosting provides 550 dyno hours per month, or ~18.3 hours per day. Follow these instructions to write a script that pings your dyno every 15 minutes to prevent it from falling asleep, with the exception of a specified bedtime.
+
+## Install Node's `http` library
+
 In the Terminal, navigate to your project's directory and install Node's `http` library:
 `npm install --save http`
 
+## Add script to entry.jsx
 
 ```javascript
 var http = require("http");
@@ -18,3 +27,9 @@ Bedtime before midnight:
 
 Bedtime after midnight:
 `(hours < 1 || hours > 8) // don't ping between 1am and 8am`
+
+As long as you specify a period of at least 6 hours, you should not run the risk of going over your free dyno hour limit. The only exception would be if your your app receives a substantial amount of actual traffic during the designated sleep period. I specified I sleep period of 7 hours to account for this possibility.
+
+## Push to Heroku
+
+That's it! Your dyno should now go to sleep during the interval specified, but will no longer nap during the day :)
