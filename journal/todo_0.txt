@@ -1,9 +1,11 @@
 ####################
 ### NOTES
-create Search component
-clicking list toggles Search component
-
 create Note component
+
+style Search component
+style Note component
+
+clicking list toggles Search component
 clicking add toggles Note component
 
 ####################

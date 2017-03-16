@@ -1,0 +1,15 @@
+.note {
+  // background-color: #0A0B1A;
+  background-color: blue;
+
+  // full height of body
+  display: inline-block;
+  vertical-align: top;
+
+  // take up the remainder of width
+  flex: 1 1 auto;
+
+  // width:150px;
+  // padding:10px;
+  // margin-left: 10px;
+}
