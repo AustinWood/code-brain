@@ -2,11 +2,10 @@
 
 (Note: pending better name idea with available domain...)
 
-[Heroku link] [heroku]
+[Heroku link][heroku]
+[Trello link][trello]
+
 [heroku]: https://codebrain.herokuapp.com
-
-[Trello link] [trello]
-
 [trello]: https://trello.com/b/c0fTypyd/code-brain
 
 ## Minimum Viable Product
