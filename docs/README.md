@@ -2,9 +2,8 @@
 
 (Note: pending better name idea with available domain...)
 
-[Heroku link][heroku]
-
-[Trello link][trello]
+* [Heroku link][heroku]
+* [Trello link][trello]
 
 [heroku]: https://codebrain.herokuapp.com
 [trello]: https://trello.com/b/c0fTypyd/code-brain
