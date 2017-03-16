@@ -1,9 +1,7 @@
-heroku link
-
 ####################
 ### NOTES
-clicking list toggles Search component
-clicking add toggles Note component
+mode is nested on initial lode
+render components according to state
 
 ####################
 ### QUESTIONS
