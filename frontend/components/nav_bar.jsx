@@ -10,7 +10,7 @@ const NavBar = ({ currentUser, logout }) => {
     // );
   }
 
-  const randomNum = Math.ceil(Math.random() * 45);
+  const randomNum = Math.ceil(Math.random() * 45) + 2;
 
   return (
     <div className="nav-bar">

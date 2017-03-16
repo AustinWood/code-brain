@@ -1,0 +1,2 @@
+2017-03-15
+Couldn't get image assets to load on Heroku. Tried manually precompiling. Eventually settled on moving to Cloudinary. Faster implementation, as well as faster servers!
