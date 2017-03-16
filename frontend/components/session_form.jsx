@@ -6,6 +6,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { username: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.props.demoLogin.bind(this);
+    this.demo = this.demo.bind(this);
   }
 
   componentDidUpdate() {
@@ -25,6 +27,7 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    console.log(this);
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
@@ -72,28 +75,28 @@ class SessionForm extends React.Component {
   }
 
   demo() {
+    console.log(this);
     const usernameElement = document.getElementById('username');
     const passwordElement = document.getElementById('password');
+    usernameElement.value = '';
+    passwordElement.value = '';
 
-    let fillInput = (element, text) => {
+    let fillInput = (element, text, demoLogin = this.props.demoLogin) => {
       return function() {
         if (text.length > 0) {
           element.value += text[0];
           setTimeout(fillInput(element, text.substring(1)), 80);
         } else if (element === usernameElement) {
           fillInput(passwordElement, 'password')();
+        } else {
+          const user = {username: 'demo_account', password: 'password'};
+          demoLogin({user});
         }
       };
     };
 
-    usernameElement.value = '';
-    passwordElement.value = '';
     fillInput(usernameElement, 'demo_account')();
-    // const user = {username: 'username', password: 'password'}; // this is wrong
-    // this.props.demo_login(user);
   }
-
-
 
   renderErrors() {
     if (this.props.errors.length === 0) {

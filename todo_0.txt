@@ -3,6 +3,7 @@
 redirect from '/'
 demo account
 update Trello, tell Luke
+Add demo user to seeds
 
 ####################
 ### CLEANUP
