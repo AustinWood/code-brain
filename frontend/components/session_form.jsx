@@ -38,7 +38,6 @@ class SessionForm extends React.Component {
     }
   }
 
-  // TODO: DRY
   authFooter() {
     let text;
     let link;
@@ -62,8 +61,21 @@ class SessionForm extends React.Component {
         <p className="auth-footer-text">
           {text}&nbsp;&nbsp;{link}
         </p>
+        <p className="auth-footer-text">
+          Not planning to stick around long?<br/>
+        <button className="auth-footer-link" onClick={this.demo}>
+          Try the demo account.
+        </button>
+        </p>
       </div>
     );
+  }
+
+  demo() {
+    document.getElementById('username').value = 'demo_account';
+    document.getElementById('password').value = 'demo_account';
+    const user = {username: 'username', password: 'password'};
+    this.props.demo_login(user);
   }
 
   renderErrors() {
@@ -92,7 +104,8 @@ class SessionForm extends React.Component {
               <input type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
-                className="auth-input" />
+                className="auth-input"
+                id="username" />
             </div>
             <br/>
             <div className="login-row">
@@ -100,7 +113,8 @@ class SessionForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
-                className="auth-input" />
+                className="auth-input"
+                id="password" />
             </div>
             <br/>
             {this.renderErrors()}

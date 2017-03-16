@@ -2,13 +2,15 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 
 
-
+// TODO: This can;t be the best way to route this
 const NavBar = ({ currentUser, logout }) => {
   if (!currentUser) {
     // return (
     //   <div></div>
     // );
   }
+
+  const randomNum = Math.ceil(Math.random() * 45);
 
   return (
     <div className="nav-bar">
@@ -18,7 +20,7 @@ const NavBar = ({ currentUser, logout }) => {
       </div>
       <div className="nav-center">
         <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} className="play-img" />
-        <p className="due-text">27 notes due</p>
+        <p className="due-text">{randomNum} notes due</p>
       </div>
       <div className="nav-right">
         <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" />
