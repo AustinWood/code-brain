@@ -11,6 +11,3 @@ CSS consistent class names (auth vs login)
 
 ####################
 ### QUESTIONS
-Protip:
-Make an alias `fs` (or something similarly) short... explain alias in two lines
-Should styles/applications.css be scss?
