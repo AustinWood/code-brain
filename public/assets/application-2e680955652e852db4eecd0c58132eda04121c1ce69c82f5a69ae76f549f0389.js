@@ -25797,13 +25797,13 @@ var SessionForm = function (_React$Component) {
       if (this.props.formType === "login") {
         return _react2.default.createElement(
           'p',
-          { className: 'auth-header' },
+          { className: 'session-form-header' },
           'Log in'
         );
       } else {
         return _react2.default.createElement(
           'p',
-          { className: 'auth-header' },
+          { className: 'session-form-header' },
           'Sign up'
         );
       }
@@ -25825,7 +25825,7 @@ var SessionForm = function (_React$Component) {
             { to: '/signup' },
             _react2.default.createElement(
               'p',
-              { className: 'auth-footer-link' },
+              { className: 'session-form-footer-link' },
               'Sign up here!'
             )
           )
@@ -25844,7 +25844,7 @@ var SessionForm = function (_React$Component) {
             { to: '/login' },
             _react2.default.createElement(
               'p',
-              { className: 'auth-footer-link' },
+              { className: 'session-form-footer-link' },
               'Log in here!'
             )
           )
@@ -25871,10 +25871,10 @@ var SessionForm = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'login-form-container' },
+        { className: 'session-form-container' },
         _react2.default.createElement(
           'form',
-          { onSubmit: this.handleSubmit, className: 'login-form-box' },
+          { onSubmit: this.handleSubmit, className: 'session-form-box' },
           this.authHeader(),
           this.renderErrors(),
           _react2.default.createElement(
@@ -25889,7 +25889,7 @@ var SessionForm = function (_React$Component) {
             _react2.default.createElement('input', { type: 'text',
               value: this.state.username,
               onChange: this.update("username"),
-              className: 'auth-input' }),
+              className: 'session-input' }),
             _react2.default.createElement(
               'p',
               null,
@@ -25898,12 +25898,12 @@ var SessionForm = function (_React$Component) {
             _react2.default.createElement('input', { type: 'password',
               value: this.state.password,
               onChange: this.update("password"),
-              className: 'auth-input' }),
+              className: 'session-input' }),
             _react2.default.createElement('br', null),
             _react2.default.createElement('input', {
               type: 'submit',
               value: 'Submit',
-              className: 'auth-submit' }),
+              className: 'session-form-submit-button' }),
             _react2.default.createElement('br', null),
             this.authFooter()
           )

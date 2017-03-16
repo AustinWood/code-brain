@@ -1,5 +1,5 @@
 /* line 3, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
-.login-form-container {
+.session-form-container {
   background-color: #1A1B25;
   height: 100vh;
   display: flex;
@@ -8,19 +8,19 @@
 }
 
 /* line 13, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
-.login-form-box {
+.session-form-box {
   background-color: #0A0B1A;
   border-radius: 15px;
   padding: 25px;
 }
 
 /* line 23, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
-.auth-header {
+.session-form-header {
   text-align: center;
 }
 
 /* line 27, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
-.auth-input {
+.session-input {
   background-color: #d1d1d1;
   color: #0A0B1A;
 }
@@ -32,14 +32,14 @@
 }
 
 /* line 37, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
-.auth-submit {
+.session-form-submit-button {
   padding: 5px;
   background-color: #2a6d9e;
   color: #E3F2FC;
 }
 
 /* line 43, /Users/austinwood/Desktop/code_brain/app/assets/stylesheets/auth.scss */
-.auth-footer-link {
+.session-form-footer-link {
   margin-top: 5px;
   text-align: center;
   color: #64BAC1;

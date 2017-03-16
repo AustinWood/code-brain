@@ -1,7 +1,11 @@
 ####################
+### SEEDS
+Add demo user to seeds
+
+####################
 ### AUTH
-click anywhere in login-row, change focus
-hover login-row → change bg color
+click anywhere in sesson-input-container, change focus
+hover sesson-input-container → change bg color
 
 ####################
 ### NAV BAR

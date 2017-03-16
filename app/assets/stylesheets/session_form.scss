@@ -1,6 +1,6 @@
 ///////////////
 // Outer box //
-.login-form-container {
+.session-form-container {
   background-color: #1A1B25;
   height: 100vh;
   display: flex;
@@ -11,7 +11,7 @@
 
 ///////////////
 // Inner box //
-.login-form-box {
+.session-form-box {
   background-color: #0A0B1A;
   border-radius: 15px;
   padding: 26px 32px;
@@ -21,24 +21,24 @@
 // Component pieces //
 //////////////////////
 
-.auth-header {
+.session-form-header {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 24px;
 }
 
-.auth-error-container {
+.session-error-container {
   margin: -10px 0px 8px 0px;
 }
 
-.auth-error {
+.session-error {
   color: #fd51d9;
   font-size: 16px;
   text-align: center;
 }
 
-.login-row {
+.sesson-input-container {
   background-color: #d1d1d1;
   border-radius: 8px;
   padding: 10px 10px;
@@ -46,7 +46,7 @@
   display: flex;
 }
 
-.login-img {
+.session-input-img {
   height: 35px;
   width: 35px;
   display: inline-block;
@@ -54,7 +54,7 @@
   padding: 0;
 }
 
-.auth-input {
+.session-input {
   display: inline-block;
   background-color : #d1d1d1;
   color: #0A0B1A;
@@ -64,13 +64,13 @@
   font-size: 22px;
 }
 
-.auth-submit-container {
+.session-form-submit-container {
   text-align: center;
   margin-bottom: 8px;
   margin-top: 4px;
 }
 
-.auth-submit {
+.session-form-submit-button {
   max-width: 400px;
   border-radius: 8px;
   color: #E3F2FC;
@@ -80,7 +80,7 @@
   height: 55px;
 }
 
-.auth-submit:hover {
+.session-form-submit-button:hover {
   background: #6956ec; /* For no gradient support */
   background: -webkit-linear-gradient(bottom, #6956ec , #56b2ba); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(top, #6956ec, #56b2ba); /* For Opera 11.1 to 12.0 */
@@ -88,7 +88,7 @@
   background: linear-gradient(to top, #6956ec , #56b2ba); /* Standard syntax */
 }
 
-.auth-footer-container {
+.session-form-footer-container {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@
   align-items: center;
 }
 
-.auth-footer-text {
+.session-form-footer-text {
   margin-top: 2px;
   margin-bottom: 12px;
   padding: 0;
@@ -105,11 +105,11 @@
   color: #AEB6BF;
 }
 
-.auth-footer-link {
+.session-form-footer-link {
   color: #56b2ba;
 }
 
-.auth-footer-link:hover {
+.session-form-footer-link:hover {
   color: #0b78e3;
 }
 

@@ -32,7 +32,7 @@ As long as you specify a period of at least 6 hours, you should not run the risk
 
 ## Push to Heroku
 
-That's it! Your dyno should now go to sleep during the interval specified, but will no longer nap during the day :)
+That's it! Your dyno should now go to sleep during the interval specified, but will no longer nap during the day 🦎 😊
 
 If you're interested in how many hours you have remaining, you can always run `heroku ps` in the Terminal:
 `>> Free dyno hours quota remaining this month: 545h 24m (99%)`

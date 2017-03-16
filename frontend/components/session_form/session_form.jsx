@@ -35,9 +35,9 @@ class SessionForm extends React.Component {
 
   authHeader() {
     if (this.props.formType === "login") {
-      return <p className="auth-header">Log in</p>;
+      return <p className="session-form-header">Log in</p>;
     } else {
-      return <p className="auth-header">Sign up</p>;
+      return <p className="session-form-header">Sign up</p>;
     }
   }
 
@@ -47,26 +47,26 @@ class SessionForm extends React.Component {
     if (this.props.formType === "login") {
       text = "No account yet?";
       link = (
-        <Link to="/signup" className="auth-footer-link">
+        <Link to="/signup" className="session-form-footer-link">
           Sign up here!
         </Link>
       );
     } else {
       text = "Already signed up?";
       link = (
-        <Link to="/login" className="auth-footer-link">
+        <Link to="/login" className="session-form-footer-link">
           Log in here!
         </Link>
       );
     }
     return(
-      <div className="auth-footer-container">
-        <p className="auth-footer-text">
+      <div className="session-form-footer-container">
+        <p className="session-form-footer-text">
           {text}&nbsp;&nbsp;{link}
         </p>
-        <p className="auth-footer-text">
+        <p className="session-form-footer-text">
           Not planning to stick around long?<br/>
-        <button className="auth-footer-link" onClick={this.demo}>
+        <button className="session-form-footer-link" onClick={this.demo}>
           Try the demo account.
         </button>
         </p>
@@ -103,9 +103,9 @@ class SessionForm extends React.Component {
       return (<div></div>);
     }
     return (
-      <ul className="auth-error-container">
+      <ul className="session-error-container">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`} className="auth-error">
+          <li key={`error-${i}`} className="session-error">
             {error}
           </li>
         ))}
@@ -115,34 +115,34 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="session-form-container">
+        <form onSubmit={this.handleSubmit} className="session-form-box">
           {this.authHeader()}
           <div className="login-form">
-            <div className="login-row">
-              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/user_dark_typzor.png"} className="login-img" />
+            <div className="sesson-input-container">
+              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/user_dark_typzor.png"} className="session-input-img" />
               <input type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
-                className="auth-input"
+                className="session-input"
                 id="username" />
             </div>
             <br/>
-            <div className="login-row">
-              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/password_s4kwh0.png"} className="login-img" />
+            <div className="sesson-input-container">
+              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/password_s4kwh0.png"} className="session-input-img" />
               <input type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
-                className="auth-input"
+                className="session-input"
                 id="password" />
             </div>
             <br/>
             {this.renderErrors()}
-            <div className="auth-submit-container">
+            <div className="session-form-submit-container">
               <input
                 type="submit"
                 value="Submit"
-                className="auth-submit" />
+                className="session-form-submit-button" />
               <br/>
             </div>
           </div>

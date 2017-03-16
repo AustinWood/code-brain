@@ -1,11 +1,4 @@
 ####################
-### HEROKU
-redirect from '/'
-demo account
-update Trello, tell Luke
-Add demo user to seeds
-
-####################
 ### CLEANUP
 restructure CSS, especially resets
 CSS consistent class names (auth vs login)
