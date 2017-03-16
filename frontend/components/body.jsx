@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './search/search';
 import Note from './note/note';
-import { Link, withRouter } from 'react-router';
+// import { Link, withRouter } from 'react-router';
 
 
 class Body extends React.Component {
@@ -17,11 +17,9 @@ class Body extends React.Component {
     if (this.props.mode === "view" || this.props.mode === "edit") {
       return (<Search />);
     }
-    return (<Search />);
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="body">
         {this.search()}

@@ -1,10 +1,8 @@
 import Body from './body';
-// import { logout } from '../../actions/session_actions';
-// import { setMode, addNote } from '../../actions/navigation_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = ({ display }) => ({
-  display: display
+  mode: display.mode
 });
 
 const mapDispatchToProps = dispatch => ({

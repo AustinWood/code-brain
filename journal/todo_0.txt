@@ -1,6 +1,6 @@
 ####################
 ### NOTES
-render components according to state
+fix margins on Note without Search sibling
 
 ####################
 ### QUESTIONS
