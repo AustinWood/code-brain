@@ -1,6 +1,13 @@
 ####################
 ### NOTES
-fix margins on Note without Search sibling
+
+create notes model
+create seed data
 
 ####################
 ### QUESTIONS
+
+####################
+### TONIGHT
+ping
+os x firewall set rule that allows incoming requests to port 3000

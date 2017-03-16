@@ -4,7 +4,7 @@ import NotesIndex from './notes_index';
 import { connect } from 'react-redux';
 
 const mapStateToProps = ({ display }) => ({
-  selectedTags: display.selectedTags
+  // selectedTags: display.selectedTags
 });
 
 const mapDispatchToProps = dispatch => ({

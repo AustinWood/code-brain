@@ -3,6 +3,10 @@
 Add demo user to seeds
 
 ####################
+### STYLE
+fix margins on Note without Search sibling
+
+####################
 ### AUTH
 click anywhere in sesson-input-container, change focus
 hover sesson-input-container → change bg color
