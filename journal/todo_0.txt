@@ -5,3 +5,5 @@ CSS consistent class names (auth vs login)
 
 ####################
 ### QUESTIONS
+dyno pinger
+manual precompile
