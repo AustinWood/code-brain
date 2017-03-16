@@ -7,3 +7,7 @@ clicking add toggles Note component
 ### QUESTIONS
 dyno pinger
 manual precompile
+
+
+custom error messages
+heroku link
