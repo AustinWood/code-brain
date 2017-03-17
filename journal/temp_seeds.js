@@ -1,32 +1,3 @@
-Array.prototype.mySelect = function (callback){
-  
-};
-
-let cb = function (el) {
-  return (el < 3);
-};
-console.log([1,2,3,4,5].mySelect(cb).equals([1,2]));
-
-// Bubble sort
-
-Array.prototype.bubbleSort = function () {
-  let sorted = false;
-  while (!sorted) {
-    sorted = true;
-    for(let i = 0; i < this.length - 1; i++) {
-      if (this[i] > this[i + 1]) {
-        this[i + 1] = [this[i], this[i] = this[i + 1]][0];
-        sorted = false;
-      }
-    }
-  }
-  return this;
-};
-
-console.log('-------BUBBLE SORT-------');
-console.log([9,8,7,6,5,4,3,2,1].bubbleSort().equals([1,2,3,4,5,6,7,8,9]));
-console.log([7,6,2,-3,8,4,5,3,9,1].bubbleSort().equals([-3,1,2,3,4,5,6,7,8,9]));
-
 //Write a monkey patch of quick sort that accepts a callback
 
 Array.prototype.myQuickSort = function (callback) {

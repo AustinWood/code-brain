@@ -53,7 +53,7 @@ class TextEditor extends React.Component {
           ref="editor"
         />
         <input
-         onClick={this.jsonState}
+         onClick={this.logRaw}
          style={styles.button}
          type="button"
          value="Log State"
