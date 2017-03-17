@@ -1,7 +1,8 @@
 ####################
 ### NOTES
-create text editor container
-render text editor component on L and R
+pass props
+text editors should be clickable within full width/height of parent div
+
 
 
 add skeleton + answer to seed data

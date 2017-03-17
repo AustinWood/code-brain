@@ -1,5 +1,6 @@
 import React from 'react';
 import TextEditorContainer from './text_editor_container';
+import TextEditor from './text_editor';
 
 class Note extends React.Component {
   componentDidMount() {
@@ -8,6 +9,7 @@ class Note extends React.Component {
 
   render() {
     const note = this.props.note;
+    const myText = "hey there!";
     return (
       <div className="note">
 
@@ -17,9 +19,11 @@ class Note extends React.Component {
 
         <div className="note-body">
           <div className="note-body-sub" id="note-body-left">
-            <TextEditorContainer />
+            <TextEditor json={note.skeleton} />
           </div>
-          <div className="note-body-sub" id="note-body-right" dangerouslySetInnerHTML={{__html: note.solution}}></div>
+          <div className="note-body-sub" id="note-body-right">
+            <TextEditor json={note.solution} />
+          </div>
         </div>
 
         <div className="note-footer">

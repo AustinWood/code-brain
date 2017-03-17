@@ -18,7 +18,7 @@ class TextEditor extends React.Component {
     this.jsonState = () => console.log(JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
     // JSON.parse(jsonString);
   }
-  
+
   render() {
 
     const styles = {
@@ -39,14 +39,14 @@ class TextEditor extends React.Component {
       }
     };
 
-    debugger;
+    // debugger;
 
     return (
       <div style={styles.editor} onClick={this.focus}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.onChange}
-          placeholder=""
+          placeholder={this.props.json}
           ref="editor"
         />
       </div>
