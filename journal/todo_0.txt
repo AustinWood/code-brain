@@ -1,7 +1,7 @@
 ####################
 ### NOTES
-
-create notes model
+setup API
+add validations to notes model
 create seed data
 
 ####################
