@@ -13,15 +13,23 @@ const Note = () => {
       </div>
 
       <div className="note-footer">
-        <button>
-          <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-toggle" />
-        </button>
-        <button>
-          <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-trash" />
-        </button>
-        <button>
-          <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/save_ypr6p1.png"} className="note-footer-save" />
-        </button>
+
+        <div className="note-footer-repl">
+          <p className="note-footer-repl-text">REPL :</p>
+          <button>
+            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
+          </button>
+        </div>
+
+        <div className="note-footer-right">
+          <button>
+            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
+          </button>
+          <button>
+            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/save_ypr6p1.png"} className="note-footer-img" id="note-footer-save" />
+          </button>
+        </div>
+
       </div>
     </div>
   );

@@ -33,4 +33,46 @@
 
 .note-footer {
   flex: 0 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.note-footer-repl {
+  flex: 0 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.note-footer-right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.note-footer-repl-text {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.note-footer-img {
+  height: 50px;
+  width: 50px;
+  padding: 16px;
+}
+
+#note-footer-toggle {
+
+}
+
+#note-footer-trash {
+  padding-right: 28px;
+}
+
+#note-footer-save {
+
 }
