@@ -4,6 +4,7 @@ import configureStore from './store/store.js';
 import Root from './components/root';
 
 import { login, signup, logout } from './actions/session_actions';
+import { fetchNote, fetchNotes } from './actions/note_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
   dynoPinger();
+  window.fetchNotes = fetchNotes;
 });
 
 let dynoPinger = () => {

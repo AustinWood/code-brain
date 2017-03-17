@@ -12,5 +12,6 @@
 #
 
 class Note < ApplicationRecord
-  
+  validates :question, :skeleton, :answer, :author_id, presence: true
+
 end
