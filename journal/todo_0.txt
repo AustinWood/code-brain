@@ -1,6 +1,9 @@
 ####################
 ### NOTES
-implement Draft.js
+create text editor container
+render text editor component on L and R
+
+
 add skeleton + answer to seed data
 render skeleton + answer in Note component
 make NoteIndexItems clickable

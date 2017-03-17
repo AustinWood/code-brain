@@ -1,4 +1,5 @@
 import React from 'react';
+import JacksonParser from 'jackson-parser';
 import { Editor, EditorState, convertFromRaw, convertToRaw } from 'draft-js';
 
 class TextEditor extends React.Component {
@@ -14,14 +15,10 @@ class TextEditor extends React.Component {
     this.onChange = (editorState) => this.setState({editorState});
     this.logState = () => console.log(this.state.editorState.toJS());
     this.logRaw = () => console.log(convertToRaw(this.state.editorState.getCurrentContent()));
+    this.jsonState = () => console.log(JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
+    // JSON.parse(jsonString);
   }
-
-  // render() {
-  //   return (
-  //       <Editor editorState={this.state.editorState} onChange={this.onChange} />
-  //   );
-  // }
-
+  
   render() {
 
     const styles = {
