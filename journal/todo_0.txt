@@ -1,9 +1,9 @@
 ####################
 ### NOTES
-pass props
-text editors should be clickable within full width/height of parent div
 
 
+full width/height of parent div
+better way to escape quotes in seeds? HERE?
 
 add skeleton + answer to seed data
 render skeleton + answer in Note component

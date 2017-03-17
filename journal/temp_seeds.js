@@ -1,69 +1,11 @@
-
-
-// You have an unsorted array of integers. Write a recursive solution
-// to count the number of occurrences of a specific value.
-
-function numOccur (array, target) {
-  if (array.length === 0) return 0;
-  let count = 0;
-  if (array[0] === target) {
-    count += 1;
-  }
-  let thing = numOccur(array.slice(1), target);
-  return thing + count;
-}
-
-console.log('-------NUM OCCUR-------');
-console.log(numOccur([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6], 5) === 4);
-console.log(numOccur([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6], 13) === 0);
-
-//Write a method that squares each element in the array
-
-Array.prototype.square = function () {
-  return this.map(el => {
-    return el * el;
-  });
-};
-
-console.log('-------SQUARE-------');
-console.log([1,2,3,4,5].square().equals([ 1, 4, 9, 16, 25 ]));
-
-
-
-// Rewrite JavaScript's's Array#uniq method.
-
-Array.prototype.myUniq = function () {
-  let arr = [];
-  this.forEach(el =>{
-    if (!arr.includes(el)) {
-      arr.push(el);
-    }
-  });
-  return arr;
-};
-
-console.log('-------MY UNIQ-------');
-console.log([1, 2, 6, 4, 'hi', 8, 4, 4, 6, 7, 2, 'hi'].myUniq().equals([1, 2, 6, 4, 'hi', 8, 7]));
-console.log([].myUniq().equals([]));
-console.log([1,2,3,4,5,6,7,8,9].myUniq().equals([1,2,3,4,5,6,7,8,9]));
-
-// Rewrite JavaScript's's Array#select method.
-
 Array.prototype.mySelect = function (callback){
-  let arr = [];
-  for(let i = 0; i < this.length; i++) {
-    if (callback(this[i])) {
-      arr.push(this[i]);
-    }
-  }
-  return arr;
+  
 };
 
-console.log('-------MY SELECT-------');
-let cb3 = function (el) {
+let cb = function (el) {
   return (el < 3);
 };
-console.log([1,2,3,4,5].mySelect(cb3).equals([1,2]));
+console.log([1,2,3,4,5].mySelect(cb).equals([1,2]));
 
 // Bubble sort
 
