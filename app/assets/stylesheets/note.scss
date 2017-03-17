@@ -20,16 +20,17 @@
   padding: 16px;
 }
 
+.note-header-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .note-body {
-  // width: 100vw;
   flex: 1 1 auto;
   background-color: blue;
 }
 
 .note-footer {
-  // width: 100vw;
   flex: 0 1 auto;
-  background-color: red;
-  // width: 30px;
-  height: 30px;
 }
