@@ -8,7 +8,7 @@ class NotesIndexItem extends React.Component {
   render() {
     return (
       <div className="notes-index-item">
-        <p>{this.props.question}</p>
+        <p>{question}</p>
       </div>
     );
   }
