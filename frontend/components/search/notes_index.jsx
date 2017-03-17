@@ -18,11 +18,10 @@ import NotesIndexItem from './notes_index_item';
 
 class NotesIndex extends React.Component {
   componentDidMount() {
-    // this.props.requestTodos();
+    this.props.requestNotes();
   }
 
   render() {
-    debugger;
     // const { todos, createTodo, updateTodo, errors } = this.props;
     const { notes } = this.props;
 

@@ -11,3 +11,6 @@ create seed data
 be rake db:purge
 be rake db:migrate
 be rake db:seed
+
+>> unexpected )
+notes_index_container.jsx line 23
