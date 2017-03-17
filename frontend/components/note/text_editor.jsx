@@ -36,7 +36,7 @@ class TextEditor extends React.Component {
         color: "#E3F2FC"
       },
       button: {
-        marginTop: 10,
+        marginTop: 50,
         textAlign: 'center',
       }
     };
@@ -52,6 +52,12 @@ class TextEditor extends React.Component {
           placeholder=""
           ref="editor"
         />
+        <input
+         onClick={this.logState}
+         style={styles.button}
+         type="button"
+         value="Log State"
+       />
       </div>
     );
   }
