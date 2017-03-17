@@ -16,7 +16,7 @@ class Note extends React.Component {
 
         <div className="note-body">
           <div className="note-body-sub" id="note-body-left" dangerouslySetInnerHTML={{__html: note.skeleton}}></div>
-          <div className="note-body-sub" id="note-body-right"><p className="code">{note.solution}</p></div>
+          <div className="note-body-sub" id="note-body-right" dangerouslySetInnerHTML={{__html: note.solution}}></div>
         </div>
 
         <div className="note-footer">

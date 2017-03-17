@@ -6,7 +6,7 @@ const demoNote = {
   question: "You have array of integers. Write a recursive solution to find the sum of the integers.",
 
   skeleton: `
-    <p className='code'>function sumRecur(array) {</p>
+    <p>function sumRecur(array) {</p>
     <br />
     <p className="code">}</p>
     <br />
@@ -15,12 +15,14 @@ const demoNote = {
     <p className="code">console.log(sumRecur([]) === 0);
   `,
 
-  solution: `function sumRecur(array) {\n
-    if (array.length === 0) return 0;\n
-    if (array.length === 1) return array[0];\n
-    let sum = sumRecur(array.slice(1));\n
-    return sum + array[0];\n
-  }`
+  solution: `
+    <p>function sumRecur(array) {</p>
+    <p>&nbsp&nbspif (array.length === 0) return 0;</p>
+    <p>&nbsp&nbspif (array.length === 1) return array[0];</p>
+    <p>&nbsp&nbsplet sum = sumRecur(array.slice(1));</p>
+    <p>&nbsp&nbspreturn sum + array[0];</p>
+    <p>}</p>
+  `
 }
 
 const mapStateToProps = state => ({
