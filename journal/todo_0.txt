@@ -1,11 +1,12 @@
 ####################
 ### NOTES
-format text as code
+format text better
 add skeleton + answer to seed data
 render skeleton + answer in Note component
 make NoteIndexItems clickable
 make Note editable
 functionality to add new note
+make text scrollable L/R and Up/Down
 
 ####################
 ### QUESTIONS

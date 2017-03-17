@@ -5,15 +5,23 @@ import { connect } from 'react-redux';
 const demoNote = {
   question: "You have array of integers. Write a recursive solution to find the sum of the integers.",
 
-  skeleton: `
-    <p>function sumRecur(array) {</p>
-    <br />
-    <p className="code">}</p>
-    <br />
-    <p className="code">console.log(sumRecur([1, 3, 5, 7, 9, 2, 4, 6, 8]) === 45);</p>
-    <p className="code">console.log(sumRecur([-3, 0, 3, 7, 1, 0, -7, 32]) === 33);</p>
-    <p className="code">console.log(sumRecur([]) === 0);
-  `,
+  // skeleton: `
+  //   <p>function sumRecur(array) {</p>
+  //   <br />
+  //   <p className="code">}</p>
+  //   <br />
+  //   <p className="code">console.log(sumRecur([1, 3, 5, 7, 9, 2, 4, 6, 8]) === 45);</p>
+  //   <p className="code">console.log(sumRecur([-3, 0, 3, 7, 1, 0, -7, 32]) === 33);</p>
+  //   <p className="code">console.log(sumRecur([]) === 0);
+  // `,
+
+  skeleton:
+    /*HERE
+    function sumRecur(array) {
+
+    }
+    HERE*/
+  ,
 
   solution: `
     <p>function sumRecur(array) {</p>
