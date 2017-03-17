@@ -2,8 +2,8 @@
   background-color: #0A0B1A;
 
   // full height of body
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  flex-flow: column;
 
   // take up the remainder of width
   flex: 1 1 auto;
@@ -13,4 +13,23 @@
 
   border-radius: 12px;
   border: 1px solid gray;
+}
+
+.note-header {
+  flex: 0 1 auto;
+  padding: 16px;
+}
+
+.note-body {
+  // width: 100vw;
+  flex: 1 1 auto;
+  background-color: blue;
+}
+
+.note-footer {
+  // width: 100vw;
+  flex: 0 1 auto;
+  background-color: red;
+  // width: 30px;
+  height: 30px;
 }

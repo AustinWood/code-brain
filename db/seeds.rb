@@ -24,7 +24,7 @@ notes = [
     ".",
   ],
   [
-    "Write a method that squares each element in an array",
+    "Write a method that squares each element in an array.",
     ".",
     ".",
   ],
