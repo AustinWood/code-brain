@@ -12,4 +12,5 @@
 #
 
 class Note < ApplicationRecord
+  
 end
