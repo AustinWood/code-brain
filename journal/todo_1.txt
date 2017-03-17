@@ -33,3 +33,5 @@ Make an alias `fs` (or something similarly) short...
 ### TONIGHT
 ping
 os x firewall set rule that allows incoming requests to port 3000
+
+script for speed pairing

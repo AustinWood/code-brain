@@ -1,5 +1,5 @@
 import React from 'react';
-import { Editor, EditorState } from 'draft-js';
+import { Editor, EditorState, convertFromRaw, convertToRaw } from 'draft-js';
 
 class TextEditor extends React.Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class TextEditor extends React.Component {
     this.focus = () => this.refs.editor.focus();
     this.onChange = (editorState) => this.setState({editorState});
     this.logState = () => console.log(this.state.editorState.toJS());
+    this.logRaw = () => console.log(convertToRaw(this.state.editorState.getCurrentContent()));
   }
 
   // render() {
@@ -30,10 +31,9 @@ class TextEditor extends React.Component {
         width: 600,
       },
       editor: {
-        border: '1px solid #ccc',
         cursor: 'text',
         minHeight: 80,
-        padding: 10,
+        padding: 18,
         color: "#E3F2FC"
       },
       button: {
@@ -42,12 +42,14 @@ class TextEditor extends React.Component {
       }
     };
 
+    debugger;
+
     return (
       <div style={styles.editor} onClick={this.focus}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.onChange}
-          placeholder="Enter some text..."
+          placeholder=""
           ref="editor"
         />
       </div>

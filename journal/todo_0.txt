@@ -11,4 +11,8 @@ make editable text separate React component
 mark certain lines as mirrorable
 
 ####################
+### OTHER
+https://mattbrictson.com/lightning-fast-sass-reloading-in-rails
+
+####################
 ### QUESTIONS
