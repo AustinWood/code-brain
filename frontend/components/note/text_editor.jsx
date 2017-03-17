@@ -1,6 +1,5 @@
 import React from 'react';
-import JacksonParser from 'jackson-parser';
-import { Editor, EditorState, convertFromRaw, convertToRaw } from 'draft-js';
+import { Editor, EditorState, ContentState, convertFromRaw, convertToRaw } from 'draft-js';
 
 class TextEditor extends React.Component {
   constructor(props) {
@@ -9,14 +8,17 @@ class TextEditor extends React.Component {
     // this.onChange = (editorState) => this.setState({editorState});
 
     super(props);
-    this.state = {editorState: EditorState.createEmpty()};
+    console.log(this.props.json);
+    const content = convertFromRaw(JSON.parse(this.props.json));
+    console.log(content);
+    this.state = {editorState: EditorState.createWithContent(content)};
+    // this.state = {editorState: EditorState.createEmpty()};
 
     this.focus = () => this.refs.editor.focus();
     this.onChange = (editorState) => this.setState({editorState});
     this.logState = () => console.log(this.state.editorState.toJS());
     this.logRaw = () => console.log(convertToRaw(this.state.editorState.getCurrentContent()));
     this.jsonState = () => console.log(JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
-    // JSON.parse(jsonString);
   }
 
   render() {
@@ -41,12 +43,13 @@ class TextEditor extends React.Component {
 
     // debugger;
 
+
     return (
       <div style={styles.editor} onClick={this.focus}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.onChange}
-          placeholder={this.props.json}
+          placeholder=""
           ref="editor"
         />
       </div>
