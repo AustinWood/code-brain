@@ -1,12 +1,14 @@
 ####################
 ### NOTES
-format text better
+implement Draft.js
 add skeleton + answer to seed data
 render skeleton + answer in Note component
 make NoteIndexItems clickable
 make Note editable
 functionality to add new note
 make text scrollable L/R and Up/Down
+make editable text separate React component
+mark certain lines as mirrorable
 
 ####################
 ### QUESTIONS

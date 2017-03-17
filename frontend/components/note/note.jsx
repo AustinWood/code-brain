@@ -1,4 +1,5 @@
 import React from 'react';
+import TextEditor from './text_editor';
 
 class Note extends React.Component {
   componentDidMount() {
@@ -15,7 +16,9 @@ class Note extends React.Component {
         </div>
 
         <div className="note-body">
-          <div className="note-body-sub" id="note-body-left" dangerouslySetInnerHTML={{__html: note.skeleton}}></div>
+          <div className="note-body-sub" id="note-body-left">
+            <TextEditor />
+          </div>
           <div className="note-body-sub" id="note-body-right" dangerouslySetInnerHTML={{__html: note.solution}}></div>
         </div>
 
