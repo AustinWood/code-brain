@@ -4,8 +4,8 @@ import NotesIndexItem from './notes_index_item';
 let arr = ['this is a note', 'and another', 'and one more', 'the last note', 'just kidding'];
 
 const notesList = () => {
-  return arr.map(el => (
-    <NotesIndexItem question={el} />
+  return arr.map((el, idx) => (
+    <NotesIndexItem question={el} key={idx} />
   ));
 };
 

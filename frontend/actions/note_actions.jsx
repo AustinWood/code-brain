@@ -1,25 +1,25 @@
-import * as APIUtil from '../util/note_api_util';
+import * as NoteApiUtil from '../util/note_api_util';
 
 export const RECEIVE_NOTES = "RECEIVE_NOTES";
 export const RECEIVE_NOTE = "RECEIVE_NOTE";
 
 // export const createReview = review => dispatch => (
-//   APIUtil.createReview(review)
+//   NoteApiUtil.createReview(review)
 //     .then(review => dispatch(receiveReview(review)))
 // );
 //
-export const fetchNotes = filters => dispatch => (
-  APIUtil.fetchNotes(filters)
+export const fetchNotes = () => dispatch => (
+  NoteApiUtil.fetchNotes()
     .then(notes => dispatch(receiveNotes(notes)))
 );
 
 export const fetchNote = id => dispatch => (
-  APIUtil.fetchNote(id)
+  NoteApiUtil.fetchNote(id)
     .then(note => dispatch(receiveNote(note)))
 );
 //
 // export const createNote = note => dispatch => (
-//   APIUtil.createNote(note)
+//   NoteApiUtil.createNote(note)
 //     .then(note => dispatch(receiveNote(note)))
 // );
 //

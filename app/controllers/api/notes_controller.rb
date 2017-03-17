@@ -1,6 +1,6 @@
 class Api::NotesController < ApplicationController
   def index
-
+    @notes = Note.all
   end
 
   def show
@@ -9,7 +9,6 @@ class Api::NotesController < ApplicationController
 
   def create
     @note = Note.create!(note_params)
-    render :show
   end
 
   def update

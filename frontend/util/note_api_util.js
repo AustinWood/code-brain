@@ -1,8 +1,7 @@
-export const fetchNotes = (data) => {
+export const fetchNotes = () => {
   return $.ajax({
     method: 'GET',
-    url: 'api/notes',
-    data
+    url: 'api/notes'
   });
 };
 
@@ -13,10 +12,10 @@ export const fetchNote = (id) => {
   });
 };
 
-export const createNote = (data) => {
+export const createNote = (note) => {
   return $.ajax({
     method: 'POST',
     url: 'api/notes',
-    data
+    data: { note }
   });
 };
