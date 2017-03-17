@@ -1,19 +1,11 @@
 ####################
 ### NOTES
+format text as code
 add skeleton + answer to seed data
 render skeleton + answer in Note component
-format as code
 make NoteIndexItems clickable
 make Note editable
 functionality to add new note
 
 ####################
 ### QUESTIONS
-
->> Best sequence for seeding?
-be rake db:purge
-be rake db:migrate
-be rake db:seed
-
->> unexpected )
-notes_index_container.jsx line 23

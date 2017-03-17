@@ -7,7 +7,6 @@ class Note extends React.Component {
 
   render() {
     const note = this.props.note;
-    debugger;
     return (
       <div className="note">
 
@@ -16,7 +15,7 @@ class Note extends React.Component {
         </div>
 
         <div className="note-body">
-          <div className="note-body-sub" id="note-body-left"><p className="code">{note.skeleton}</p></div>
+          <div className="note-body-sub" id="note-body-left" dangerouslySetInnerHTML={{__html: note.skeleton}}></div>
           <div className="note-body-sub" id="note-body-right"><p className="code">{note.solution}</p></div>
         </div>
 

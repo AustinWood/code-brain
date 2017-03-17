@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 
 demo = User.create!(
   username: "demo_account",
@@ -48,7 +49,7 @@ notes.each do |note|
     question: note[0],
     skeleton: note[1],
     answer: note[2],
-    author_id: 1
+    author_id: demo.id
   )
 end
 
