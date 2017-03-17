@@ -1,6 +1,7 @@
 class Api::NotesController < ApplicationController
   def index
-    @notes = Note.all
+    render json: Note.all
+    # render json: Note.all.where(author_id: current_user.id), include: :tags
   end
 
   def show
