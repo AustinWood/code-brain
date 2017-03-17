@@ -27,7 +27,7 @@ const Note = () => {
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
           </button>
           <button>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/save_ypr6p1.png"} className="note-footer-img" id="note-footer-save" />
+            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
           </button>
         </div>
 
