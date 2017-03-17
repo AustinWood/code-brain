@@ -1,8 +1,11 @@
 ####################
 ### NOTES
-setup API
-add validations to notes model
-create seed data
+add skeleton + answer to seed data
+render skeleton + answer in Note component
+format as code
+make NoteIndexItems clickable
+make Note editable
+functionality to add new note
 
 ####################
 ### QUESTIONS

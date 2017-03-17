@@ -1,8 +1,6 @@
 import React from 'react';
 import Search from './search/search';
-import Note from './note/note';
-// import { Link, withRouter } from 'react-router';
-
+import NoteContainer from './note/note_container';
 
 class Body extends React.Component {
   constructor(props) {
@@ -23,7 +21,7 @@ class Body extends React.Component {
     return (
       <div className="body">
         {this.search()}
-        <Note />
+        <NoteContainer />
       </div>
     );
   }
