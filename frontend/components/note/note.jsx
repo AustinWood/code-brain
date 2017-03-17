@@ -9,7 +9,8 @@ const Note = () => {
       </div>
 
       <div className="note-body">
-
+        <div className="note-body-sub" id="note-body-left"></div>
+        <div className="note-body-sub" id="note-body-right"></div>
       </div>
 
       <div className="note-footer">

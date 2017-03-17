@@ -28,7 +28,23 @@
 
 .note-body {
   flex: 1 1 auto;
-  background-color: blue;
+  display: flex;
+  flex-flow: row;
+}
+
+.note-body-sub {
+  border-radius: 12px;
+  border: 1px solid gray;
+  width: 50%;
+  padding: 12px;
+}
+
+#note-body-left {
+  margin: 0px 12px 0px 24px;
+}
+
+#note-body-right {
+  margin: 0px 24px 0px 12px;
 }
 
 .note-footer {
