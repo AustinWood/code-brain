@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: notes
+#
+#  id         :integer          not null, primary key
+#  question   :text             default(""), not null
+#  skeleton   :text             default(""), not null
+#  answer     :text             default(""), not null
+#  author_id  :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  skeleton: MyString
+  answer: MyString
+  author_id: 1
+
+two:
+  question: MyString
+  skeleton: MyString
+  answer: MyString
+  author_id: 1
