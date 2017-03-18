@@ -11,7 +11,6 @@ class NotesIndexItem extends React.Component {
   }
 
   render() {
-    // debugger;
     return (
       <div
         className="notes-index-item"
@@ -22,5 +21,5 @@ class NotesIndexItem extends React.Component {
     );
   }
 }
-//
+
 export default NotesIndexItem;

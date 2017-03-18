@@ -1,7 +1,6 @@
 ####################
 ### NOTES FRONT END
 
-color selected note
 display message on initial render (Select a note or CREATE A NEW ONE)
 
 ####################

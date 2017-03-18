@@ -1,4 +1,4 @@
-import Note from './note';
+  import Note from './note';
 import { connect } from 'react-redux';
 // import { fetchNotes, fetchNote } from '../../actions/note_actions';
 

@@ -3,13 +3,13 @@ import TextEditorContainer from './text_editor_container';
 import TextEditor from './text_editor';
 
 class Note extends React.Component {
-  componentDidMount() {
-
+  nullNoteMessage() {
+    return (
+      <div>hello</div>
+    );
   }
 
-  render() {
-    const note = this.props.note || { question: "", skeleton: "", answer: "" };
-    const myText = "hey there!";
+  renderedNote(note) {
     return (
       <div className="note">
 
@@ -48,8 +48,15 @@ class Note extends React.Component {
       </div>
     );
   }
-}
 
-//<button onClick={this.props.addNote}>
+  render() {
+    // const note = this.props.note || { question: "", skeleton: "", answer: "" };
+    const note = this.props.note;
+    if (note === null) {
+      return this.nullNoteMessage();
+    }
+    return this.renderedNote(note);
+  }
+}
 
 export default Note;
