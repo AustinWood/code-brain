@@ -16,8 +16,9 @@ images off-white (gear, user, etc)
 https://icons8.com
  - user, password
 
-
 sync Atom snippets (similar to Facebook addings tags)
 
 If Heroku is showing an old version of my app:
 RAILS_ENV=production bundle exec rake assets:precompile
+
+mark certain lines as mirrorable for simplified editing

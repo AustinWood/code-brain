@@ -1,33 +1,33 @@
 ####################
 ### NOTES FRONT END
 
+TextEditor full width/height of parent div
+make text scrollable L/R and Up/Down
+
 double selecting note index item ?? wtf?
+
+clicking new note button opens blank template
 add link to nullNoteMessage to create new note
+use HERE docs in seeds.rb
+clicking save saves changes to state
+
+####################
+### NOTES BACK END
+
+clicking save saves changes to db
 
 ####################
 ### REFACTOR
+
 notes_index.jsx
 
 ####################
-### NOTES
-
-TextEditor full width/height of parent div
-better way to escape quotes in seeds? HERE?
-
-add skeleton + answer to seed data
-render skeleton + answer in Note component
-make NoteIndexItems clickable
-make Note editable
-functionality to add new note
-make text scrollable L/R and Up/Down
-make editable text separate React component
-mark certain lines as mirrorable
-
-####################
 ### OTHER
-https://mattbrictson.com/lightning-fast-sass-reloading-in-rails
+
+note language button with dropdown and images
 add css effect to button on demo login
 
 ####################
 ### QUESTIONS
+
 Is the pattern I follow when passing params to funcs inside {} good? See nav_bar and notes_index_item
