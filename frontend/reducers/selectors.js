@@ -1,5 +1,5 @@
-// export const selectNote = ({ noteDetail }, noteId) => {
-// 	const foundNote = noteDetail.items.find(item => item.id === itemId);
+// export const selectNote = (noteId) => {
+// 	const foundNote = allNote.find(item => item.id === itemId);
 // 	return foundItem || {};
 // }
 

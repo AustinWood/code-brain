@@ -1,7 +1,7 @@
 ####################
 ### NOTES FRONT END
 change state on notes_index_item click via reducer
-> setup reducer/selector
+> selector to get current note and pass down instead of demo
 
 ####################
 ### NOTES

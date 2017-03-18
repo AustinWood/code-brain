@@ -1,8 +1,8 @@
 export const SELECT_NOTE = "SELECT_NOTE";
 
-export const selectNote = noteId => ({
+export const selectNote = note => ({
   type: SELECT_NOTE,
-  noteId
+  note
 });
 
 // PROBLEMS IF JUST ONE?

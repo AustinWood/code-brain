@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 const _display = Object.freeze({
   mode: 'view',
-  noteId: null,
+  note: null,
   selectedTags: []
 });
 
@@ -17,13 +17,13 @@ const NavigationReducer = (state = _display, action) => {
     case ADD_NOTE:
       const newState = {
         mode: 'edit',
-        noteId: null
+        note: null
       };
       return merge({}, _display, newState);
     case SELECT_NOTE:
       const newState2 = {
         mode: 'edit',
-        noteId: action.noteId
+        note: action.note
       };
       return merge({}, _display, newState2);
     default:
