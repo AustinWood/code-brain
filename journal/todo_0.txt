@@ -1,8 +1,7 @@
 ####################
 ### NOTES FRONT END
 
-editor text should be white
-editor text padding
+log JSON button padding
 TextEditor full width/height of parent div
 make text scrollable L/R and Up/Down
 
