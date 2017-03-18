@@ -3,19 +3,15 @@ import { Editor, EditorState, ContentState, convertFromRaw, convertToRaw } from 
 
 class TextEditor extends React.Component {
   constructor(props) {
-    // super(props);
-    // this.state = {editorState: EditorState.createEmpty()};
-    // this.onChange = (editorState) => this.setState({editorState});
-
     super(props);
-    console.log(this.props.json);
+    // Convert the saved JSON string to Draf.js content
     const content = convertFromRaw(JSON.parse(this.props.json));
-    console.log(content);
+    // Create a new editor state using the saved content
     this.state = {editorState: EditorState.createWithContent(content)};
-    // this.state = {editorState: EditorState.createEmpty()};
-
     this.focus = () => this.refs.editor.focus();
     this.onChange = (editorState) => this.setState({editorState});
+
+    // Put these somewhere else?
     this.logState = () => console.log(this.state.editorState.toJS());
     this.logRaw = () => console.log(convertToRaw(this.state.editorState.getCurrentContent()));
     this.jsonState = () => console.log(JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
