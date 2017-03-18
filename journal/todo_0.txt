@@ -1,10 +1,8 @@
 ####################
 ### NOTES FRONT END
 
-refactor and comment text_editor.jsx
 notes index hover change pointer to hand
 notes index hover color effect
-move styles out of text_editor.jsx
 display message on initial render (Select a note or CREATE A NEW ONE)
 
 ####################

@@ -42,11 +42,7 @@ class TextEditor extends React.Component {
     // in the text editor that will call `logJson()`
     if (showLogJsonButton) {
       return (
-        <input
-         onClick={this.logJson}
-         type="button"
-         value="Log State"
-        />
+        <input onClick={this.logJson} type="button" value="Log JSON" />
       );
     }
   }
