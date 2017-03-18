@@ -17,8 +17,8 @@ class TextEditor extends React.Component {
 
   setEditorState() {
     if (this.props.json === "") {
-      // If there is no JSON to parse (e.g. on initial load or new note),
-      // then create an empty state
+      // If there is no JSON to parse (e.g. on initial load
+      // or when creating a new note), then start with an empty state
       this.state = {editorState: EditorState.createEmpty()};
     } else {
       // If there is saved JSON, convert it to Draf.js content
@@ -36,41 +36,31 @@ class TextEditor extends React.Component {
     console.log(json);
   }
 
+  logJsonButton() {
+    const showLogJsonButton = true;
+    // Change `showLogJsonButton` to `true` to render a button
+    // in the text editor that will call `logJson()`
+    if (showLogJsonButton) {
+      return (
+        <input
+         onClick={this.logJson}
+         type="button"
+         value="Log State"
+        />
+      );
+    }
+  }
+
   render() {
-
-    const styles = {
-      root: {
-        fontFamily: '\'Helvetica\', sans-serif',
-        padding: 20,
-        width: 600,
-      },
-      editor: {
-        cursor: 'text',
-        minHeight: 80,
-        padding: 18,
-        color: "#E3F2FC"
-      },
-      button: {
-        marginTop: 50,
-        textAlign: 'center',
-      }
-    };
-
-
     return (
-      <div style={styles.editor} onClick={this.focus}>
+      <div onClick={this.focus}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.onChange}
           placeholder=""
           ref="editor"
         />
-        <input
-         onClick={this.logRaw}
-         style={styles.button}
-         type="button"
-         value="Log State"
-       />
+      {this.logJsonButton()}
       </div>
     );
   }

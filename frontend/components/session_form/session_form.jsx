@@ -75,7 +75,6 @@ class SessionForm extends React.Component {
   }
 
   demo() {
-    console.log(this);
     const usernameElement = document.getElementById('username');
     const passwordElement = document.getElementById('password');
     usernameElement.value = '';
