@@ -6,6 +6,10 @@ notes index hover color effect
 display message on initial render (Select a note or CREATE A NEW ONE)
 
 ####################
+### REFACTOR
+notes_index.jsx
+
+####################
 ### NOTES
 
 TextEditor full width/height of parent div
