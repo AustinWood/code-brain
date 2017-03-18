@@ -13,6 +13,8 @@
 
   border-radius: 12px;
   border: 1px solid gray;
+
+  justify-content: center;
 }
 
 .note-header {
@@ -98,4 +100,11 @@
 
 #note-footer-save {
 
+}
+
+.null-note-message {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+  color: gray
 }

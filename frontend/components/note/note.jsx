@@ -5,7 +5,9 @@ import TextEditor from './text_editor';
 class Note extends React.Component {
   nullNoteMessage() {
     return (
-      <div>hello</div>
+      <div className="note">
+        <p className="null-note-message">Select a note on the left,<br/>or create a new one.</p>
+      </div>
     );
   }
 

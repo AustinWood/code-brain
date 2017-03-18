@@ -1,7 +1,8 @@
 ####################
 ### NOTES FRONT END
 
-display message on initial render (Select a note or CREATE A NEW ONE)
+double selecting note index item ?? wtf?
+add link to nullNoteMessage to create new note
 
 ####################
 ### REFACTOR
