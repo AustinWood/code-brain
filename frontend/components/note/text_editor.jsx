@@ -1,19 +1,14 @@
 import React from 'react';
-import { Editor, EditorState, ContentState, convertFromRaw, convertToRaw } from 'draft-js';
+import { Editor, EditorState, ContentState,
+         convertFromRaw, convertToRaw } from 'draft-js';
 
 class TextEditor extends React.Component {
   constructor(props) {
     super(props);
     this.setEditorState();
-    // debugger;
-
     this.focus = () => this.refs.editor.focus();
     this.onChange = (editorState) => this.setState({editorState});
-
-    // Put these somewhere else?
-    this.logState = () => console.log(this.state.editorState.toJS());
-    this.logRaw = () => console.log(convertToRaw(this.state.editorState.getCurrentContent()));
-    this.jsonState = () => console.log(JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
+    this.logJson = this.logJson.bind(this);
   }
 
   componentWillReceiveProps() {
@@ -31,6 +26,14 @@ class TextEditor extends React.Component {
       // Create a new editor state using the saved content
       this.state = {editorState: EditorState.createWithContent(content)};
     }
+  }
+
+  // Useful for creating seed data. Type in the text editor,
+  // then log the Draft.js content to the console as JSON.
+  logJson() {
+    const rawContent = convertToRaw(this.state.editorState.getCurrentContent());
+    const json = JSON.stringify(rawContent);
+    console.log(json);
   }
 
   render() {
@@ -53,8 +56,6 @@ class TextEditor extends React.Component {
       }
     };
 
-    // debugger;
-
 
     return (
       <div style={styles.editor} onClick={this.focus}>
@@ -73,7 +74,6 @@ class TextEditor extends React.Component {
       </div>
     );
   }
-
 }
 
 export default TextEditor;
