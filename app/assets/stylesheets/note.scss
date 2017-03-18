@@ -1,33 +1,31 @@
-.note {
+.note-container {
+  flex: 1 1 auto; // take up remainder of width
   background-color: #0A0B1A;
-
-  // full height of body
-  display: flex;
-  flex-flow: column;
-
-  // take up the remainder of width
-  flex: 1 1 auto;
-
   margin: 28px 28px 28px 0px;
-
-
   border-radius: 12px;
   border: 1px solid gray;
+}
 
-  justify-content: center;
+.note {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  // max-height: 100%;
+  // justify-content: center;
 }
 
 //////////////////////
 //      HEADER      //
 //////////////////////
 
-.note-header {
-  flex: 0 1 auto;
-  padding: 16px;
-  margin: 12px 0px;
+.note-header-container {
+  width: 100%;
+  // background-color: rgba(255,0,0,0.3);
 }
 
-.note-header-text {
+.note-header {
+  margin: 12px;
   text-align: center;
   font-size: 24px;
   font-weight: 400;
@@ -37,36 +35,67 @@
 //       BODY       //
 //////////////////////
 
-.note-body {
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: row;
+.note-body-container {
+  // background-color: rgba(20,20,155,0.3);
+  height: 100%;
 }
 
-.note-body-sub {
+.note-body {
+  // background-color: rgba(0,255,0,0.3);
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.editor-container-container-container {
+  display: table-cell;
+  width: 50%;
+  padding: 0px 12px;
+}
+
+.editor-container-container {
+  position: relative;
+  height: 100%;
+}
+
+.editor-container {
+  // background-color: rgba(155,155,155,0.5);
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   border: 1px solid gray;
-  width: 50%;
-  padding: 12px;
   font-family: 'Courier New', monospace;
   color: #E3F2FC;
+  text-align: left;
+  max-height: 100%;
 }
 
-#note-body-left {
-  margin: 0px 12px 0px 24px;
+.editor-container * {
+  max-height: inherit;
+  justify-content: center;
+
 }
 
-#note-body-right {
-  margin: 0px 24px 0px 12px;
-}
-
-.text-editor {
-
+.public-DraftEditor-content {
+  min-height: calc(100% - 24px);
+  max-height: calc(100% - 24px);
+  min-width: calc(100% - 24px);
+  max-width: calc(100% - 24px);
+  padding: 12px;
+  overflow: auto;
+  // background-color: rgba(255,0,255,0.5);
+  word-break: break-all;
+  position: absolute;
+  display:block;
 }
 
 //////////////////////
 //      FOOTER      //
 //////////////////////
+
+.note-footer-container {
+  // background-color: rgba(0,0,255,0.3);
+}
 
 .note-footer {
   flex: 0 1 auto;
@@ -100,7 +129,7 @@
 .note-footer-img {
   height: 50px;
   width: 50px;
-  padding: 16px;
+  padding: 14px;
 }
 
 #note-footer-toggle {

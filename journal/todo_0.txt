@@ -1,9 +1,10 @@
 ####################
 ### NOTES FRONT END
 
-log JSON button padding
 TextEditor full width/height of parent div
 make text scrollable L/R and Up/Down
+make NotesIndex scrollable
+make Note scrollable (short window height edge case)
 
 double selecting note index item ?? wtf?
 

@@ -37,7 +37,7 @@ class TextEditor extends React.Component {
   }
 
   logJsonButton() {
-    const showLogJsonButton = true;
+    const showLogJsonButton = false;
     // Change `showLogJsonButton` to `true` to render a button
     // in the text editor that will call `logJson()`
     if (showLogJsonButton) {
@@ -54,9 +54,8 @@ class TextEditor extends React.Component {
 
   render() {
     return (
-      <div onClick={this.focus}>
+      <div onClick={this.focus} className="editor-container">
         <Editor
-          className="text-editor"
           editorState={this.state.editorState}
           onChange={this.onChange}
           placeholder=""
