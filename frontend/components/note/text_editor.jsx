@@ -51,12 +51,13 @@ class TextEditor extends React.Component {
     return (
       <div onClick={this.focus}>
         <Editor
+          className="text-editor"
           editorState={this.state.editorState}
           onChange={this.onChange}
           placeholder=""
           ref="editor"
         />
-      {this.logJsonButton()}
+        {this.logJsonButton()}
       </div>
     );
   }
