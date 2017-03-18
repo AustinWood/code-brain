@@ -1,6 +1,11 @@
 ####################
-### NOTES
+### NOTES FRONT END
+change state on notes_index_item click via reducer
+> setup container
+> setup reducer/selector
 
+####################
+### NOTES
 
 TextEditor full width/height of parent div
 better way to escape quotes in seeds? HERE?

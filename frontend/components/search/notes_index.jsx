@@ -1,5 +1,5 @@
 import React from 'react';
-import NotesIndexItem from './notes_index_item';
+import NotesIndexItemContainer from './notes_index_item_container';
 
 // const notesList = (notes = []) => {
 //   let notesIndexItems = [];
@@ -26,7 +26,7 @@ class NotesIndex extends React.Component {
     const { notes } = this.props;
 
     const noteComponents = notes.map(note => (
-        <NotesIndexItem
+        <NotesIndexItemContainer
           key={ note.id }
           note={ note } />
       )
