@@ -1,3 +1,8 @@
+// export const selectNote = ({ noteDetail }, noteId) => {
+// 	const foundNote = noteDetail.items.find(item => item.id === itemId);
+// 	return foundItem || {};
+// }
+
 export const allNotes = ({ notes }) => Object.keys(notes).map(id => notes[id]);
 
 // export const stepsByTodoId = ({ steps }, todo_id) => {

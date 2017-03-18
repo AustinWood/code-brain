@@ -1,4 +1,5 @@
 import { SET_MODE, ADD_NOTE } from '../actions/navigation_actions';
+import { SELECT_NOTE } from '../actions/notes_index_actions';
 import merge from 'lodash/merge';
 
 const _display = Object.freeze({
@@ -19,6 +20,12 @@ const NavigationReducer = (state = _display, action) => {
         noteId: null
       };
       return merge({}, _display, newState);
+    case SELECT_NOTE:
+      const newState2 = {
+        mode: 'edit',
+        noteId: action.noteId
+      };
+      return merge({}, _display, newState2);
     default:
       return state;
   }

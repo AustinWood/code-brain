@@ -10,10 +10,10 @@ const mapStateToProps = ({ session }) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   addNote: () => dispatch(addNote()),
-  setMode: (mode) => dispatch(setMode(mode))
+  setMode: mode => dispatch(setMode(mode))
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(NavBar);

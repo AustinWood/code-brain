@@ -25,3 +25,4 @@ add css effect to button on demo login
 
 ####################
 ### QUESTIONS
+Is the pattern I follow when passing params to funcs inside {} good? See nav_bar and notes_index_item
