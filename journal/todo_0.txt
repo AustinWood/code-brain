@@ -2,7 +2,7 @@
 ### NOTES
 
 
-full width/height of parent div
+TextEditor full width/height of parent div
 better way to escape quotes in seeds? HERE?
 
 add skeleton + answer to seed data
@@ -17,6 +17,7 @@ mark certain lines as mirrorable
 ####################
 ### OTHER
 https://mattbrictson.com/lightning-fast-sass-reloading-in-rails
+add css effect to button on demo login
 
 ####################
 ### QUESTIONS
