@@ -1,7 +1,9 @@
 ####################
 ### NOTES FRONT END
-change state on notes_index_item click via reducer
-> selector to get current note and pass down instead of demo
+
+notes index hover change pointer to hand
+notes index hover color effect
+move styles out of text_editor.jsx
 
 ####################
 ### NOTES

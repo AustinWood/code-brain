@@ -8,7 +8,7 @@ class Note extends React.Component {
   }
 
   render() {
-    const note = this.props.note;
+    const note = this.props.note || { question: "", skeleton: "", answer: "" };
     const myText = "hey there!";
     return (
       <div className="note">
@@ -22,7 +22,7 @@ class Note extends React.Component {
             <TextEditor json={note.skeleton} />
           </div>
           <div className="note-body-sub" id="note-body-right">
-            <TextEditor json={note.solution} />
+            <TextEditor json={note.answer} />
           </div>
         </div>
 
