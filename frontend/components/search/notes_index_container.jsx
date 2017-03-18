@@ -7,6 +7,7 @@ import { allNotes } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
   notes: allNotes(state),
+  display: state.display,
   errors: state.errors
 });
 

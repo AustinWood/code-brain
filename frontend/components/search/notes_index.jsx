@@ -20,15 +20,18 @@ class NotesIndex extends React.Component {
   componentDidMount() {
     this.props.requestNotes();
   }
-
+//
   render() {
-    // const { todos, createTodo, updateTodo, errors } = this.props;
     const { notes } = this.props;
-
+    let selectedNoteId = null;
+    if (this.props.display.note !== null) {
+      selectedNoteId = this.props.display.note.id;
+    }
     const noteComponents = notes.map(note => (
         <NotesIndexItemContainer
           key={ note.id }
-          note={ note } />
+          note={ note }
+          selected={ selectedNoteId === note.id } />
       )
     );
 

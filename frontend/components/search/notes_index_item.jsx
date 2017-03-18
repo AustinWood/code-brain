@@ -11,8 +11,12 @@ class NotesIndexItem extends React.Component {
   }
 
   render() {
+    // debugger;
     return (
-      <div className="notes-index-item" onClick={this.selectCurrentNote}>
+      <div
+        className="notes-index-item"
+        id={this.props.selected ? "selected-notes-index-item" : ""}
+        onClick={this.selectCurrentNote}>
         <p>{this.props.note.question}</p>
       </div>
     );

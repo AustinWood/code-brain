@@ -1,8 +1,7 @@
 ####################
 ### NOTES FRONT END
 
-notes index hover change pointer to hand
-notes index hover color effect
+color selected note
 display message on initial render (Select a note or CREATE A NEW ONE)
 
 ####################
