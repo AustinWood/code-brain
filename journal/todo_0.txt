@@ -1,7 +1,6 @@
 ####################
 ### NOTES FRONT END
 change state on notes_index_item click via reducer
-> setup container
 > setup reducer/selector
 
 ####################
