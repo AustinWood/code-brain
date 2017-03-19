@@ -1,12 +1,12 @@
 ####################
 ### NOW
 
+Footer to presentational component
+Study footer
+REPL?
+less white, and index highlight
 Add note opens blank state in Note
 Add 'Add' link to Note
-REPL?
-Study footer
-Footer to presentational component
-less white, and index highlight
 
 ####################
 ### NOTES BACK END

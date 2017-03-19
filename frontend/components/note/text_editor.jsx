@@ -19,17 +19,17 @@ class TextEditor extends React.Component {
     this.logJson = this.logJson.bind(this);
   }
 
-  componentDidMount() {
-
-  }
+  // componentDidMount() {
+  //   this.setEditorState();
+  // }
 
   componentWillReceiveProps() {
     this.setEditorState();
   }
 
-  componentDidReceiveProps() {
-    this.setEditorState();
-  }
+  // componentDidReceiveProps() {
+  //   this.setEditorState();
+  // }
 
   setEditorState() {
     if (this.props.json === "") {
@@ -89,5 +89,31 @@ class TextEditor extends React.Component {
     );
   }
 }
+
+// const TextEditor = (state) => {
+//
+//   const editorState = () => {
+//
+//     if (this.props.json === "") {
+//         // If there is no JSON to parse (e.g. on initial load
+//         // or when creating a new note), then start with an empty state
+//         return {editorState: EditorState.createEmpty()};
+//       } else {
+//         // If there is saved JSON, convert it to Draf.js content
+//         const content = convertFromRaw(JSON.parse(this.props.json));
+//         // Create a new editor state using the saved content
+//         return {editorState: EditorState.createWithContent(content)};
+//       }
+//     };
+//
+//   return (
+//     <div className="editor-container">
+//       <Editor
+//         editorState={editorState}
+//         ref="editor"
+//       />
+//     </div>
+//   );
+// };
 
 export default TextEditor;

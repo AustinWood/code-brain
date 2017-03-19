@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchNotes } from '../../actions/note_actions';
-import { selectNote } from '../../actions/navigation_actions';
+import { fetchNotes, receiveNote } from '../../actions/note_actions';
 import { asArray } from '../../reducers/selectors';
 
 import Search from './search';
@@ -19,7 +18,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   requestNotes: () => dispatch(fetchNotes()),
-  selectNote: note => dispatch(selectNote(note))
+  receiveNote: note => dispatch(receiveNote(note))
 });
 
 export default connect(

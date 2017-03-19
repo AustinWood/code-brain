@@ -15,19 +15,19 @@ const NavigationReducer = (state = _display, action) => {
   switch(action.type) {
     case SET_MODE:
       const mode = action.mode;
-      return merge({}, _display, { mode });
+      return merge({}, state, { mode });
     case ADD_NOTE:
       newState = {
         mode: 'add',
         note: null
       };
-      return merge({}, _display, newState);
+      return merge({}, state, newState);
     case SELECT_NOTE:
       newState = {
         mode: 'edit',
         note: action.note
       };
-      return merge({}, _display, newState);
+      return merge({}, state, newState);
     case UPDATE_SKELETON:
       newState = {note: {skeleton: action.json}};
       return merge({}, state, newState);
