@@ -1,5 +1,5 @@
 import React from 'react';
-import TextEditor from './text_editor';
+import TextEditorContainer from './text_editor_container';
 import NoteFooterContainer from './note_footer_container';
 
 class Note extends React.Component {
@@ -66,13 +66,13 @@ class Note extends React.Component {
 
               <div className="editor-container-container-container" id="editor-left">
                 <div className="editor-container-container">
-                  <TextEditor json={note.skeleton} updateParentState={this.updateSkeleton} />
+                  <TextEditorContainer json={note.skeleton} updateParentState={this.updateSkeleton} />
                 </div>
               </div>
 
               <div className="editor-container-container-container" id="editor-right">
                 <div className="editor-container-container">
-                  <TextEditor json={note.answer} updateParentState={this.updateSkeleton} />
+                  <TextEditorContainer json={note.answer} updateParentState={this.updateSkeleton} />
                 </div>
               </div>
 
