@@ -1,7 +1,7 @@
 ####################
 ### NOTES BACK END
 
-create notes_util
+note_container receive note via notes not note
 clicking save saves changes to db
 add error handling to note_actions.jsx
 

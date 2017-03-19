@@ -5,6 +5,7 @@ Add demo user to seeds
 ####################
 ### STYLE
 fix margins on Note without Search sibling
+less-white white
 
 ####################
 ### AUTH
