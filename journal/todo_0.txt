@@ -1,8 +1,8 @@
 ####################
 ### NOW
 
-Restore index header
 Add note opens blank state in Note
+Add 'Add' link to Note
 REPL?
 Study footer
 Footer to presentational component

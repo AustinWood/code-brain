@@ -27,6 +27,10 @@ class TextEditor extends React.Component {
     this.setEditorState();
   }
 
+  componentDidReceiveProps() {
+    this.setEditorState();
+  }
+
   setEditorState() {
     if (this.props.json === "") {
       // If there is no JSON to parse (e.g. on initial load

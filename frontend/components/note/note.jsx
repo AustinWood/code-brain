@@ -107,13 +107,12 @@ class Note extends React.Component {
   }
 
   render() {
-    let note = this.props.note;
-    if (note === null) {
-      if (this.props.mode !== 'add') {
-        return this.nullNoteMessage();
-      }
-      note = {question: "", skeleton: "", answer: ""};
+    if (note === null && this.props.mode !=='add') {
+      return this.nullNoteMessage();
     }
+
+    let note = this.props.note || {question: "", skeleton: "", answer: ""};
+
     return this.renderedNote(note);
   }
 }

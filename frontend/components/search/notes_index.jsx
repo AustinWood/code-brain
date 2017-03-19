@@ -18,7 +18,7 @@ const NotesIndex = ({ notes, selectNote, selectedNoteId }) => (
     <div className="notes-index-container">
       {noteComponents(notes, selectNote, selectedNoteId)}
     </div>
-    
+
   </div>
 );
 
