@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import Note from './note';
 
-const mapStateToProps = (state, { params }) => ({
+const mapStateToProps = (state) => ({
   note: state.display.note
 });
 

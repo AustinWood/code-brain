@@ -5,9 +5,10 @@ import { Editor, EditorState, ContentState,
 class TextEditor extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {editorState: EditorState.createEmpty()};
     this.setEditorState();
     this.focus = () => this.refs.editor.focus();
-    this.onChange = (editorState) => this.setState({editorState});
+    this.onChange = editorState => this.setState({editorState});
     this.logJson = this.logJson.bind(this);
   }
 
@@ -19,12 +20,12 @@ class TextEditor extends React.Component {
     if (this.props.json === "") {
       // If there is no JSON to parse (e.g. on initial load
       // or when creating a new note), then start with an empty state
-      this.state = {editorState: EditorState.createEmpty()};
+      this.setState({editorState: EditorState.createEmpty()});
     } else {
       // If there is saved JSON, convert it to Draf.js content
       const content = convertFromRaw(JSON.parse(this.props.json));
       // Create a new editor state using the saved content
-      this.state = {editorState: EditorState.createWithContent(content)};
+      this.setState({editorState: EditorState.createWithContent(content)});
     }
   }
 
@@ -58,7 +59,6 @@ class TextEditor extends React.Component {
         <Editor
           editorState={this.state.editorState}
           onChange={this.onChange}
-          placeholder=""
           ref="editor"
         />
         {this.logJsonButton()}
