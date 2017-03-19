@@ -7,7 +7,7 @@ const noteComponents = (notes = [], selectNote, selectedNoteId) => {
   console.log(`${selectedNoteId}`);
   return (
     notes.map(note => (
-      
+
       <NotesIndexItem
         note={note}
         key={note.id}

@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-Delete index item container
 Restore index header
 Add note opens blank state in Note
 REPL?
