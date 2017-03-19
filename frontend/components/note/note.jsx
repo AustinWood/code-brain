@@ -2,6 +2,10 @@ import React from 'react';
 import TextEditor from './text_editor';
 
 class Note extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   nullNoteMessage() {
     return (
       <div className="note-container">
