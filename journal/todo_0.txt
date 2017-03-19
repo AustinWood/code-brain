@@ -1,4 +1,11 @@
 ####################
+### NOTES BACK END
+
+create notes_util
+clicking save saves changes to db
+add error handling to note_actions.jsx
+
+####################
 ### NOTES FRONT END
 
 clicking new note button opens blank template
@@ -6,11 +13,6 @@ add link to nullNoteMessage to create new note
 use HERE docs in seeds.rb
 clicking save saves changes to state
 toggle for soft wrap
-
-####################
-### NOTES BACK END
-
-clicking save saves changes to db
 
 ####################
 ### REFACTOR

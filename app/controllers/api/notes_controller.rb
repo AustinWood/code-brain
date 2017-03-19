@@ -23,10 +23,10 @@ class Api::NotesController < ApplicationController
   private
   def note_params
     params.require(:note).permit(
-    :question,
-    :skeleton,
-    :answer,
-    :author_id
+      :question,
+      :skeleton,
+      :answer,
+      :author_id
     )
   end
 end
