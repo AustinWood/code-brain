@@ -32,7 +32,7 @@ class Note extends React.Component {
 
               <div className="editor-container-container-container" id="editor-right">
                 <div className="editor-container-container">
-                  <TextEditor json={note.skeleton} />
+                  <TextEditor json={note.answer} />
                 </div>
               </div>
 
