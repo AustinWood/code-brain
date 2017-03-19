@@ -1,5 +1,4 @@
 import React from 'react';
-import TextEditorContainer from './text_editor_container';
 import TextEditor from './text_editor';
 
 class Note extends React.Component {
