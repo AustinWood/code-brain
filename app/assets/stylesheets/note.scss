@@ -4,6 +4,8 @@
   margin: 28px 28px 28px 0px;
   border-radius: 12px;
   border: 1px solid gray;
+  // display: flex;
+  // justify-content: center;
 }
 
 .note {
@@ -155,8 +157,23 @@
 }
 
 .null-note-message {
+  position: relative;
+  height: 100%;
   text-align: center;
+}
+
+.null-note-message::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 1%;
+  vertical-align: middle;
+}
+
+.null-note-message p {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 24px;
   font-weight: 200;
-  color: gray
+  color: gray;
 }

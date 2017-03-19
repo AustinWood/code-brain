@@ -6,7 +6,9 @@ class Note extends React.Component {
   nullNoteMessage() {
     return (
       <div className="note-container">
-        <p className="null-note-message">Select a note on the left,<br/>or create a new one.</p>
+        <div className="null-note-message">
+          <p>Select a note on the left,<br/>or create a new one.</p>
+        </div>
       </div>
     );
   }
