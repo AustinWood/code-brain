@@ -1,4 +1,15 @@
 ####################
+### NOW
+
+Delete index item container
+Restore index header
+Add note opens blank state in Note
+REPL?
+Study footer
+Footer to presentational component
+less white, and index highlight
+
+####################
 ### NOTES BACK END
 
 clicking save saves changes to db

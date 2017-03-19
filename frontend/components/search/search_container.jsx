@@ -1,16 +1,21 @@
 import { connect } from 'react-redux';
 import { fetchNotes } from '../../actions/note_actions';
 import { selectNote } from '../../actions/navigation_actions';
-
-// import { updateFilter } from '../../actions/filter_actions';
 import { asArray } from '../../reducers/selectors';
 
 import Search from './search';
 
-const mapStateToProps = state => ({
-  notes: asArray(state),
-  display: state.display
-});
+const mapStateToProps = state => {
+  let selectedNoteId = null;
+  if (state.display.note !== null) {
+    selectedNoteId = state.display.note.id;
+  }
+  return {
+    notes: asArray(state),
+    display: state.display,
+    selectedNoteId: selectedNoteId
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   requestNotes: () => dispatch(fetchNotes()),

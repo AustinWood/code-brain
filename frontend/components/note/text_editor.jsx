@@ -9,9 +9,18 @@ class TextEditor extends React.Component {
     this.setEditorState();
     this.focus = () => this.refs.editor.focus();
     // this.onChange = json => this.props.update(this.convertToJson());
-    this.onChange = editorState => this.setState({editorState});
+    this.onChange = editorState => {
+      this.setState({editorState});
+      // this.props.updateParentState(this.convertToJson2({editorState}));
+      console.log("onChange !!!");
+    };
+
     this.convertToJson = this.convertToJson.bind(this);
     this.logJson = this.logJson.bind(this);
+  }
+
+  componentDidMount() {
+
   }
 
   componentWillReceiveProps() {
@@ -37,6 +46,11 @@ class TextEditor extends React.Component {
     const rawContent = convertToRaw(this.state.editorState.getCurrentContent());
     return JSON.stringify(rawContent);
   }
+
+  // convertToJson2(editorState) {
+  //   const rawContent = convertToRaw(editorState);
+  //   return JSON.stringify(rawContent);
+  // }
 
   logJson() {
     console.log(this.convertToJson());

@@ -5,22 +5,32 @@ import NoteFooterContainer from './note_footer_container';
 class Note extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: "",
-      skeleton: "",
-      answer: ""
-    };
+    this.state = {note: null, text: "old"};
     this.handleSave = this.handleSave.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.updateSkeleton = this.updateSkeleton.bind(this);
+  }
+
+  componentWillReceiveProps() {
+    const note = this.props.note;
+    if (note !== null) {
+      this.setState({note: note});
+    }
   }
 
   handleSave() {
-    // debugger;
-    if (this.props.note.id === null) {
-      // this.props.createNote(note);
-    } else {
-      // this.props.updateNote(note);
-    }
+    this.props.updateNote(this.state.note);
+
+    // if (this.props.note.id === null) {
+    //   // this.props.createNote(note);
+    // } else {
+    //   // this.props.updateNote(note);
+    // }
+  }
+
+  updateSkeleton() {
+    this.setState({note: {skeleton: "new text!"}});
+    // this.setState({text: "new!"});
   }
 
   handleDelete() {
@@ -42,6 +52,7 @@ class Note extends React.Component {
   }
 
   renderedNote(note) {
+    // debugger;
     return (
       <div className="note-container">
         <div className="note">
@@ -55,13 +66,13 @@ class Note extends React.Component {
 
               <div className="editor-container-container-container" id="editor-left">
                 <div className="editor-container-container">
-                  <TextEditor json={note.skeleton} />
+                  <TextEditor json={note.skeleton} updateParentState={this.updateSkeleton} />
                 </div>
               </div>
 
               <div className="editor-container-container-container" id="editor-right">
                 <div className="editor-container-container">
-                  <TextEditor json={note.answer} />
+                  <TextEditor json={note.answer} updateParentState={this.updateSkeleton} />
                 </div>
               </div>
 
