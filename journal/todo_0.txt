@@ -1,8 +1,6 @@
 ####################
 ### NOTES FRONT END
 
-double selecting note index item ?? wtf?
-
 clicking new note button opens blank template
 add link to nullNoteMessage to create new note
 use HERE docs in seeds.rb
@@ -27,5 +25,7 @@ add css effect to button on demo login
 
 ####################
 ### QUESTIONS
+
+double selecting note index item
 
 Is the pattern I follow when passing params to funcs inside {} good? See nav_bar and notes_index_item

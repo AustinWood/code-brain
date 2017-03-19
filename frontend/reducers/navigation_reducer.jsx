@@ -16,7 +16,7 @@ const NavigationReducer = (state = _display, action) => {
       return merge({}, _display, { mode });
     case ADD_NOTE:
       const newState = {
-        mode: 'edit',
+        mode: 'add',
         note: null
       };
       return merge({}, _display, newState);
