@@ -1,15 +1,25 @@
-import { RECEIVE_NOTES, RECEIVE_NOTE } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
-const NotesReducer = (oldState = {}, action) => {
-  Object.freeze(oldState);
+import {
+    RECEIVE_NOTES,
+    RECEIVE_NOTE,
+    REMOVE_NOTE
+  } from '../actions/note_actions';
+
+const NotesReducer = (state = {}, action) => {
+  Object.freeze(state);
+  let newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_NOTES:
-      return merge({}, action.notes);
+      return action.notes;
     case RECEIVE_NOTE:
-      return merge({}, oldState, {[action.note.id]: action.note});
+      const newNote = {[action.note.id]: action.note};
+      return merge({}, state, newNote);
+    case REMOVE_NOTE:
+      delete newState[action.id];
+      return newState;
     default:
-      return oldState;
+      return state;
   }
 };
 
