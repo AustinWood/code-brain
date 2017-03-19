@@ -1,14 +1,31 @@
+.notes-index-component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .notes-index-header {
+  flex: 0 1 auto;
   margin: 12px;
   text-align: center;
   font-size: 20px;
   font-weight: 400;
 }
 
+.notes-index-container {
+  flex: 1 1 auto;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.notes-index {
+  // height: 50px;
+}
+
 .notes-index-item {
   background-color: #0A0B1A;
-  padding: 8px 14px;
-  margin: 10px 10px;
+  padding: 8px 10px;
+  margin: 10px 12px;
   border-radius: 12px;
   border: 1px solid gray;
 }

@@ -25,17 +25,13 @@ class Note extends React.Component {
 
               <div className="editor-container-container-container" id="editor-left">
                 <div className="editor-container-container">
-                  <div className="editor-container">
-                    <TextEditor json={note.skeleton} />
-                  </div>
+                  <TextEditor json={note.skeleton} />
                 </div>
               </div>
 
               <div className="editor-container-container-container" id="editor-right">
                 <div className="editor-container-container">
-                  <div className="editor-container">
-                    <TextEditor json={note.answer} />
-                  </div>
+                  <TextEditor json={note.skeleton} />
                 </div>
               </div>
 

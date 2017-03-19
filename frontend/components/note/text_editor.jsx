@@ -54,7 +54,7 @@ class TextEditor extends React.Component {
 
   render() {
     return (
-      <div onClick={this.focus}>
+      <div onClick={this.focus} className="editor-container">
         <Editor
           editorState={this.state.editorState}
           onChange={this.onChange}

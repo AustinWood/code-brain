@@ -36,11 +36,14 @@ class NotesIndex extends React.Component {
     );
 
     return(
-      <div>
+      <div className="notes-index-component">
         <p className="notes-index-header">Showing {notes.length} of {notes.length} notes</p>
-        <ul>
+      <div className="notes-index-container">
+        <ul className="notes-index">
           { noteComponents }
         </ul>
+      </div>
+
       </div>
     );
   }

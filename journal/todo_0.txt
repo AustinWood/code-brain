@@ -1,8 +1,7 @@
 ####################
 ### NOTES FRONT END
 
-make NotesIndex scrollable
-make Note scrollable (short window height edge case)
+center "Select note" text
 
 double selecting note index item ?? wtf?
 
