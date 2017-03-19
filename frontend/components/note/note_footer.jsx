@@ -31,10 +31,10 @@ const NoteFooter = ({ note, createNote, updateNote, deleteNote }) => {
         </div>
 
         <div className="note-footer-right">
-          <button>
+          <button onClick={ handleDelete }>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
           </button>
-          <button>
+          <button onClick={ handleSave }>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
           </button>
         </div>

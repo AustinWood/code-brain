@@ -1,6 +1,6 @@
 import React from 'react';
 import TextEditor from './text_editor';
-import NoteFooter from './note_footer';
+import NoteFooterContainer from './note_footer_container';
 
 class Note extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class Note extends React.Component {
             </div>
           </div>
 
-          <NoteFooter />
+          <NoteFooterContainer />
 
         </div>
       </div>

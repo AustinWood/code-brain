@@ -10,7 +10,6 @@ import NotesIndexItemContainer from './notes_index_item_container';
 // };
 //
 // const NotesIndex = (notes) => {
-//   // debugger;
 //
 // };
 

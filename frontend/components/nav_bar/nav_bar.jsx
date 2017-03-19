@@ -17,7 +17,6 @@ class NavBar extends React.Component {
   }
 
   render() {
-    // debugger;
     const randomNum = Math.ceil(Math.random() * 45) + 2;
 
     return (

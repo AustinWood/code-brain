@@ -2,7 +2,6 @@
 ### NOTES BACK END
 
 clicking save saves changes to db
-move footer to separate file
 add error handling to note_actions.jsx
 
 ####################

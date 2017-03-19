@@ -17,7 +17,13 @@ class Api::NotesController < ApplicationController
   end
 
   def destroy
-
+    @note = Note.find(params[:id])
+    if @note.author_id == current_user.id
+      @note.destroy
+      render json: {}
+    else
+      render json: ["Error deleting note."], status: 404
+    end
   end
 
   private

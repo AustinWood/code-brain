@@ -20,16 +20,16 @@ export const createNote = note => (
   })
 );
 
-export const updateNote = note => {
+export const updateNote = note => (
   $.ajax({
     method: 'PATCH',
     url: `api/notes/${note.id}`
-  });
-};
+  })
+);
 
-export const deleteNote = id => {
+export const deleteNote = id => (
   $.ajax({
     method: 'DELETE',
     url: `api/notes/${id}`
-  });
-};
+  })
+);
