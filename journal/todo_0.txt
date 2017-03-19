@@ -1,8 +1,6 @@
 ####################
 ### NOTES FRONT END
 
-center "Select note" text
-
 double selecting note index item ?? wtf?
 
 clicking new note button opens blank template

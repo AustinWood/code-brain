@@ -36,6 +36,11 @@
 }
 
 #selected-notes-index-item {
-  background-color: #8d4de8;
-  border: 1px solid #E3F2FC;
+  // background-color: #8d4de8;
+  border: 1px solid #3e71e0;
+  background-color: #1A1B25;
+}
+
+#selected-notes-index-item * {
+  color: #f3d132;
 }
