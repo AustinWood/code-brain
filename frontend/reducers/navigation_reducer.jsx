@@ -1,6 +1,8 @@
 import { SET_MODE, ADD_NOTE, SELECT_NOTE } from '../actions/navigation_actions';
 import merge from 'lodash/merge';
 
+import { UPDATE_SKELETON } from '../actions/note_actions';
+
 const _display = Object.freeze({
   mode: 'view',
   note: null,
@@ -9,22 +11,26 @@ const _display = Object.freeze({
 
 const NavigationReducer = (state = _display, action) => {
   Object.freeze(state);
+  let newState;
   switch(action.type) {
     case SET_MODE:
       const mode = action.mode;
       return merge({}, _display, { mode });
     case ADD_NOTE:
-      const newState = {
+      newState = {
         mode: 'add',
         note: null
       };
       return merge({}, _display, newState);
     case SELECT_NOTE:
-      const newState2 = {
+      newState = {
         mode: 'edit',
         note: action.note
       };
-      return merge({}, _display, newState2);
+      return merge({}, _display, newState);
+    case UPDATE_SKELETON:
+      newState = {note: {skeleton: action.json}};
+      return merge({}, state, newState);
     default:
       return state;
   }

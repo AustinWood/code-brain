@@ -8,7 +8,9 @@ class TextEditor extends React.Component {
     this.state = {editorState: EditorState.createEmpty()};
     this.setEditorState();
     this.focus = () => this.refs.editor.focus();
+    // this.onChange = json => this.props.update(this.convertToJson());
     this.onChange = editorState => this.setState({editorState});
+    this.convertToJson = this.convertToJson.bind(this);
     this.logJson = this.logJson.bind(this);
   }
 
@@ -31,10 +33,13 @@ class TextEditor extends React.Component {
 
   // Useful for creating seed data. Type in the text editor,
   // then log the Draft.js content to the console as JSON.
-  logJson() {
+  convertToJson() {
     const rawContent = convertToRaw(this.state.editorState.getCurrentContent());
-    const json = JSON.stringify(rawContent);
-    console.log(json);
+    return JSON.stringify(rawContent);
+  }
+
+  logJson() {
+    console.log(this.convertToJson());
   }
 
   logJsonButton() {

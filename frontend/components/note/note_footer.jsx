@@ -4,6 +4,7 @@ const NoteFooter = ({ note, createNote, updateNote, deleteNote }) => {
 
   // Should this kind of logic be moved to reducer?
   const handleSave = () => {
+    // debugger;
     if (note.id === null) {
       createNote(note);
     } else {
