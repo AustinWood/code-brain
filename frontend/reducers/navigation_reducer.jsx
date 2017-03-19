@@ -1,5 +1,4 @@
-import { SET_MODE, ADD_NOTE } from '../actions/navigation_actions';
-import { SELECT_NOTE } from '../actions/notes_index_actions';
+import { SET_MODE, ADD_NOTE, SELECT_NOTE } from '../actions/navigation_actions';
 import merge from 'lodash/merge';
 
 const _display = Object.freeze({

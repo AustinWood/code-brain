@@ -3,12 +3,12 @@ import React from 'react';
 class NotesIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    // this.selectCurrentNote = this.selectCurrentNote.bind(this);
+    this.selectCurrentNote = this.selectCurrentNote.bind(this);
   }
 
   selectCurrentNote() {
     console.log("clicked!");
-    // this.props.selectNote(this.props.note);
+    this.props.selectNote(this.props.note);
   }
 
   render() {

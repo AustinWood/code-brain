@@ -7,7 +7,6 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     this.props.requestNotes();
   }
 
@@ -15,7 +14,7 @@ class Search extends React.Component {
     const notes = this.props.notes;
     return (
       <div className="search">
-        <NotesIndex notes={notes} />
+        <NotesIndex notes={notes} selectNote={this.props.selectNote} />
       </div>
     );
   }
