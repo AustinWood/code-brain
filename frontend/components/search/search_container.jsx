@@ -1,13 +1,14 @@
-import NotesIndex from './notes_index';
-// import { logout } from '../../actions/session_actions';
-// import { setMode, addNote } from '../../actions/navigation_actions';
 import { connect } from 'react-redux';
 import { fetchNotes } from '../../actions/note_actions';
 
+// import { updateFilter } from '../../actions/filter_actions';
+import { asArray } from '../../reducers/selectors';
+
+import Search from './search';
+
 const mapStateToProps = state => ({
-  notes: state.notes,
-  display: state.display,
-  errors: state.errors
+  notes: asArray(state),
+  display: state.display
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -17,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(NotesIndex);
+)(Search);

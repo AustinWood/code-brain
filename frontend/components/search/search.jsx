@@ -1,12 +1,24 @@
 import React from 'react';
-import NotesIndexContainer from './notes_index_container';
+import NotesIndex from './notes_index';
 
-const Search = () => {
-  return (
-    <div className="search">
-      <NotesIndexContainer />
-    </div>
-  );
-};
+class Search extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    debugger;
+    this.props.requestNotes();
+  }
+
+  render() {
+    const notes = this.props.notes;
+    return (
+      <div className="search">
+        <NotesIndex notes={notes} />
+      </div>
+    );
+  }
+}
 
 export default Search;

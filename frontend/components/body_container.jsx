@@ -1,8 +1,8 @@
 import Body from './body';
 import { connect } from 'react-redux';
 
-const mapStateToProps = ({ display }) => ({
-  mode: display.mode
+const mapStateToProps = state => ({
+  display: state.display
 });
 
 const mapDispatchToProps = dispatch => ({
