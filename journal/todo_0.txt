@@ -1,8 +1,8 @@
 ####################
 ### NOTES BACK END
 
-note_container receive note via notes not note
 clicking save saves changes to db
+move footer to separate file
 add error handling to note_actions.jsx
 
 ####################
@@ -31,3 +31,5 @@ add css effect to button on demo login
 double selecting note index item
 
 Is the pattern I follow when passing params to funcs inside {} good? See nav_bar and notes_index_item
+
+note_footer
