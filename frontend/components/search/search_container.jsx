@@ -6,12 +6,12 @@ import Search from './search';
 
 const mapStateToProps = state => {
   let selectedNoteId = null;
-  if (state.display.note !== null) {
-    selectedNoteId = state.display.note.id;
+  if (state.navigation.note !== null) {
+    selectedNoteId = state.navigation.note.id;
   }
   return {
     notes: asArray(state),
-    display: state.display,
+    navigation: state.navigation,
     selectedNoteId: selectedNoteId
   };
 };

@@ -3,8 +3,8 @@ import { createNote, updateNote, deleteNote } from '../../actions/note_actions';
 import Note from './note';
 
 const mapStateToProps = (state) => ({
-  note: state.display.note,
-  mode: state.display.mode
+  note: state.currentNote,
+  mode: state.navigation.mode
 });
 
 const mapDispatchToProps = dispatch => ({

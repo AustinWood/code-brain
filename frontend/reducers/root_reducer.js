@@ -6,7 +6,7 @@ import NoteDetailReducer from './note_detail_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  display: NavigationReducer,
+  navigation: NavigationReducer,
   notes: NotesReducer,
   currentNote: NoteDetailReducer
 });

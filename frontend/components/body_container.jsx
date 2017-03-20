@@ -2,7 +2,7 @@ import Body from './body';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  display: state.display
+  navigation: state.navigation
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -11,5 +11,5 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(Body);

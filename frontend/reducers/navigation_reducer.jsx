@@ -3,13 +3,13 @@ import merge from 'lodash/merge';
 
 import { UPDATE_SKELETON } from '../actions/note_actions';
 
-const _display = Object.freeze({
+const _navigation = Object.freeze({
   mode: 'view',
   note: null,
   selectedTags: []
 });
 
-const NavigationReducer = (state = _display, action) => {
+const NavigationReducer = (state = _navigation, action) => {
   Object.freeze(state);
   let newState;
   switch(action.type) {
