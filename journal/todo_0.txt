@@ -1,8 +1,6 @@
 ####################
 ### NOW
 
-refactor note.jsx
-refactor text_editor.jsx
 allow edit title, especially on new note
 clicking save saves changes to state
 persist save/update changes to db
