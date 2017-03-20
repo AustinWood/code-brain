@@ -1,8 +1,8 @@
 ####################
 ### NOW
 
+bllue → yellow
 Study footer - edit, run code, reveal answer
-change name of action back to selectNote
 
 Footer to presentational component
 
