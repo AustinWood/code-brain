@@ -4,7 +4,8 @@ import merge from 'lodash/merge';
 const _noteDetail = Object.freeze({
   question: "hello",
   skeleton: "",
-  answer: ""
+  answer: "",
+  id: null
 });
 
 const NoteDetailReducer = (state = _noteDetail, action) => {

@@ -5,10 +5,7 @@ import { asArray } from '../../reducers/selectors';
 import Search from './search';
 
 const mapStateToProps = state => {
-  let selectedNoteId = null;
-  // if (state.navigation.note !== null) {
-  //   selectedNoteId = state.navigation.note.id;
-  // }
+  let selectedNoteId = state.currentNote.id;
   return {
     notes: asArray(state),
     navigation: state.navigation,
