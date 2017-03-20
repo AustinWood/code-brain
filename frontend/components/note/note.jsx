@@ -6,29 +6,34 @@ class Note extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: ""
+      question: "",
+      skeleton: "",
+      answer: "",
     };
-    this.update = this.update.bind(this);
+    this.updateQuestion = this.updateQuestion.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({question: nextProps.note.question});
+    this.setState({
+      question: nextProps.note.question,
+      skeleton: nextProps.note.skeleton,
+      answer: nextProps.note.answer
+    });
   }
 
   render() {
     if (this.props.note.question === null) {
       return this.nullNoteMessage();
     }
-    return this.renderedNote(this.props.note);
+    return this.renderedNote();
   }
 
-  update(e) {
-    console.log('update me');
-    // this.setState({ question: e.target.value });
+  updateQuestion(e) {
     this.props.updateAttr({question: e.target.value});
   }
 
-  renderedNote(note) {
+  renderedNote() {
+    const note = this.props.note;
     return (
       <div className="note-container">
         <div className="note">
@@ -36,7 +41,7 @@ class Note extends React.Component {
           <div className="note-header-container">
             <input type="text"
               value={this.state.question}
-              onChange={this.update}
+              onChange={this.updateQuestion}
               className="note-header" />
           </div>
 
@@ -60,11 +65,11 @@ class Note extends React.Component {
 
           <div className="note-footer-container">
             <NoteFooter
-              noteId={note.id}
+              note={note}
               deleteNote={this.props.deleteNote}
-              footerType={this.props.footerType}
-              saveChanges={this.props.saveChanges}
-              parentState />
+              createNote={this.props.createNote}
+              updateNote={this.props.updateNote}
+              footerType={this.props.footerType} />
           </div>
 
         </div>

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNote, updateNote, deleteNote, saveChanges, updateAttr } from '../../actions/note_actions';
+import { createNote, updateNote, deleteNote, updateAttr } from '../../actions/note_actions';
 import { addNote } from '../../actions/navigation_actions';
 import Note from './note';
 
@@ -13,7 +13,6 @@ const mapDispatchToProps = dispatch => ({
   updateNote: note => dispatch(updateNote(note)),
   deleteNote: id => dispatch(deleteNote(id)),
   addNote: id => dispatch(addNote()),
-  saveChanges: note => dispatch(saveChanges()),
   updateAttr: keyValuePair => dispatch(updateAttr(keyValuePair))
 });
 
