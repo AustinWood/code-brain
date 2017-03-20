@@ -25,3 +25,6 @@ research REPL
 
 ####################
 ### QUESTIONS
+
+update title, etc?
+note actions.. current and all?

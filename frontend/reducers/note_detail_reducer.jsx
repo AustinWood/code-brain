@@ -4,7 +4,8 @@ import { ADD_NOTE } from '../actions/navigation_actions';
 import {
   SELECT_NOTE,
   REMOVE_NOTE,
-  SAVE_CHANGES } from '../actions/note_actions';
+  SAVE_CHANGES,
+  UPDATE_ATTR } from '../actions/note_actions';
 
 const _noteDetail = Object.freeze({
   question: null,
@@ -38,6 +39,8 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
         console.log('not null id');
       }
       return state;
+    case UPDATE_ATTR:
+      return merge({}, state, action.keyValuePair);
     default:
       return state;
   }

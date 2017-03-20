@@ -24,7 +24,8 @@ class Note extends React.Component {
 
   update(e) {
     console.log('update me');
-    this.setState({ question: e.target.value });
+    // this.setState({ question: e.target.value });
+    this.props.updateAttr({question: e.target.value});
   }
 
   renderedNote(note) {
@@ -62,7 +63,8 @@ class Note extends React.Component {
               noteId={note.id}
               deleteNote={this.props.deleteNote}
               footerType={this.props.footerType}
-              saveChanges={this.props.saveChanges} />
+              saveChanges={this.props.saveChanges}
+              parentState />
           </div>
 
         </div>

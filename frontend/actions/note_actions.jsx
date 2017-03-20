@@ -5,6 +5,7 @@ export const RECEIVE_NOTE = "RECEIVE_NOTE";
 export const SELECT_NOTE = "SELECT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const SAVE_CHANGES = "SAVE_CHANGES";
+export const UPDATE_ATTR = "UPDATE_ATTR";
 
 ////////////////////////
 ////////////////////////
@@ -32,6 +33,11 @@ export const removeNote = id => ({
 export const saveChanges = note => ({
   type: SAVE_CHANGES,
   note
+});
+
+export const updateAttr = (keyValuePair) => ({
+  type: UPDATE_ATTR,
+  keyValuePair
 });
 
 ////////////////////////
