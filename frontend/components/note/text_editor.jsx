@@ -5,75 +5,50 @@ import { Editor, EditorState, ContentState,
 class TextEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {editorState: EditorState.createEmpty()};
-    this.setEditorState();
-    this.focus = () => this.refs.editor.focus();
-    // this.onChange = json => this.props.update(this.convertToJson());
-    this.onChange = editorState => {
-      this.setState({editorState});
-      // this.props.updateParentState(this.convertToJson2({editorState}));
-      console.log("onChange !!!");
+    this.state = {
+      editorState: EditorState.createEmpty()
     };
+    this.setEditorState();
+
+    this.focus = () => this.refs.editor.focus();
+    this.onChange = editorState => this.setState({ editorState });
 
     this.convertToJson = this.convertToJson.bind(this);
     this.logJson = this.logJson.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.setEditorState();
-  // }
-
   componentWillReceiveProps() {
     this.setEditorState();
   }
 
-  // componentDidReceiveProps() {
-  //   this.setEditorState();
-  // }
-
   setEditorState() {
-    if (this.props.json === "") {
-      // If there is no JSON to parse (e.g. on initial load
-      // or when creating a new note), then start with an empty state
-      this.setState({editorState: EditorState.createEmpty()});
-    } else {
-      // If there is saved JSON, convert it to Draf.js content
-      const content = convertFromRaw(JSON.parse(this.props.json));
-      // Create a new editor state using the saved content
-      this.setState({editorState: EditorState.createWithContent(content)});
-    }
+    // Convert JSON string to Draf.js content
+    const content = convertFromRaw(JSON.parse(this.props.json));
+    // Create a new editor state using the saved content
+    this.setState({editorState: EditorState.createWithContent(content)});
+  }
+
+  convertToJson(editorState) {
+    const rawContent = convertToRaw(editorState);
+    return JSON.stringify(rawContent);
   }
 
   // Useful for creating seed data. Type in the text editor,
   // then log the Draft.js content to the console as JSON.
-  convertToJson() {
-    const rawContent = convertToRaw(this.state.editorState.getCurrentContent());
-    return JSON.stringify(rawContent);
-  }
-
-  // convertToJson2(editorState) {
-  //   const rawContent = convertToRaw(editorState);
-  //   return JSON.stringify(rawContent);
-  // }
-
   logJson() {
-    console.log(this.convertToJson());
+    const editorState = this.state.editorState.getCurrentContent();
+    console.log(this.convertToJson(editorState));
   }
 
   logJsonButton() {
-    const showLogJsonButton = false;
-    // Change `showLogJsonButton` to `true` to render a button
-    // in the text editor that will call `logJson()`
-    if (showLogJsonButton) {
-      return (
-        <input
-          onClick={this.logJson}
-          type="button"
-          value="Log JSON"
-          style={{marginTop: '20px', color: '#80d135'}}
-        />
-      );
-    }
+    return (
+      <input
+        onClick={this.logJson}
+        type="button"
+        value="Log JSON"
+        style={{marginTop: '20px', color: '#80d135'}}
+      />
+    );
   }
 
   render() {
@@ -84,36 +59,9 @@ class TextEditor extends React.Component {
           onChange={this.onChange}
           ref="editor"
         />
-        {this.logJsonButton()}
       </div>
     );
   }
 }
-
-// const TextEditor = (state) => {
-//
-//   const editorState = () => {
-//
-//     if (this.props.json === "") {
-//         // If there is no JSON to parse (e.g. on initial load
-//         // or when creating a new note), then start with an empty state
-//         return {editorState: EditorState.createEmpty()};
-//       } else {
-//         // If there is saved JSON, convert it to Draf.js content
-//         const content = convertFromRaw(JSON.parse(this.props.json));
-//         // Create a new editor state using the saved content
-//         return {editorState: EditorState.createWithContent(content)};
-//       }
-//     };
-//
-//   return (
-//     <div className="editor-container">
-//       <Editor
-//         editorState={editorState}
-//         ref="editor"
-//       />
-//     </div>
-//   );
-// };
 
 export default TextEditor;
