@@ -1,4 +1,4 @@
-import { SET_MODE, ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH, STUDY } from '../actions/navigation_actions';
+import { ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH, STUDY } from '../actions/navigation_actions';
 import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({
@@ -9,20 +9,15 @@ const NavigationReducer = (state = _navigation, action) => {
   Object.freeze(state);
   let newState;
   switch(action.type) {
-    // case SET_MODE:
-    //   const mode = action.mode;
-    //   return merge({}, state, { mode });
-    // case ADD_NOTE:
-    //   newState = {
-    //     mode: 'add',
-    //     note: null
-    //   };
-    //   return merge({}, state, newState);
+    case ADD_NOTE:
+      newState = { showSearch: true };
+      return merge({}, state, newState);
     case TOGGLE_SEARCH:
-      const showSearch = !(state.showSearch);
-      return merge({}, state, { showSearch: showSearch });
+      newState = { showSearch: !(state.showSearch) };
+      return merge({}, state, newState);
     case STUDY:
-      return merge({}, state, { showSearch: false });
+      newState = { showSearch: !(state.showSearch) };
+      return merge({}, state, newState);
     default:
       return state;
   }

@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-left margin when no Seach component
 Study footer - edit, run code, reveal answer
 add link to nullNoteMessage to create new note
 address setState() warning

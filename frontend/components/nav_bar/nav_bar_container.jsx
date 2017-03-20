@@ -1,6 +1,6 @@
 import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
-import { setMode, addNote, toggleSearch, study } from '../../actions/navigation_actions';
+import { addNote, toggleSearch, study } from '../../actions/navigation_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = ({ session }) => ({
