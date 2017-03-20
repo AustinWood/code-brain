@@ -1,11 +1,12 @@
 ####################
 ### NOW
 
-save edits to skeleton
-save edits to answer
+bug: create multiple times
+
 extract question to presentational component
-clicking save saves changes to state
-persist save/update changes to db
+style question
+highlight text boxes on hover
+> fix logout bug
 verify notes meets MVP, submit for review
 
 ####################

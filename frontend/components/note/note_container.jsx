@@ -6,7 +6,7 @@ import Note from './note';
 const mapStateToProps = (state) => ({
   note: state.currentNote,
   footerType: state.navigation.footerType,
-  authorId: state.session.currentUser.id
+  authorId: state.session.currentUser ? state.session.currentUser.id : null
 });
 
 const mapDispatchToProps = dispatch => ({
