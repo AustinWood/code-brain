@@ -1,15 +1,19 @@
 ####################
 ### NOW
 
-bllue → yellow
+add link to nullNoteMessage to create new note
 Study footer - edit, run code, reveal answer
+Todo refresh
+Prepare questions
+Hackers application
+
+####################
+### LATER
 
 Footer to presentational component
-
+Less white
 REPL?
-less white, and index highlight
 Add note opens blank state in Note
-Add 'Add' link to Note
 
 ####################
 ### NOTES BACK END
@@ -21,7 +25,6 @@ add error handling to note_actions.jsx
 ### NOTES FRONT END
 
 clicking new note button opens blank template
-add link to nullNoteMessage to create new note
 use HERE docs in seeds.rb
 clicking save saves changes to state
 toggle for soft wrap
