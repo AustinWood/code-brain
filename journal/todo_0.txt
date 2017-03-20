@@ -1,6 +1,8 @@
 ####################
 ### NOW
 
+change name of action back to selectNote
+
 Footer to presentational component
 Study footer
 REPL?
