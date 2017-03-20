@@ -5,9 +5,6 @@ import { Editor, EditorState, ContentState,
 class TextEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      editorState: EditorState.createEmpty()
-    };
     this.setEditorState();
 
     this.focus = () => this.refs.editor.focus();
@@ -17,15 +14,28 @@ class TextEditor extends React.Component {
     this.logJson = this.logJson.bind(this);
   }
 
-  componentWillReceiveProps() {
-    this.setEditorState();
+  componentWillReceiveProps(nextProps) {
+    // this.setEditorState();
+
+    if (nextProps.json === null) {
+        this.state = {editorState: EditorState.createEmpty()};
+    } else {
+      // Convert JSON string to Draf.js content
+      const content = convertFromRaw(JSON.parse(nextProps.json));
+      // Create a new editor state using the saved content
+      this.state = ({editorState: EditorState.createWithContent(content)});
+    }
   }
 
   setEditorState() {
-    // Convert JSON string to Draf.js content
-    const content = convertFromRaw(JSON.parse(this.props.json));
-    // Create a new editor state using the saved content
-    this.setState({editorState: EditorState.createWithContent(content)});
+    if (this.props.json === null) {
+        this.state = {editorState: EditorState.createEmpty()};
+    } else {
+      // Convert JSON string to Draf.js content
+      const content = convertFromRaw(JSON.parse(this.props.json));
+      // Create a new editor state using the saved content
+      this.state = ({editorState: EditorState.createWithContent(content)});
+    }
   }
 
   convertToJson(editorState) {

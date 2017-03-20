@@ -19,8 +19,8 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
     case ADD_NOTE:
       newState = {
         question: "",
-        skeleton: "",
-        answer: "",
+        skeleton: null,
+        answer: null,
         id: null
       };
       return merge({}, newState);

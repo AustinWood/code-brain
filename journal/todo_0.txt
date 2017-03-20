@@ -1,7 +1,8 @@
 ####################
 ### NOW
 
-
+@notes = current_user.notes
+verify delete
 
 ####################
 ### EASY
