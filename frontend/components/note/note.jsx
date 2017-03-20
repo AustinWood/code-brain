@@ -49,7 +49,9 @@ class Note extends React.Component {
     return (
       <div className="note-container">
         <div className="null-note-message">
-          <p>Select a note on the left,<br/>or create a new one.</p>
+          <p>Select a note on the left,<br/>
+          <span onClick={ this.props.addNote }>or create a new one.</span>
+          </p>
         </div>
       </div>
     );

@@ -170,10 +170,19 @@
   vertical-align: middle;
 }
 
-.null-note-message p {
+.null-note-message p, span {
   display: inline-block;
   vertical-align: middle;
   font-size: 24px;
   font-weight: 200;
   color: gray;
+}
+
+.null-note-message span {
+  color: #56b2ba;
+}
+
+.null-note-message span:hover {
+  cursor: pointer;
+  color: #0b78e3;
 }

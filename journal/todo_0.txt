@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-render nullNoteMessage on launch
 add link to nullNoteMessage to create new note
 Study footer - edit, run code, reveal answer
 add hover effect to images
