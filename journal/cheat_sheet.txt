@@ -1,2 +1,5 @@
 # Automatic SASS reloading
 bundle exec guard -P livereload
+
+# Precompile
+RAILS_ENV=production bundle exec rake assets:precompile

@@ -1,24 +1,26 @@
 ####################
 ### AUTH
-clear errors on clicking "Already..?" <Link>
-
-####################
-### AUTH
-Put 6 char limit on passwords
-Verify valid email
-
-####################
-### STYLING
-images off-white (gear, user, etc)
+clear errors on click "Already..?"
+put 6 char limit on passwords
+verify valid email
+click anywhere in sesson-input-container to change focus
+custom error messages
+reset state when logging back in
 
 ####################
 ### CREDITS
 https://icons8.com
- - user, password
 
-sync Atom snippets (similar to Facebook addings tags)
+####################
+### FEATURES
 
-If Heroku is showing an old version of my app:
-RAILS_ENV=production bundle exec rake assets:precompile
+Sync Atom snippets (similar to Facebook's use of Draft.js when adding tags in a comment)
 
-mark certain lines as mirrorable for simplified editing
+Mark certain lines as mirrorable for simplified editing
+
+Toggle for line wrap
+
+####################
+### LOCAL HOST OVER IP
+ping
+os x firewall set rule that allows incoming requests to port 3000

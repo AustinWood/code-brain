@@ -1,54 +1,31 @@
 ####################
 ### NOW
 
-address setState() warning
-Todo refresh
-Prepare questions
 Hackers application
 
 ####################
-### LATER
-
-reset state when logging back in
+### EASY
 add hover effect to trash and save
 add hover effect to #play-img in nav_bar
-Footer to presentational component
-Less white
-REPL?
-Add note opens blank state in Note
+refactor notes_index.jsx
 
 ####################
-### NOTES BACK END
-
-clicking save saves changes to db
-add error handling to note_actions.jsx
-
-####################
-### NOTES FRONT END
-
-clicking new note button opens blank template
-use HERE docs in seeds.rb
+### HARD
 clicking save saves changes to state
-toggle for soft wrap
-
-####################
-### REFACTOR
-
-notes_index.jsx
-
-####################
-### OTHER
-
+persist save/update changes to db
+add error handling to note_actions.jsx
 note language button with dropdown and images
-add css effect to button on demo login
+research REPL
 
 ####################
 ### QUESTIONS
 
+# setState() warning (related to next question?)
 # Note index clicks are one behind
     > search_container, note, text_editor
 # Delete does not re-render index
-
-Is the pattern I follow when passing params to funcs inside {} good? See nav_bar and notes_index_item
-
-note_footer
+# Good pattern when passing params to funcs inside {}?
+    > notes_index_item
+# note_footer
+    > extract and pass up save to parent?
+    > or change state?
