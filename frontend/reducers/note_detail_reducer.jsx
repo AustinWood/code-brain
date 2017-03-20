@@ -5,8 +5,7 @@ import {
   SELECT_NOTE,
   REMOVE_NOTE,
   UPDATE_ATTR,
-  createNote,
-  updateNote } from '../actions/note_actions';
+  RECEIVE_NOTE } from '../actions/note_actions';
 
 const _noteDetail = Object.freeze({
   question: null,
@@ -34,6 +33,8 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
       return merge({}, _noteDetail);
     case UPDATE_ATTR:
       return merge({}, state, action.keyValuePair);
+    case RECEIVE_NOTE:
+      return action.note;
     default:
       return state;
   }
