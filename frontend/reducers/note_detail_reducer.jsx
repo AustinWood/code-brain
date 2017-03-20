@@ -3,9 +3,9 @@ import { ADD_NOTE } from '../actions/navigation_actions';
 import merge from 'lodash/merge';
 
 const _noteDetail = Object.freeze({
-  question: "",
-  skeleton: "",
-  answer: "",
+  question: null,
+  skeleton: null,
+  answer: null,
   id: null
 });
 
@@ -17,6 +17,12 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
       newState = action.note;
       return merge({}, state, newState);
     case ADD_NOTE:
+      newState = {
+        question: "",
+        skeleton: "",
+        answer: "",
+        id: null
+      };
       return merge({}, _noteDetail);
     default:
       return state;

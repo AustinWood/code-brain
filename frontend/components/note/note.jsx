@@ -111,13 +111,11 @@ class Note extends React.Component {
   }
 
   render() {
-    if (note === null && this.props.mode !=='add') {
+    if (this.props.note.question === null) {
       return this.nullNoteMessage();
     }
 
-    let note = this.props.note || {question: "", skeleton: "", answer: ""};
-
-    return this.renderedNote(note);
+    return this.renderedNote(this.props.note);
   }
 }
 
