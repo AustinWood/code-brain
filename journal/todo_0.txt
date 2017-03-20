@@ -1,7 +1,9 @@
 ####################
 ### NOW
 
-allow edit title, especially on new note
+save edits to skeleton
+save edits to answer
+extract question to presentational component
 clicking save saves changes to state
 persist save/update changes to db
 verify notes meets MVP, submit for review
@@ -9,7 +11,6 @@ verify notes meets MVP, submit for review
 ####################
 ### EASY
 
-add hover effect to trash and save
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
 confirm delete
@@ -21,7 +22,7 @@ cursor color when editing
 
 add error handling to note_actions.jsx
 note language button with dropdown and images
-research REPL
+research REPL => see js#eval()
 
 ####################
 ### QUESTIONS

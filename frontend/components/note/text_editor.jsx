@@ -6,12 +6,11 @@ class TextEditor extends React.Component {
   constructor(props) {
     super(props);
     this.setEditorState(props.json);
-
     this.focus = () => this.refs.editor.focus();
-    this.onChange = editorState => this.setState({ editorState });
 
     this.convertToJson = this.convertToJson.bind(this);
     this.logJson = this.logJson.bind(this);
+    this.updateGlobalState = this.updateGlobalState.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,16 +28,24 @@ class TextEditor extends React.Component {
     }
   }
 
+  updateGlobalState(editorState) {
+    this.setState({ editorState });
+    const key = this.props.attrKey;
+    const val = this.convertToJson(editorState);
+    let newState = {};
+    newState[key] = val;
+    this.props.updateAttr(newState);
+  }
+
   convertToJson(editorState) {
-    const rawContent = convertToRaw(editorState);
+    const rawContent = convertToRaw(editorState.getCurrentContent());
     return JSON.stringify(rawContent);
   }
 
   // Useful for creating seed data. Type in the text editor,
   // then log the Draft.js content to the console as JSON.
   logJson() {
-    const editorState = this.state.editorState.getCurrentContent();
-    console.log(this.convertToJson(editorState));
+    console.log(this.convertToJson());
   }
 
   logJsonButton() {
@@ -57,7 +64,7 @@ class TextEditor extends React.Component {
       <div onClick={this.focus} className="editor-container">
         <Editor
           editorState={this.state.editorState}
-          onChange={this.onChange}
+          onChange={this.updateGlobalState}
           ref="editor"
         />
       </div>

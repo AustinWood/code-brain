@@ -62,11 +62,3 @@ export const deleteNote = noteId => dispatch => (
     .then(() => dispatch(removeNote(noteId)))
     .then(errors => ({ type: "RECEIVE_ERRORS", errors }))
 );
-
-////////////////////////
-////////////////////////
-
-export const updateSkeleton = json => ({
-  type: UPDATE_SKELETON,
-  json
-});

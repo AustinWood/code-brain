@@ -50,13 +50,13 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-left">
                 <div className="editor-cc">
-                  <TextEditor json={note.skeleton} />
+                  <TextEditor json={note.skeleton} updateAttr={this.props.updateAttr} attrKey="skeleton" />
                 </div>
               </div>
 
               <div className="editor-ccc" id="editor-right">
                 <div className="editor-cc">
-                  <TextEditor json={note.answer} />
+                  <TextEditor json={note.answer} updateAttr={this.props.updateAttr} attrKey="answer" />
                 </div>
               </div>
 
