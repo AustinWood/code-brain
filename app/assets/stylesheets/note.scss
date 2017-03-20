@@ -97,6 +97,7 @@
   overflow: auto;
   // background-color: rgba(255,0,255,0.5);
   word-break: keep-all;
+  word-wrap: normal;
   position: absolute;
   display:block;
 }
@@ -155,6 +156,36 @@
 #note-footer-save {
 
 }
+
+.note-footer-study {
+  flex: 0 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 30px;
+  margin: 4px 0px 6px 0px;
+}
+
+.note-footer-button {
+  border-radius: 12px;
+  border: 1px solid #E3F2FC;
+  height: 42px;
+  padding: 7px 18px;
+  margin: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.note-footer-button:hover {
+  cursor: pointer;
+  background-color: #1A1B25;
+}
+
+//////////////////////
+// NULLNOTE MESSAGE //
+//////////////////////
 
 .null-note-message {
   position: relative;

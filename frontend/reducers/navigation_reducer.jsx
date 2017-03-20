@@ -2,7 +2,8 @@ import { ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH, STUDY } from '../actions/navigati
 import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({
-  showSearch: true
+  showSearch: true,
+  noteFooterType: 'edit' // edit, ask, answer
 });
 
 const NavigationReducer = (state = _navigation, action) => {
@@ -10,13 +11,22 @@ const NavigationReducer = (state = _navigation, action) => {
   let newState;
   switch(action.type) {
     case ADD_NOTE:
-      newState = { showSearch: true };
+      newState = {
+        showSearch: true,
+        noteFooterType: 'edit'
+      };
       return merge({}, state, newState);
     case TOGGLE_SEARCH:
-      newState = { showSearch: !(state.showSearch) };
+      newState = {
+        showSearch: !(state.showSearch),
+        noteFooterType: 'edit'
+      };
       return merge({}, state, newState);
     case STUDY:
-      newState = { showSearch: !(state.showSearch) };
+      newState = {
+        showSearch: false,
+        noteFooterType: 'ask'
+      };
       return merge({}, state, newState);
     default:
       return state;
