@@ -16,7 +16,7 @@ export const createNote = note => (
   $.ajax({
     method: 'POST',
     url: `api/notes`,
-    data: { note }
+    data: {note}
   })
 );
 

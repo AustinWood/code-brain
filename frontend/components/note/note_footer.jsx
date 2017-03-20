@@ -1,4 +1,5 @@
 import React from 'react';
+import merge from 'lodash/merge';
 
 class NoteFooter extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class NoteFooter extends React.Component {
 
   handleSave() {
     if (this.props.note.id === null) {
-      this.props.createNote(this.props.note);
+      const newNote = merge({}, this.props.note, {author_id: this.props.authorId});
+      this.props.createNote(newNote);
     } else {
       this.props.updateNote(this.props.note);
     }

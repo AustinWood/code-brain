@@ -69,7 +69,8 @@ class Note extends React.Component {
               deleteNote={this.props.deleteNote}
               createNote={this.props.createNote}
               updateNote={this.props.updateNote}
-              footerType={this.props.footerType} />
+              footerType={this.props.footerType}
+              authorId={this.props.authorId} />
           </div>
 
         </div>

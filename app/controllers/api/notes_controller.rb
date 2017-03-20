@@ -11,6 +11,7 @@ class Api::NotesController < ApplicationController
 
   def create
     @note = Note.create!(note_params)
+    render json: @note
   end
 
   def update
