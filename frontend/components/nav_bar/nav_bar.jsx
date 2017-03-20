@@ -4,16 +4,6 @@ import { Link, withRouter } from 'react-router';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.view = this.view.bind(this);
-    this.study = this.study.bind(this);
-  }
-
-  view() {
-    this.props.setMode('view');
-  }
-
-  study() {
-    this.props.setMode('study');
   }
 
   render() {
@@ -23,7 +13,7 @@ class NavBar extends React.Component {
       <div className="nav-bar">
 
         <div className="nav-left">
-          <button onClick={this.view}>
+          <button onClick={this.props.toggleSearch}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png"} className="nav-img" />
           </button>
           <button onClick={this.props.addNote}>

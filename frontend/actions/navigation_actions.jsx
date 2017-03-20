@@ -15,3 +15,11 @@ export const selectNote = note => ({
   type: SELECT_NOTE,
   note
 });
+
+///// NEW ACTIONS
+
+export const TOGGLE_SEARCH = "TOGGLE_SEARCH";
+
+export const toggleSearch = () => ({
+  type: TOGGLE_SEARCH,
+});

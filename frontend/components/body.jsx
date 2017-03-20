@@ -12,7 +12,7 @@ class Body extends React.Component {
   }
 
   search() {
-    if (this.props.navigation.mode === "view" || this.props.navigation.mode === "edit") {
+    if (this.props.navigation.showSearch) {
       return (<SearchContainer />);
     }
   }

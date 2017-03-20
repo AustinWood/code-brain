@@ -1,6 +1,6 @@
 import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
-import { setMode, addNote } from '../../actions/navigation_actions';
+import { setMode, addNote, toggleSearch } from '../../actions/navigation_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = ({ session }) => ({
@@ -10,7 +10,7 @@ const mapStateToProps = ({ session }) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   addNote: () => dispatch(addNote()),
-  setMode: mode => dispatch(setMode(mode))
+  toggleSearch: () => dispatch(toggleSearch())
 });
 
 export default connect(
