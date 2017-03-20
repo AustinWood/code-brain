@@ -14,7 +14,7 @@ class NoteFooter extends React.Component {
     if (this.props.footerType === "ask") {
       return askFooter();
     } else {
-      return editFooter(this.handleDelete);
+      return editFooter(this.handleDelete, this.props.saveChanges);
     }
   }
 }
@@ -25,7 +25,7 @@ export default NoteFooter;
 ///// EDIT FOOTER /////
 ///////////////////////
 
-const editFooter = (handleDelete) => (
+const editFooter = (handleDelete, saveChanges) => (
   <div className="note-footer">
 
     <div className="note-footer-repl">
@@ -39,7 +39,7 @@ const editFooter = (handleDelete) => (
       <button onClick={handleDelete}>
         <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
       </button>
-      <button>
+      <button onClick={saveChanges}>
         <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
       </button>
     </div>

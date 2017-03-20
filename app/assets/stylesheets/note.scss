@@ -27,10 +27,11 @@
 }
 
 .note-header {
-  margin: 18px 12px;
+  padding: 18px 12px;
   text-align: center;
   font-size: 24px;
   font-weight: 400;
+  width: 100%;
 }
 
 //////////////////////
@@ -155,6 +156,14 @@
 
 #note-footer-save {
 
+}
+
+#note-footer-trash:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490037200/trash_filled_ajlxej.png');
+}
+
+#note-footer-save:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490037200/save_filled_gxlmok.png');
 }
 
 .note-footer-study {

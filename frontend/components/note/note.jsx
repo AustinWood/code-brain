@@ -5,6 +5,14 @@ import NoteFooter from './note_footer';
 class Note extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      question: ""
+    };
+    this.update = this.update.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({question: nextProps.note.question});
   }
 
   render() {
@@ -14,13 +22,21 @@ class Note extends React.Component {
     return this.renderedNote(this.props.note);
   }
 
+  update(e) {
+    console.log('update me');
+    this.setState({ question: e.target.value });
+  }
+
   renderedNote(note) {
     return (
       <div className="note-container">
         <div className="note">
 
           <div className="note-header-container">
-            <p className="note-header">{note.question}</p>
+            <input type="text"
+              value={this.state.question}
+              onChange={this.update}
+              className="note-header" />
           </div>
 
           <div className="note-body-container">
@@ -45,7 +61,8 @@ class Note extends React.Component {
             <NoteFooter
               noteId={note.id}
               deleteNote={this.props.deleteNote}
-              footerType={this.props.footerType} />
+              footerType={this.props.footerType}
+              saveChanges={this.props.saveChanges} />
           </div>
 
         </div>

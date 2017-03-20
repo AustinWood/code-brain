@@ -1,6 +1,10 @@
-import { SELECT_NOTE, REMOVE_NOTE } from '../actions/note_actions';
-import { ADD_NOTE } from '../actions/navigation_actions';
 import merge from 'lodash/merge';
+
+import { ADD_NOTE } from '../actions/navigation_actions';
+import {
+  SELECT_NOTE,
+  REMOVE_NOTE,
+  SAVE_CHANGES } from '../actions/note_actions';
 
 const _noteDetail = Object.freeze({
   question: null,
@@ -26,6 +30,14 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
       return merge({}, newState);
     case REMOVE_NOTE:
       return merge({}, _noteDetail);
+    case SAVE_CHANGES:
+      console.log(state);
+      if (state.id === null) {
+        console.log('null id');
+      } else {
+        console.log('not null id');
+      }
+      return state;
     default:
       return state;
   }
