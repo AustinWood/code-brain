@@ -23,7 +23,7 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
         answer: "",
         id: null
       };
-      return merge({}, _noteDetail);
+      return merge({}, newState);
     default:
       return state;
   }
