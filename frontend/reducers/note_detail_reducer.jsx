@@ -1,4 +1,4 @@
-import { SELECT_NOTE } from '../actions/note_actions';
+import { SELECT_NOTE, REMOVE_NOTE } from '../actions/note_actions';
 import { ADD_NOTE } from '../actions/navigation_actions';
 import merge from 'lodash/merge';
 
@@ -24,6 +24,8 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
         id: null
       };
       return merge({}, newState);
+    case REMOVE_NOTE:
+      return merge({}, _noteDetail);
     default:
       return state;
   }

@@ -1,6 +1,7 @@
 ####################
 ### NOW
 
+null note after delete
 move footer to presentational component
 
 ####################
