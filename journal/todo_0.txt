@@ -1,8 +1,6 @@
 ####################
 ### NOW
 
-Study footer - edit, run code, reveal answer
-add hover effect to images
 address setState() warning
 Todo refresh
 Prepare questions
@@ -11,6 +9,9 @@ Hackers application
 ####################
 ### LATER
 
+reset state when logging back in
+add hover effect to trash and save
+add hover effect to #play-img in nav_bar
 Footer to presentational component
 Less white
 REPL?
