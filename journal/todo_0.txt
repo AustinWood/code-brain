@@ -1,8 +1,8 @@
 ####################
 ### NOW
 
-Study footer - edit, run code, reveal answer
 add link to nullNoteMessage to create new note
+Study footer - edit, run code, reveal answer
 address setState() warning
 Todo refresh
 Prepare questions
