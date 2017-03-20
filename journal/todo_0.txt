@@ -1,10 +1,10 @@
 ####################
 ### NOW
 
-add link to nullNoteMessage to create new note
-fix selectedNoteId in search_container.jsx
 left margin when no Seach component
 Study footer - edit, run code, reveal answer
+add link to nullNoteMessage to create new note
+address setState() warning
 Todo refresh
 Prepare questions
 Hackers application
