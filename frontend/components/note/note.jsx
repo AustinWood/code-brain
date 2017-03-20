@@ -1,18 +1,11 @@
 import React from 'react';
 import TextEditor from './text_editor';
-import NoteFooterContainer from './note_footer_container';
-// const Repl = require('react-repl');
-
-// require('brace/mode/javascript');
-// require('brace/theme/monokai');
+import NoteFooter from './note_footer';
 
 class Note extends React.Component {
   constructor(props) {
     super(props);
     this.state = {note: null, text: "old"};
-    this.handleSave = this.handleSave.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
-    this.updateSkeleton = this.updateSkeleton.bind(this);
   }
 
   componentWillReceiveProps() {
@@ -22,27 +15,19 @@ class Note extends React.Component {
     }
   }
 
-  handleSave() {
-    this.props.updateNote(this.state.note);
-
-    // if (this.props.note.id === null) {
-    //   // this.props.createNote(note);
-    // } else {
-    //   // this.props.updateNote(note);
-    // }
-  }
+  // handleSave() {
+  //   this.props.updateNote(this.state.note);
+  //
+  //   // if (this.props.note.id === null) {
+  //   //   // this.props.createNote(note);
+  //   // } else {
+  //   //   // this.props.updateNote(note);
+  //   // }
+  // }
 
   updateSkeleton() {
     this.setState({note: {skeleton: "new text!"}});
     // this.setState({text: "new!"});
-  }
-
-  handleDelete() {
-    if (this.props.note.id === null) {
-      // close component
-    } else {
-      this.props.deleteNote(this.props.note.id);
-    }
   }
 
   nullNoteMessage() {
@@ -71,13 +56,13 @@ class Note extends React.Component {
 
               <div className="editor-container-container-container" id="editor-left">
                 <div className="editor-container-container">
-                  <TextEditor json={note.skeleton} updateParentState={this.updateSkeleton} />
+                  <TextEditor json={note.skeleton} />
                 </div>
               </div>
 
               <div className="editor-container-container-container" id="editor-right">
                 <div className="editor-container-container">
-                  <TextEditor json={note.answer} updateParentState={this.updateSkeleton} />
+                  <TextEditor json={note.answer} />
                 </div>
               </div>
 
@@ -85,52 +70,15 @@ class Note extends React.Component {
           </div>
 
           <div className="note-footer-container">
-            {this.noteFooter()}
+            <NoteFooter
+              noteId={note.id}
+              deleteNote={this.props.deleteNote}
+              footerType={this.props.footerType} />
           </div>
 
         </div>
       </div>
     );
-  }
-
-  noteFooter() {
-    if (this.props.noteFooterType === 'edit') {
-      return (
-        <div className="note-footer">
-
-          <div className="note-footer-repl">
-            <p className="note-footer-repl-text">REPL :</p>
-            <button>
-              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
-            </button>
-          </div>
-
-          <div className="note-footer-right">
-            <button onClick={ this.handleDelete }>
-              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
-            </button>
-            <button onClick={ this.handleSave }>
-              <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
-            </button>
-          </div>
-
-        </div>
-      );
-    } else {
-      return (
-        <div className="note-footer-study">
-
-          <div className="note-footer-button" onClick={this.props.study}>
-            <p className="note-footer-text">Run Code</p>
-          </div>
-
-          <div className="note-footer-button" onClick={this.props.study}>
-            <p className="note-footer-text">Reveal Answer</p>
-          </div>
-
-        </div>
-      );
-    }
   }
 
   render() {

@@ -1,48 +1,66 @@
 import React from 'react';
 
-const NoteFooter = ({ note, createNote, updateNote, deleteNote }) => {
+class NoteFooter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
-  // Should this kind of logic be moved to reducer?
-  const handleSave = () => {
-    // debugger;
-    if (note.id === null) {
-      createNote(note);
+  handleDelete() {
+    this.props.deleteNote(this.props.noteId);
+  }
+
+  render() {
+    if (this.props.footerType === "ask") {
+      return askFooter();
     } else {
-      updateNote(note);
+      return editFooter(this.handleDelete);
     }
-  };
-
-  const handleDelete = () => {
-    if (note.id === null) {
-      // close component
-    } else {
-      deleteNote(note.id);
-    }
-  };
-
-  return (
-    <div className="note-footer-container">
-      <div className="note-footer">
-
-        <div className="note-footer-repl">
-          <p className="note-footer-repl-text">REPL :</p>
-          <button>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
-          </button>
-        </div>
-
-        <div className="note-footer-right">
-          <button onClick={ handleDelete }>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
-          </button>
-          <button onClick={ handleSave }>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
-          </button>
-        </div>
-
-      </div>
-    </div>
-  );
-};
+  }
+}
 
 export default NoteFooter;
+
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+
+const editFooter = (handleDelete) => (
+  <div className="note-footer">
+
+    <div className="note-footer-repl">
+      <p className="note-footer-repl-text">REPL :</p>
+      <button>
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
+      </button>
+    </div>
+
+    <div className="note-footer-right">
+      <button onClick={handleDelete}>
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
+      </button>
+      <button>
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
+      </button>
+    </div>
+
+  </div>
+);
+
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+
+const askFooter = () => (
+  <div className="note-footer-study">
+
+    <div className="note-footer-button">
+      <p className="note-footer-text">Run Code</p>
+    </div>
+
+    <div className="note-footer-button">
+      <p className="note-footer-text">Reveal Answer</p>
+    </div>
+
+  </div>
+);

@@ -2,10 +2,16 @@
 ### NOW
 
 move footer to presentational component
+refactor note.jsx
+refactor text_editor.jsx
 allow edit title, especially on new note
+clicking save saves changes to state
+persist save/update changes to db
+verify notes meets MVP, submit for review
 
 ####################
 ### EASY
+
 add hover effect to trash and save
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
@@ -14,8 +20,7 @@ confirm delete
 
 ####################
 ### HARD
-clicking save saves changes to state
-persist save/update changes to db
+
 add error handling to note_actions.jsx
 note language button with dropdown and images
 research REPL

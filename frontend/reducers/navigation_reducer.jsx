@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({
   showSearch: true,
-  noteFooterType: 'edit' // edit, ask, answer
+  footerType: 'edit' // edit, ask, answer
 });
 
 const NavigationReducer = (state = _navigation, action) => {
@@ -13,19 +13,19 @@ const NavigationReducer = (state = _navigation, action) => {
     case ADD_NOTE:
       newState = {
         showSearch: true,
-        noteFooterType: 'edit'
+        footerType: 'edit'
       };
       return merge({}, state, newState);
     case TOGGLE_SEARCH:
       newState = {
         showSearch: !(state.showSearch),
-        noteFooterType: 'edit'
+        footerType: 'edit'
       };
       return merge({}, state, newState);
     case STUDY:
       newState = {
         showSearch: false,
-        noteFooterType: 'ask'
+        footerType: 'ask'
       };
       return merge({}, state, newState);
     default:
