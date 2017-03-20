@@ -1,8 +1,8 @@
 ####################
 ### NOW
 
-null note after delete
 move footer to presentational component
+allow edit title, especially on new note
 
 ####################
 ### EASY
