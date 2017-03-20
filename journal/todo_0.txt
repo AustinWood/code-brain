@@ -1,14 +1,15 @@
 ####################
 ### NOW
 
-@notes = current_user.notes
-verify delete
+move footer to presentational component
 
 ####################
 ### EASY
 add hover effect to trash and save
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
+confirm delete
+@notes = current_user.notes
 
 ####################
 ### HARD
@@ -20,13 +21,3 @@ research REPL
 
 ####################
 ### QUESTIONS
-
-# setState() warning (related to next question?)
-# Note index clicks are one behind
-    > search_container, note, text_editor
-# Delete does not re-render index
-# Good pattern when passing params to funcs inside {}?
-    > notes_index_item
-# note_footer
-    > extract and pass up save to parent?
-    > or change state?
