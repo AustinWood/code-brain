@@ -7,7 +7,7 @@ class NotesIndexItem extends React.Component {
   }
 
   selectCurrentNote() {
-    this.props.receiveNote(this.props.note);
+    this.props.selectNote(this.props.note);
   }
 
   render() {

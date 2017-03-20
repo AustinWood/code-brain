@@ -1,6 +1,10 @@
 import React from 'react';
 import TextEditorContainer from './text_editor_container';
 import NoteFooterContainer from './note_footer_container';
+// const Repl = require('react-repl');
+
+// require('brace/mode/javascript');
+// require('brace/theme/monokai');
 
 class Note extends React.Component {
   constructor(props) {

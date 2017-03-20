@@ -2,6 +2,7 @@ import * as NoteApiUtil from '../util/note_api_util';
 
 export const RECEIVE_NOTES = "RECEIVE_NOTES";
 export const RECEIVE_NOTE = "RECEIVE_NOTE";
+export const SELECT_NOTE = "SELECT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const UPDATE_SKELETON = "UPDATE_SKELETON";
 
@@ -15,6 +16,11 @@ export const receiveNotes = notes => ({
 
 export const receiveNote = note => ({
   type: RECEIVE_NOTE,
+  note
+});
+
+export const selectNote = note => ({
+  type: SELECT_NOTE,
   note
 });
 

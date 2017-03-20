@@ -17,7 +17,7 @@ class Search extends React.Component {
 
         <NotesIndex
           notes={notes}
-          receiveNote={this.props.receiveNote}
+          selectNote={this.props.selectNote}
           selectedNoteId={this.props.selectedNoteId} />
 
       </div>

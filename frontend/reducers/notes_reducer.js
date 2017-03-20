@@ -11,9 +11,9 @@ const NotesReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_NOTES:
       return action.notes;
-    // case RECEIVE_NOTE:
-    //   const newNote = {[action.note.id]: action.note};
-    //   return merge({}, state, newNote);
+    case RECEIVE_NOTE:
+      const newNote = {[action.note.id]: action.note};
+      return merge({}, state, newNote);
     case REMOVE_NOTE:
       delete newState[action.id];
       return newState;
