@@ -21,7 +21,7 @@ class NavBar extends React.Component {
           </button>
         </div>
 
-        <button onClick={this.study}>
+        <button onClick={this.props.study}>
           <div className="nav-center">
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} className="play-img" />
             <p className="due-text">{randomNum} notes due</p>
