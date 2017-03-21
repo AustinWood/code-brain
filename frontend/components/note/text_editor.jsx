@@ -17,9 +17,21 @@ class TextEditor extends React.Component {
     this.setEditorState(nextProps.json);
   }
 
+////////////////////////
+/////  PLAIN TEXT  /////
+////////////////////////
+
+
+//////////////////
+/////  JSON  /////
+//////////////////
+
   setEditorState(json) {
-    if (json === null) {
-        this.state = {editorState: EditorState.createEmpty()};
+    if (this.props.attrKey === "question") {
+      const content = ContentState.createFromText(json);
+      this.state = ({editorState: EditorState.createWithContent(content)});
+    } else if (json === null) {
+      this.state = {editorState: EditorState.createEmpty()};
     } else {
       // Convert JSON string to Draf.js content
       const content = convertFromRaw(JSON.parse(json));

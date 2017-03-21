@@ -1,13 +1,14 @@
 ####################
 ### NOW
 
-bug: create multiple times
+wrap title
+verify notes meets MVP
+push to Heroku and seed
+submit for review
 
 extract question to presentational component
 style question
 highlight text boxes on hover
-> fix logout bug
-verify notes meets MVP, submit for review
 
 ####################
 ### EASY

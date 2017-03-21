@@ -2,6 +2,9 @@ import React from 'react';
 import TextEditor from './text_editor';
 import NoteFooter from './note_footer';
 
+import { Editor, EditorState, ContentState,
+         convertFromRaw, convertToRaw } from 'draft-js';
+
 class Note extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +22,14 @@ class Note extends React.Component {
       skeleton: nextProps.note.skeleton,
       answer: nextProps.note.answer
     });
+    this.resizeTextArea();
+  }
+
+  resizeTextArea() {
+    const textArea = document.getElementById('textarea');
+    if (textArea) {
+      textArea.css({'height':'auto','overflow-y':'hidden'}).height(textArea.scrollHeight);
+    }
   }
 
   render() {
@@ -31,7 +42,12 @@ class Note extends React.Component {
   updateQuestion(e) {
     this.props.updateAttr({question: e.target.value});
   }
-
+  // <input
+  //   type="text"
+  //   value={this.state.question}
+  //   onChange={this.updateQuestion}
+  //   className="note-header"
+  //   id="textarea" />
   renderedNote() {
     const note = this.props.note;
     return (
@@ -39,9 +55,10 @@ class Note extends React.Component {
         <div className="note">
 
           <div className="note-header-container">
-            <input type="text"
-              value={this.state.question}
-              onChange={this.updateQuestion}
+            <TextEditor
+              json={note.question}
+              updateAttr={this.props.updateAttr}
+              attrKey="question"
               className="note-header" />
           </div>
 
