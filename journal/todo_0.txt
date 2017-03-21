@@ -1,19 +1,19 @@
 ####################
 ### NOW
 
-confirm delete
-logout dropdown tooltip
-don't allow title editing during study
+randomize notes
 
 ####################
 ### CODE_REVIEW
 
-randomize notes
+logout dropdown tooltip
+don't allow title editing during study
 prepare for code review
 
 ####################
 ### EASY
 
+confirm delete
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
 @notes = current_user.notes

@@ -5,6 +5,7 @@ export const RECEIVE_NOTE = "RECEIVE_NOTE";
 export const SELECT_NOTE = "SELECT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const UPDATE_ATTR = "UPDATE_ATTR";
+export const NEXT_QUESTION = "NEXT_QUESTION";
 
 ////////////////////////
 ////////////////////////
@@ -62,3 +63,25 @@ export const deleteNote = noteId => dispatch => (
     .then(() => dispatch(removeNote(noteId)))
     .then(errors => ({ type: "RECEIVE_ERRORS", errors }))
 );
+
+////////////////////////
+////////////////////////
+
+export const selectById = id => dispatch => (
+  NoteApiUtil.fetchNote(id)
+    .then(note => dispatch(selectNote(note)))
+);
+
+export const nextQuestion = () => (dispatch, getState) => {
+  const state = getState();
+  const dueNotes = state.study.dueNotes;
+  console.log("IN NEXT QUESTION");
+  console.log(dueNotes);
+  const nextNote = state.notes[dueNotes[0]];
+  dispatch(selectNote(nextNote));
+  dispatch(revealNextQuestion());
+};
+
+export const revealNextQuestion = () => ({
+  type: NEXT_QUESTION
+});

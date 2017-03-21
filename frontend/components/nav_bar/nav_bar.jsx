@@ -7,8 +7,6 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const randomNum = Math.ceil(Math.random() * 45) + 2;
-    console.log(this.props.dueNotesCount);
     return (
       <div className="nav-bar">
 
@@ -23,7 +21,7 @@ class NavBar extends React.Component {
 
         <div className="nav-center" onClick={this.props.nextQuestion}>
           <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} id="play-img" />
-          <p className="due-text">{this.props.dueNotesCount} notes due</p>
+          <p className="due-text">{this.props.dueNotes.length} notes due</p>
         </div>
 
         <div className="nav-right">

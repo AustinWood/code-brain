@@ -1,6 +1,7 @@
 import {
   ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH,
-  STUDY, REVEAL_ANSWER, NEXT_QUESTION } from '../actions/navigation_actions';
+  STUDY, REVEAL_ANSWER } from '../actions/navigation_actions';
+import { NEXT_QUESTION } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({

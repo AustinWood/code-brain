@@ -1,5 +1,5 @@
-import { STUDY, REVEAL_ANSWER, NEXT_QUESTION } from '../actions/navigation_actions';
-import { RECEIVE_NOTES } from '../actions/note_actions';
+import { STUDY, REVEAL_ANSWER } from '../actions/navigation_actions';
+import { RECEIVE_NOTES, NEXT_QUESTION } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
 const _study = Object.freeze({
@@ -35,9 +35,11 @@ const NavigationReducer = (state = _study, action) => {
       };
       return merge({}, state, newState);
     case NEXT_QUESTION:
-      // POP OFF THE FIRST note
+      console.log("next question in study reducer");
+      let arr = state.dueNotes;
+      arr.shift();
       newState = {
-        // dueNotes: []
+        dueNotes: arr
       };
       return merge({}, state, newState);
     default:

@@ -1,11 +1,12 @@
 import NavBar from './nav_bar';
 import { logout } from '../../actions/session_actions';
-import { addNote, toggleSearch, nextQuestion } from '../../actions/navigation_actions';
+import { addNote, toggleSearch } from '../../actions/navigation_actions';
+import { nextQuestion } from '../../actions/note_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  dueNotesCount: state.study.dueNotes.length
+  dueNotes: state.study.dueNotes
 });
 
 const mapDispatchToProps = dispatch => ({
