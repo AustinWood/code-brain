@@ -1,0 +1,127 @@
+.note-footer-container {
+  // background-color: rgba(0,0,255,0.3);
+}
+
+.note-footer {
+  flex: 0 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 0px 30px;
+  margin: 4px 0px 6px 0px;
+}
+
+.note-footer-repl {
+  flex: 0 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.note-footer-right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.note-footer-repl-text {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.note-footer-img {
+  height: 42px;
+  width: 42px;
+  padding: 14px;
+}
+
+#note-footer-toggle {
+
+}
+
+#note-footer-trash {
+  padding-right: 24px;
+}
+
+#note-footer-save {
+
+}
+
+#note-footer-trash:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490037200/trash_filled_ajlxej.png');
+}
+
+#note-footer-save:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490037200/save_filled_gxlmok.png');
+}
+
+.note-footer-study {
+  flex: 0 1 auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 30px;
+  margin: 4px 0px 6px 0px;
+}
+
+.note-footer-button {
+  border-radius: 12px;
+  border: 1px solid #E3F2FC;
+  height: 42px;
+  padding: 7px 18px;
+  margin: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.note-footer-button:hover {
+  cursor: pointer;
+  background-color: #1A1B25;
+}
+
+.note-footer-answer {
+  flex: 0 1 auto;
+  padding: 0px 60px;
+  margin: 4px 0px 6px 0px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.answer-centered {
+  max-width: 550px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.note-footer-answer p {
+  font-size: 18px;
+  font-weight: 200;
+  margin-right: 40px;
+}
+
+#face-1:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490102446/face-1-filled_lqcibh.png');
+}
+
+#face-2:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490101922/face-2-filled_dty5pr.png');
+}
+
+#face-3:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490101923/face-3-filled_map5hr.png');
+}
+
+#face-4:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490101922/face-4-filled_ltipty.png');
+}
+
+#face-5:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490101923/face-5-filled_fspc0a.png');
+}

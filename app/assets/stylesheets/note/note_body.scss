@@ -1,0 +1,63 @@
+.note-body-container {
+  // background-color: rgba(20,20,155,0.3);
+  height: 100%;
+}
+
+.note-body {
+  // background-color: rgba(0,255,0,0.3);
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.editor-ccc {
+  display: table-cell;
+  width: 50%;
+}
+
+#editor-left {
+  padding-left: 16px;
+  padding-right: 8px;
+}
+
+#editor-right {
+  padding-left: 8px;
+  padding-right: 16px;
+}
+
+.editor-cc {
+  position: relative;
+  height: 100%;
+}
+
+.editor-container {
+  // background-color: rgba(155,155,155,0.5);
+  background-color: #1A1B25;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid gray;
+  font-family: 'Courier New', monospace;
+  color: #E3F2FC;
+  text-align: left;
+  max-height: 100%;
+}
+
+.editor-container * {
+  max-height: inherit;
+  justify-content: center;
+}
+
+.public-DraftEditor-content {
+  min-height: calc(100% - 24px);
+  max-height: calc(100% - 24px);
+  min-width: calc(100% - 24px);
+  max-width: calc(100% - 24px);
+  padding: 6px 10px;
+  margin: 6px 2px;
+  overflow: auto;
+  word-break: keep-all;
+  word-wrap: normal;
+  position: absolute;
+  display:block;
+}
