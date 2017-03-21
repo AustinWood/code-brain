@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-highlight text boxes on select
 clicking 'run code' can add a line of '>' to console
 confirm delete
 don't allow title editing during study
@@ -32,7 +31,4 @@ add error handling to note_actions.jsx
 
 how to select random note on nextQuestion() ?
 should I have multiple footer files?
-~~~~~~
-update title, etc?
-saveChanges combines create and update?
 note actions.. current and all?
