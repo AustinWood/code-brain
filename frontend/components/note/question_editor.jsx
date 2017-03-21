@@ -33,24 +33,6 @@ class QuestionEditor extends React.Component {
     this.props.updateAttr(newState);
   }
 
-  // Useful for creating seed data. Type in the text editor,
-  // then log the Draft.js content to the console as JSON.
-  logJson() {
-    console.log(this.convertToJson(this.state.editorState));
-  }
-
-  logJsonButton() {
-    return (
-      <input
-        onClick={this.logJson}
-        type="button"
-        value="Log JSON"
-        style={{marginTop: '20px', color: '#80d135'}}
-      />
-    );
-  }
-
-  // {this.logJsonButton()}
   render() {
     if (this.props.attrKey === "question") {
       return (

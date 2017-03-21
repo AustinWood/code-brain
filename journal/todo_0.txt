@@ -2,13 +2,6 @@
 ### NOW
 
 ~~~~~~
-extract code from old commit
-extract question to presentational component
-add edit button which renders to input
-add done button to input
-  ~ or ~
-divide TextEditor into two versions - code and question
-~~~~~~
 verify notes meets MVP
 push to Heroku and seed
 verify all features on Heroku
