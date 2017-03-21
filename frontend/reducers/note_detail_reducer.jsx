@@ -5,7 +5,8 @@ import {
   SELECT_NOTE,
   REMOVE_NOTE,
   UPDATE_ATTR,
-  RECEIVE_NOTE } from '../actions/note_actions';
+  RECEIVE_NOTE,
+  LOG_CODE } from '../actions/note_actions';
 
 const _noteDetail = Object.freeze({
   question: null,
@@ -37,6 +38,11 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
       return action.note;
     case STUDY:
       // return action.note;
+      return state;
+    case LOG_CODE:
+      // return action.note;
+      console.log("in LOG_CODE");
+      console.log(action.result);
       return state;
     default:
       return state;

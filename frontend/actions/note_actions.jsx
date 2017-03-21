@@ -6,6 +6,8 @@ export const SELECT_NOTE = "SELECT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const UPDATE_ATTR = "UPDATE_ATTR";
 export const NEXT_QUESTION = "NEXT_QUESTION";
+export const RUN_CODE = "RUN_CODE";
+export const LOG_CODE = "LOG_CODE";
 
 ////////////////////////
 ////////////////////////
@@ -75,8 +77,6 @@ export const selectById = id => dispatch => (
 export const nextQuestion = () => (dispatch, getState) => {
   const state = getState();
   const dueNotes = state.study.dueNotes;
-  console.log("IN NEXT QUESTION");
-  console.log(dueNotes);
   const nextNote = state.notes[dueNotes[0]];
   dispatch(selectNote(nextNote));
   dispatch(revealNextQuestion());
@@ -84,4 +84,21 @@ export const nextQuestion = () => (dispatch, getState) => {
 
 export const revealNextQuestion = () => ({
   type: NEXT_QUESTION
+});
+
+////////////////////////
+////////////////////////
+
+export const runCode = () => (dispatch, getState) => {
+  console.log("running code in note_actions ...");
+  const state = getState();
+  const draftObj = state.currentNote.skeleton;
+  const plainText = "2 + 9";
+  const result = eval(plainText);
+  dispatch(logCode(result));
+};
+
+export const logCode = (result) => ({
+  type: LOG_CODE,
+  result
 });

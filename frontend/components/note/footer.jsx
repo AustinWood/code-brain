@@ -69,7 +69,7 @@ class Footer extends React.Component {
     return (
       <div className="note-footer-study">
 
-        <div className="note-footer-button">
+        <div className="note-footer-button" onClick={this.props.runCode}>
           <p className="note-footer-text">Run Code</p>
         </div>
 

@@ -1,7 +1,9 @@
 ####################
 ### NOW
 
-randomize notes
+create runCode action
+call runCode on button press, pass in plain text
+in note_detail_reducer update console
 
 ####################
 ### CODE_REVIEW
@@ -19,11 +21,13 @@ refactor notes_index.jsx
 @notes = current_user.notes
 cursor color when editing
 add RECEIVE_NOTE.note.id to study.dueNotes if new
+reset state on login
+https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
+set scrollbar type (force browsers to render similarly?)
 
 ####################
 ### HARD
 
-research REPL => see js#eval()
 note language button with dropdown and images
 add error handling to note_actions.jsx
 

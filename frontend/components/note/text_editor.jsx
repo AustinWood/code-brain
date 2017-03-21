@@ -27,6 +27,20 @@ class TextEditor extends React.Component {
       const content = convertFromRaw(JSON.parse(json));
       // Create a new editor state using the saved content
       this.state = ({editorState: EditorState.createWithContent(content)});
+
+
+
+      const plainText = this.state.editorState.getCurrentContent().getPlainText();
+      try {
+        console.log("~~~~~~~~~~~");
+        // console.log(plainText);
+        console.log(eval(plainText));
+      } catch (e) {
+        console.log('failed');
+      } finally {
+        // console.log('finally');
+      }
+
     }
   }
 
