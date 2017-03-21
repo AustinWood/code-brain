@@ -25,21 +25,17 @@ const NavigationReducer = (state = _navigation, action) => {
         footerType: 'edit'
       };
       return merge({}, state, newState);
-    case STUDY:
-      newState = {
-        showSearch: false,
-        footerType: 'ask'
-      };
-      return merge({}, state, newState);
     case REVEAL_ANSWER:
       console.log("in REVEAL_ANSWER");
       newState = {
+        showSearch: false,
         footerType: 'answer'
       };
       return merge({}, state, newState);
     case NEXT_QUESTION:
       console.log("in NEXT_QUESTION");
       newState = {
+        showSearch: false,
         footerType: 'ask'
       };
       return merge({}, state, newState);
