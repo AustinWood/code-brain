@@ -2,7 +2,7 @@ import React from 'react';
 import { Editor, EditorState, ContentState,
          convertFromRaw, convertToRaw } from 'draft-js';
 
-class TextEditor extends React.Component {
+class QuestionEditor extends React.Component {
   constructor(props) {
     super(props);
     this.setEditorState(props.json);
@@ -14,12 +14,35 @@ class TextEditor extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setEditorState(nextProps.json);
+    this.parseProps(nextProps.json);
+    // this.setEditorState(nextProps.json);
+  }
+
+////////////////////////
+/////  PLAIN TEXT  /////
+////////////////////////
+
+
+//////////////////
+/////  JSON  /////
+//////////////////
+
+  parseProps(props) {
+    try {
+      var jsonObject = JSON.parse(props);
+      this.setEditorState(props);
+    } catch(e) {
+      const content = ContentState.createFromText(props);
+      this.state = ({editorState: EditorState.createWithContent(content)});
+    }
   }
 
   setEditorState(json) {
-    if (json === null) {
-        this.state = {editorState: EditorState.createEmpty()};
+    if (this.props.attrKey === "question") {
+      const content = ContentState.createFromText(json);
+      this.state = ({editorState: EditorState.createWithContent(content)});
+    } else if (json === null) {
+      this.state = {editorState: EditorState.createEmpty()};
     } else {
       // Convert JSON string to Draf.js content
       const content = convertFromRaw(JSON.parse(json));
@@ -31,7 +54,12 @@ class TextEditor extends React.Component {
   updateGlobalState(editorState) {
     this.setState({ editorState });
     const key = this.props.attrKey;
-    const val = this.convertToJson(editorState);
+    let val;
+    if (this.props.attrKey === "question") {
+      val = this.convertToJson(editorState);
+    } else {
+      val = editorState.getCurrentContent().getPlainText(editorState);
+    }
     let newState = {};
     newState[key] = val;
     this.props.updateAttr(newState);
@@ -61,6 +89,17 @@ class TextEditor extends React.Component {
 
   // {this.logJsonButton()}
   render() {
+    if (this.props.attrKey === "question") {
+      return (
+        <div onClick={this.focus} className="editor-question-container">
+          <Editor
+            editorState={this.state.editorState}
+            onChange={this.updateGlobalState}
+            ref="editor"
+          />
+        </div>
+      );
+    }
     return (
       <div onClick={this.focus} className="editor-container">
         <Editor
@@ -73,4 +112,4 @@ class TextEditor extends React.Component {
   }
 }
 
-export default TextEditor;
+export default QuestionEditor;

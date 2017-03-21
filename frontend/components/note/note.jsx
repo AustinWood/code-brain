@@ -1,5 +1,6 @@
 import React from 'react';
 import TextEditor from './text_editor';
+import QuestionEditor from './question_editor';
 import FooterContainer from './footer_container';
 
 import { Editor, EditorState, ContentState,
@@ -53,7 +54,7 @@ class Note extends React.Component {
 
           <div className="note-header-container">
               <div className="editor-cc">
-            <TextEditor
+            <QuestionEditor
               json={note.question}
               updateAttr={this.props.updateAttr}
               attrKey="question"
@@ -66,13 +67,19 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-left">
                 <div className="editor-cc">
-                  <TextEditor json={note.skeleton} updateAttr={this.props.updateAttr} attrKey="skeleton" />
+                  <TextEditor
+                    json={note.skeleton}
+                    updateAttr={this.props.updateAttr}
+                    attrKey="skeleton" />
                 </div>
               </div>
 
               <div className="editor-ccc" id="editor-right">
                 <div className="editor-cc">
-                  <TextEditor json={answer} updateAttr={this.props.updateAttr} attrKey="answer" />
+                  <TextEditor
+                    json={answer}
+                    updateAttr={this.props.updateAttr}
+                    attrKey="answer" />
                 </div>
               </div>
 
