@@ -55,7 +55,7 @@ class Note extends React.Component {
           <div className="note-header-container">
               <div className="editor-cc">
             <QuestionEditor
-              json={note.question}
+              question={note.question}
               updateAttr={this.props.updateAttr}
               attrKey="question"
               className="note-header" />

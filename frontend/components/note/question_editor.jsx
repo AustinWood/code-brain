@@ -5,48 +5,21 @@ import { Editor, EditorState, ContentState,
 class QuestionEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.setEditorState(props.json);
+    this.setEditorState(props.question);
     this.focus = () => this.refs.editor.focus();
-
-    this.convertToJson = this.convertToJson.bind(this);
-    this.logJson = this.logJson.bind(this);
     this.updateGlobalState = this.updateGlobalState.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.parseProps(nextProps.json);
-    // this.setEditorState(nextProps.json);
+    this.setEditorState(nextProps.question);
   }
 
-////////////////////////
-/////  PLAIN TEXT  /////
-////////////////////////
 
-
-//////////////////
-/////  JSON  /////
-//////////////////
-
-  parseProps(props) {
-    try {
-      var jsonObject = JSON.parse(props);
-      this.setEditorState(props);
-    } catch(e) {
-      const content = ContentState.createFromText(props);
-      this.state = ({editorState: EditorState.createWithContent(content)});
-    }
-  }
-
-  setEditorState(json) {
-    if (this.props.attrKey === "question") {
-      const content = ContentState.createFromText(json);
-      this.state = ({editorState: EditorState.createWithContent(content)});
-    } else if (json === null) {
-      this.state = {editorState: EditorState.createEmpty()};
+  setEditorState(plainText) {
+    if (plainText === null) {
+        this.state = {editorState: EditorState.createEmpty()};
     } else {
-      // Convert JSON string to Draf.js content
-      const content = convertFromRaw(JSON.parse(json));
-      // Create a new editor state using the saved content
+      const content = ContentState.createFromText(plainText);
       this.state = ({editorState: EditorState.createWithContent(content)});
     }
   }
@@ -54,20 +27,10 @@ class QuestionEditor extends React.Component {
   updateGlobalState(editorState) {
     this.setState({ editorState });
     const key = this.props.attrKey;
-    let val;
-    if (this.props.attrKey === "question") {
-      val = this.convertToJson(editorState);
-    } else {
-      val = editorState.getCurrentContent().getPlainText(editorState);
-    }
+    const val = editorState.getCurrentContent().getPlainText();
     let newState = {};
     newState[key] = val;
     this.props.updateAttr(newState);
-  }
-
-  convertToJson(editorState) {
-    const rawContent = convertToRaw(editorState.getCurrentContent());
-    return JSON.stringify(rawContent);
   }
 
   // Useful for creating seed data. Type in the text editor,
