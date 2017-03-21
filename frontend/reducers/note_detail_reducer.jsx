@@ -36,7 +36,8 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
     case RECEIVE_NOTE:
       return action.note;
     case STUDY:
-      return action.note;
+      // return action.note;
+      return state;
     default:
       return state;
   }

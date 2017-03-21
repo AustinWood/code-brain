@@ -2,7 +2,6 @@
 ### NOW
 
 ~~~~~~
-verify notes meets MVP
 push to Heroku and seed
 verify all features on Heroku
 submit for review
