@@ -23,7 +23,6 @@ class Footer extends React.Component {
   }
 
   render() {
-    return this.answerFooter();
     if (this.props.footerType === "ask") {
       return this.askFooter();
     } else if (this.props.footerType === "answer") {
@@ -103,11 +102,11 @@ class Footer extends React.Component {
       <div className="note-footer-answer">
         <div className="answer-centered">
           <p>How well did you<br/>know this answer?</p>
-          <img src={faceUrls[0]} className="note-footer-img" id="face-1" />
-          <img src={faceUrls[1]} className="note-footer-img" id="face-2" />
-          <img src={faceUrls[2]} className="note-footer-img" id="face-3" />
-          <img src={faceUrls[3]} className="note-footer-img" id="face-4" />
-          <img src={faceUrls[4]} className="note-footer-img" id="face-5" />
+          <div onClick={this.props.nextQuestion}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
+          <div onClick={this.props.nextQuestion}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
+          <div onClick={this.props.nextQuestion}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
+          <div onClick={this.props.nextQuestion}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
+          <div onClick={this.props.nextQuestion}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
         </div>
       </div>
     );

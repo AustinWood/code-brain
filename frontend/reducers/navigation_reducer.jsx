@@ -31,11 +31,13 @@ const NavigationReducer = (state = _navigation, action) => {
       };
       return merge({}, state, newState);
     case REVEAL_ANSWER:
+      console.log("in REVEAL_ANSWER");
       newState = {
         footerType: 'answer'
       };
       return merge({}, state, newState);
     case NEXT_QUESTION:
+      console.log("in NEXT_QUESTION");
       newState = {
         footerType: 'ask'
       };
