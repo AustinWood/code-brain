@@ -10,7 +10,7 @@ class Footer extends React.Component {
   }
 
   handleDelete() {
-    this.props.deleteNote(this.props.noteId);
+    this.props.deleteNote(this.props.note.id);
   }
 
   handleSave() {

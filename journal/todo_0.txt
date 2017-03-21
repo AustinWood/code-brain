@@ -2,7 +2,11 @@
 ### NOW
 
 ~~~~~~
-clicking 'study' and 'nextAnswer' should randomize notes
+fix create/update/delete
+verify notes meets MVP
+push to Heroku and seed
+verify all features on Heroku
+submit for review
 ~~~~~~
 extract code from old commit
 extract question to presentational component
@@ -11,11 +15,8 @@ add done button to input
   ~ or ~
 divide TextEditor into two versions - code and question
 ~~~~~~
-fix create/update/delete
-verify notes meets MVP
-push to Heroku and seed
-verify all features on Heroku
-submit for review
+clicking 'study' and 'nextAnswer' should randomize notes
+clicking 'run code' can add a line of '>' to console
 ~~~~~~
 prepare for code review
 ~~~~~~
