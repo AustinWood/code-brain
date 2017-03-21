@@ -5,6 +5,8 @@ images off-white (gear, user, etc)
 hover sesson-input-container → change bg color
 add css effect to button on demo login
 style for Firefox and Safari
+  > Gage said it's something about only Chrome
+    auto setting div flex height's to 100% (?)
 
 ####################
 ### CLEANUP
