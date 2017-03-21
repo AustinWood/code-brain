@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-clicking 'run code' can add a line of '>' to console
 confirm delete
 don't allow title editing during study
 

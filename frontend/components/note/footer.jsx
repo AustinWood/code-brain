@@ -36,15 +36,16 @@ class Footer extends React.Component {
   ///// EDIT FOOTER /////
   ///////////////////////
 
+  // <p className="note-footer-repl-text">REPL :</p>
+  // <button>
+  //   <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
+  // </button>
   editFooter() {
     return (
       <div className="note-footer">
 
         <div className="note-footer-repl">
-          <p className="note-footer-repl-text">REPL :</p>
-          <button>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
-          </button>
+
         </div>
 
         <div className="note-footer-right">

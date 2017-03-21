@@ -6,6 +6,7 @@ const App = ({ children }) => (
   <div className="app">
     <NavBarContainer />
     <BodyContainer />
+
     { children }
   </div>
 );

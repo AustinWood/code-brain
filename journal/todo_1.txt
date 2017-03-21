@@ -16,6 +16,7 @@ DRY: receive errors in session_actions and deleteNote
 ####################
 ### FEATURES
 
+re-add REPL toggle
 
 ####################
 ### SEEDS
