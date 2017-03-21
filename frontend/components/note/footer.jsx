@@ -113,7 +113,4 @@ class Footer extends React.Component {
   }
 }
 
-// How well did you know this answer?
-// Onlick to advance ONLY (pre-MVP)
-
 export default Footer;

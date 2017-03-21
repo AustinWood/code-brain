@@ -73,7 +73,7 @@ class TextEditor extends React.Component {
   // Useful for creating seed data. Type in the text editor,
   // then log the Draft.js content to the console as JSON.
   logJson() {
-    console.log(this.convertToJson());
+    console.log(this.convertToJson(this.state.editorState));
   }
 
   logJsonButton() {
@@ -87,6 +87,7 @@ class TextEditor extends React.Component {
     );
   }
 
+  // {this.logJsonButton()}
   render() {
     if (this.props.attrKey === "question") {
       return (

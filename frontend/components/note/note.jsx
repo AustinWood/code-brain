@@ -35,20 +35,17 @@ class Note extends React.Component {
   render() {
     if (this.props.note.question === null) {
       return this.nullNoteMessage();
+    } else if (this.props.footerType === 'ask') {
+      return this.renderedNote("{\"entityMap\":{},\"blocks\":[{\"key\":\"6ks1t\",\"text\":\"> \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}]}");
     }
-    return this.renderedNote();
+    return this.renderedNote(this.props.note.answer);
   }
 
   updateQuestion(e) {
     this.props.updateAttr({question: e.target.value});
   }
-  // <input
-  //   type="text"
-  //   value={this.state.question}
-  //   onChange={this.updateQuestion}
-  //   className="note-header"
-  //   id="textarea" />
-  renderedNote() {
+  
+  renderedNote(answer) {
     const note = this.props.note;
     return (
       <div className="note-container">
@@ -75,7 +72,7 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-right">
                 <div className="editor-cc">
-                  <TextEditor json={note.answer} updateAttr={this.props.updateAttr} attrKey="answer" />
+                  <TextEditor json={answer} updateAttr={this.props.updateAttr} attrKey="answer" />
                 </div>
               </div>
 
