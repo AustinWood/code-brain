@@ -1,7 +1,7 @@
 import React from 'react';
 import merge from 'lodash/merge';
 
-class NoteFooter extends React.Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
@@ -30,7 +30,7 @@ class NoteFooter extends React.Component {
   }
 }
 
-export default NoteFooter;
+export default Footer;
 
 ///////////////////////
 ///// EDIT FOOTER /////

@@ -1,6 +1,6 @@
 import React from 'react';
 import TextEditor from './text_editor';
-import NoteFooter from './note_footer';
+import Footer from './footer';
 
 import { Editor, EditorState, ContentState,
          convertFromRaw, convertToRaw } from 'draft-js';
@@ -83,7 +83,7 @@ class Note extends React.Component {
           </div>
 
           <div className="note-footer-container">
-            <NoteFooter
+            <Footer
               note={note}
               deleteNote={this.props.deleteNote}
               createNote={this.props.createNote}
