@@ -62,17 +62,19 @@ class TextEditor extends React.Component {
   }
 
   onFocus() {
-    console.log("onFocus");
+    const key = this.props.attrKey;
+    $("#" + key).css( "background-color", "#1A1B25" );
   }
 
   onBlur() {
-    console.log("onBlur");
+    const key = this.props.attrKey;
+    $("#" + key).css( "background-color", "#0A0B1A" );
   }
 
   // {this.logJsonButton()}
   render() {
     return (
-      <div onClick={this.focus} className="editor-container">
+      <div onClick={this.focus} className="editor-container" id={this.props.attrKey}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}

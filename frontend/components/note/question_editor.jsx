@@ -7,7 +7,10 @@ class QuestionEditor extends React.Component {
     super(props);
     this.setEditorState(props.question);
     this.focus = () => this.refs.editor.focus();
+
     this.updateGlobalState = this.updateGlobalState.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -33,14 +36,25 @@ class QuestionEditor extends React.Component {
     this.props.updateAttr(newState);
   }
 
+  onFocus() {
+    const key = this.props.attrKey;
+    $("#" + key).css( "background-color", "#1A1B25" );
+  }
+
+  onBlur() {
+    const key = this.props.attrKey;
+    $("#" + key).css( "background-color", "#0A0B1A" );
+  }
+
   render() {
     return (
-      <div onClick={this.focus} className="editor-question-container">
+      <div onClick={this.focus} className="editor-question-container" id={this.props.attrKey}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
           ref="editor"
-        />
+          onFocus={this.onFocus}
+          onBlur={this.onBlur} />
       </div>
     );
   }
