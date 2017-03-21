@@ -26,6 +26,7 @@ export const revealAnswer = () => ({
   type: REVEAL_ANSWER
 });
 
-export const nextQuestion = () => ({
-  type: NEXT_QUESTION
+export const nextQuestion = note => ({
+  type: NEXT_QUESTION,
+  note
 });

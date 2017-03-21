@@ -1,22 +1,24 @@
 ####################
 ### NOW
 
+~~~~~~
+clicking 'study' and 'nextAnswer' should randomize notes
+~~~~~~
 extract code from old commit
 extract question to presentational component
 add edit button which renders to input
 add done button to input
-~~~
+  ~ or ~
 divide TextEditor into two versions - code and question
-~~~
+~~~~~~
+fix create/update/delete
 verify notes meets MVP
 push to Heroku and seed
 verify all features on Heroku
 submit for review
-~~~
+~~~~~~
 prepare for code review
-~~~
-hide answer during study until 'reveal answer'
-clicking 'study' and 'nextAnswer' should randomize notes
+~~~~~~
 
 ####################
 ### EASY
@@ -39,6 +41,8 @@ research REPL => see js#eval()
 ####################
 ### QUESTIONS
 
+how to select random note on nextQuestion() ?
+~~~~~~
 update title, etc?
 saveChanges combines create and update?
 note actions.. current and all?

@@ -44,7 +44,7 @@ class Note extends React.Component {
   updateQuestion(e) {
     this.props.updateAttr({question: e.target.value});
   }
-  
+
   renderedNote(answer) {
     const note = this.props.note;
     return (

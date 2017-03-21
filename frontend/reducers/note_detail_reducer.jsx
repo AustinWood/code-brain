@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import { ADD_NOTE } from '../actions/navigation_actions';
+import { ADD_NOTE, STUDY } from '../actions/navigation_actions';
 import {
   SELECT_NOTE,
   REMOVE_NOTE,
@@ -34,6 +34,8 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
     case UPDATE_ATTR:
       return merge({}, state, action.keyValuePair);
     case RECEIVE_NOTE:
+      return action.note;
+    case STUDY:
       return action.note;
     default:
       return state;
