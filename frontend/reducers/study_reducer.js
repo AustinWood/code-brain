@@ -13,13 +13,21 @@ const NavigationReducer = (state = _study, action) => {
     case RECEIVE_NOTES:
       const idStrs = Object.keys(action.notes);
       const idInts = idStrs.map(el => parseInt(el, 10));
+      console.log(idInts);
       return {dueNotes: idInts};
     case STUDY:
-      // grab all note id's and shuffle
-      newState = {
-        // dueNotes: []
+      console.log(state.dueNotes);
+      let shuffle = (a) => {
+          for (let i = a.length; i; i--) {
+              let j = Math.floor(Math.random() * i);
+              [a[i - 1], a[j]] = [a[j], a[i - 1]];
+          }
+          return a;
       };
-      return merge({}, state, newState);
+      const shuffled = shuffle(state.dueNotes);
+      console.log(shuffled);
+      return {dueNotes: shuffled};
+      // return merge({}, state, newState);
     case REVEAL_ANSWER:
       // i dont't think this reducer should do anything for this action..?
       newState = {

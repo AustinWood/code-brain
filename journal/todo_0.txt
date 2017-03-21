@@ -18,6 +18,7 @@ add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
 @notes = current_user.notes
 cursor color when editing
+add RECEIVE_NOTE.note.id to study.dueNotes if new
 
 ####################
 ### HARD
