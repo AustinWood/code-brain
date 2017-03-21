@@ -1,23 +1,26 @@
 ####################
 ### NOW
 
-wrap title
+extract code from old commit
+extract question to presentational component
+add edit button which renders to input
+add done button to input
+
 verify notes meets MVP
 push to Heroku and seed
+verify all features on Heroku
 submit for review
-
-extract question to presentational component
-style question
-highlight text boxes on hover
 
 ####################
 ### EASY
 
+highlight text boxes on hover
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
 confirm delete
 @notes = current_user.notes
 cursor color when editing
+extract footer to presentational component
 
 ####################
 ### HARD

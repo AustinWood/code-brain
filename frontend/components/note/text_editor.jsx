@@ -14,7 +14,8 @@ class TextEditor extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setEditorState(nextProps.json);
+    this.parseProps(nextProps.json);
+    // this.setEditorState(nextProps.json);
   }
 
 ////////////////////////
@@ -25,6 +26,16 @@ class TextEditor extends React.Component {
 //////////////////
 /////  JSON  /////
 //////////////////
+
+  parseProps(props) {
+    try {
+      var jsonObject = JSON.parse(props);
+      this.setEditorState(props);
+    } catch(e) {
+      const content = ContentState.createFromText(props);
+      this.state = ({editorState: EditorState.createWithContent(content)});
+    }
+  }
 
   setEditorState(json) {
     if (this.props.attrKey === "question") {
@@ -43,7 +54,12 @@ class TextEditor extends React.Component {
   updateGlobalState(editorState) {
     this.setState({ editorState });
     const key = this.props.attrKey;
-    const val = this.convertToJson(editorState);
+    let val;
+    if (this.props.attrKey === "question") {
+      val = this.convertToJson(editorState);
+    } else {
+      val = editorState.getCurrentContent().getPlainText(editorState);
+    }
     let newState = {};
     newState[key] = val;
     this.props.updateAttr(newState);
