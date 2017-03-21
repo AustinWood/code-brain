@@ -2,6 +2,7 @@
 ### NOW
 
 confirm delete
+logout dropdown tooltip
 don't allow title editing during study
 
 ####################

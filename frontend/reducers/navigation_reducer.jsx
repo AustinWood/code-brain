@@ -5,6 +5,7 @@ import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({
   showSearch: true,
+  isModalOpen: false,
   footerType: 'edit' // edit, ask, answer
 });
 
