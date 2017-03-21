@@ -55,11 +55,13 @@ class Note extends React.Component {
         <div className="note">
 
           <div className="note-header-container">
+              <div className="editor-cc">
             <TextEditor
               json={note.question}
               updateAttr={this.props.updateAttr}
               attrKey="question"
               className="note-header" />
+          </div>
           </div>
 
           <div className="note-body-container">
