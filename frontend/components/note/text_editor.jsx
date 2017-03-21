@@ -11,6 +11,8 @@ class TextEditor extends React.Component {
     this.convertToJson = this.convertToJson.bind(this);
     this.logJson = this.logJson.bind(this);
     this.updateGlobalState = this.updateGlobalState.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -59,6 +61,14 @@ class TextEditor extends React.Component {
     );
   }
 
+  onFocus() {
+    console.log("onFocus");
+  }
+
+  onBlur() {
+    console.log("onBlur");
+  }
+
   // {this.logJsonButton()}
   render() {
     return (
@@ -67,7 +77,8 @@ class TextEditor extends React.Component {
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
           ref="editor"
-        />
+          onFocus={this.onFocus}
+          onBlur={this.onBlur} />
       </div>
     );
   }

@@ -2,7 +2,7 @@
 ### STYLE
 use off-white for unselected borders and text
 images off-white (gear, user, etc)
-hover sesson-input-container → change bg color
+hover session-input-container → change background color
 add css effect to button on demo login
 style for Firefox and Safari
   > Gage said it's something about only Chrome

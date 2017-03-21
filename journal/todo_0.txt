@@ -1,39 +1,37 @@
 ####################
 ### NOW
 
-~~~~~~
-push to Heroku and seed
-verify all features on Heroku
-submit for review
-~~~~~~
-clicking 'study' and 'nextAnswer' should randomize notes
+highlight text boxes on select
 clicking 'run code' can add a line of '>' to console
-~~~~~~
+confirm delete
+don't allow title editing during study
+
+####################
+### CODE_REVIEW
+
+randomize notes
 prepare for code review
-~~~~~~
 
 ####################
 ### EASY
 
-highlight text boxes on hover
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
-confirm delete
 @notes = current_user.notes
 cursor color when editing
-extract footer to presentational component
 
 ####################
 ### HARD
 
-add error handling to note_actions.jsx
-note language button with dropdown and images
 research REPL => see js#eval()
+note language button with dropdown and images
+add error handling to note_actions.jsx
 
 ####################
 ### QUESTIONS
 
 how to select random note on nextQuestion() ?
+should I have multiple footer files?
 ~~~~~~
 update title, etc?
 saveChanges combines create and update?

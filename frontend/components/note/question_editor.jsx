@@ -34,19 +34,8 @@ class QuestionEditor extends React.Component {
   }
 
   render() {
-    if (this.props.attrKey === "question") {
-      return (
-        <div onClick={this.focus} className="editor-question-container">
-          <Editor
-            editorState={this.state.editorState}
-            onChange={this.updateGlobalState}
-            ref="editor"
-          />
-        </div>
-      );
-    }
     return (
-      <div onClick={this.focus} className="editor-container">
+      <div onClick={this.focus} className="editor-question-container">
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
