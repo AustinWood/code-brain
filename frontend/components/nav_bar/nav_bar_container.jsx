@@ -3,8 +3,9 @@ import { logout } from '../../actions/session_actions';
 import { addNote, toggleSearch, nextQuestion } from '../../actions/navigation_actions';
 import { connect } from 'react-redux';
 
-const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+const mapStateToProps = state => ({
+  currentUser: state.session.currentUser,
+  dueNotesCount: state.study.dueNotes.length
 });
 
 const mapDispatchToProps = dispatch => ({

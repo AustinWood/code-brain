@@ -3,7 +3,7 @@ import { createNote, updateNote, deleteNote, updateAttr } from '../../actions/no
 import { addNote } from '../../actions/navigation_actions';
 import Note from './note';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   note: state.currentNote,
   footerType: state.navigation.footerType
 });
