@@ -24,14 +24,6 @@ class Note extends React.Component {
       skeleton: nextProps.note.skeleton,
       answer: nextProps.note.answer
     });
-    this.resizeTextArea();
-  }
-
-  resizeTextArea() {
-    const textArea = document.getElementById('textarea');
-    if (textArea) {
-      textArea.css({'height':'auto','overflow-y':'hidden'}).height(textArea.scrollHeight);
-    }
   }
 
   render() {
@@ -66,6 +58,19 @@ class Note extends React.Component {
     }
   }
 
+  question() {
+
+    return (
+      <div className="editor-cc">
+        <QuestionEditor
+          question={this.props.note.question}
+          updateAttr={this.props.updateAttr}
+          attrKey="question"
+          className="note-header" />
+      </div>
+    );
+  }
+
   renderedNote() {
     const note = this.props.note;
     return (
@@ -73,13 +78,7 @@ class Note extends React.Component {
         <div className="note">
 
           <div className="note-header-container">
-            <div className="editor-cc">
-              <QuestionEditor
-                question={note.question}
-                updateAttr={this.props.updateAttr}
-                attrKey="question"
-                className="note-header" />
-            </div>
+            {this.question()}
           </div>
 
           <div className="note-body-container">
