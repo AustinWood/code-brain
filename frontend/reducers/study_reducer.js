@@ -1,5 +1,5 @@
 import { STUDY, REVEAL_ANSWER } from '../actions/navigation_actions';
-import { RECEIVE_NOTES, NEXT_QUESTION } from '../actions/note_actions';
+import { RECEIVE_NOTES, NEXT_QUESTION, LOG_SCORE } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
 const _study = Object.freeze({
@@ -13,10 +13,8 @@ const NavigationReducer = (state = _study, action) => {
     case RECEIVE_NOTES:
       const idStrs = Object.keys(action.notes);
       const idInts = idStrs.map(el => parseInt(el, 10));
-      console.log(idInts);
       return {dueNotes: idInts};
     case STUDY:
-      console.log(state.dueNotes);
       let shuffle = (a) => {
           for (let i = a.length; i; i--) {
               let j = Math.floor(Math.random() * i);
@@ -25,7 +23,6 @@ const NavigationReducer = (state = _study, action) => {
           return a;
       };
       const shuffled = shuffle(state.dueNotes);
-      console.log(shuffled);
       return {dueNotes: shuffled};
       // return merge({}, state, newState);
     case REVEAL_ANSWER:
@@ -34,14 +31,15 @@ const NavigationReducer = (state = _study, action) => {
         // dueNotes: []
       };
       return merge({}, state, newState);
-    case NEXT_QUESTION:
-      console.log("next question in study reducer");
+    case LOG_SCORE:
       let arr = state.dueNotes;
       arr.shift();
       newState = {
         dueNotes: arr
       };
       return merge({}, state, newState);
+    case NEXT_QUESTION:
+      return state;
     default:
       return state;
   }

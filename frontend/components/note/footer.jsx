@@ -139,11 +139,11 @@ class Footer extends React.Component {
     return (
       <div className="answer-centered">
         <p>How well did you<br/>know this answer?</p>
-        <div onClick={this.props.nextQuestion}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
-        <div onClick={this.props.nextQuestion}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
-        <div onClick={this.props.nextQuestion}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
-        <div onClick={this.props.nextQuestion}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
-        <div onClick={this.props.nextQuestion}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
+        <div onClick={this.props.submitScore}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
+        <div onClick={this.props.submitScore}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
+        <div onClick={this.props.submitScore}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
+        <div onClick={this.props.submitScore}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
+        <div onClick={this.props.submitScore}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
       </div>
     );
   }

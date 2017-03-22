@@ -1,7 +1,12 @@
 ####################
 ### NOW
 
-grow Question <p> with line breaks
+'x notes due' should count down *after* a note has been answered
+make console non editable
+go from study to edit - changes to skeleton linger
+cursor
+show syntax error in console
+splash
 
 ####################
 ### EASY
@@ -9,7 +14,6 @@ grow Question <p> with line breaks
 allow for testing array equality
 rework Navigation state
   > replace `footerType` with `mode`
-  > go from study to edit - changes to skeleton linger in currentNote
   > bug: clicking play after editing a note does not go to play mode
   > clicking study advances to next note without answering
 

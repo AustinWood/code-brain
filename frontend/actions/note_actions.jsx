@@ -8,6 +8,7 @@ export const SELECT_NOTE = "SELECT_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 export const UPDATE_ATTR = "UPDATE_ATTR";
 export const NEXT_QUESTION = "NEXT_QUESTION";
+export const LOG_SCORE = "LOG_SCORE";
 export const RUN_CODE = "RUN_CODE";
 export const LOG_CODE = "LOG_CODE";
 
@@ -81,6 +82,18 @@ export const nextQuestion = () => (dispatch, getState) => {
 
 export const revealNextQuestion = () => ({
   type: NEXT_QUESTION
+});
+
+export const submitScore = score => (dispatch, getState) => {
+  // const state = getState();
+  dispatch(logScore(score));
+  dispatch(nextQuestion());
+};
+
+// this will need to accept currentNoteId as well?
+export const logScore = score => ({
+  type: LOG_SCORE,
+  score
 });
 
 ////////////////////////

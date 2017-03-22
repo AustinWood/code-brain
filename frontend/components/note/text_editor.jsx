@@ -32,11 +32,11 @@ class TextEditor extends React.Component {
 
       const plainText = this.state.editorState.getCurrentContent().getPlainText();
       try {
-        console.log("~~~~~~~~~~~");
+        // console.log("~~~~~~~~~~~");
         // console.log(plainText);
-        console.log(eval(plainText));
+        // console.log(eval(plainText));
       } catch (e) {
-        console.log('failed');
+        // console.log('failed');
       } finally {
         // console.log('finally');
       }

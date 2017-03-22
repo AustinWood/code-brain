@@ -61,12 +61,14 @@ class Note extends React.Component {
   question() {
     if (this.props.footerType === 'edit') {
       return (
-        <div className="editor-cc">
-          <QuestionEditor
-            question={this.props.note.question}
-            updateAttr={this.props.updateAttr}
-            attrKey="question"
-            className="note-header" />
+        <div className="note-header-container">
+          <div className="editor-cc">
+            <QuestionEditor
+              question={this.props.note.question}
+              updateAttr={this.props.updateAttr}
+              attrKey="question"
+              className="note-header" />
+          </div>
         </div>
       );
     }
@@ -81,9 +83,7 @@ class Note extends React.Component {
       <div className="note-container">
         <div className="note">
 
-          <div className="note-header-container">
-            {this.question()}
-          </div>
+          {this.question()}
 
           <div className="note-body-container">
             <div className="note-body">

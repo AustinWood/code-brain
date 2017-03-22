@@ -1,7 +1,7 @@
 ####################
 ### STUDY ALGORITHM
 
-'x notes due' should count down *after* a note has been answered
+
 
 ####################
 ### REFERENCE
@@ -41,6 +41,7 @@ reset state on login
 ####################
 ### FEATURES
 
+react-joyride
 re-add REPL toggle
 make editor/console panes resizable
 note language button with dropdown and images
