@@ -71,11 +71,6 @@ export const deleteNote = noteId => dispatch => (
 ////////////////////////
 ////////////////////////
 
-export const selectById = id => dispatch => (
-  NoteApiUtil.fetchNote(id)
-    .then(note => dispatch(selectNote(note)))
-);
-
 export const nextQuestion = () => (dispatch, getState) => {
   const state = getState();
   const dueNotes = state.study.dueNotes;

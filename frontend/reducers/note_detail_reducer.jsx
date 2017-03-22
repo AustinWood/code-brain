@@ -21,8 +21,7 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
   let newState;
   switch(action.type) {
     case SELECT_NOTE:
-      newState = action.note;
-      return merge({}, state, newState);
+      return merge({}, state, {console: null}, action.note);
     case ADD_NOTE:
       newState = {
         question: "",
