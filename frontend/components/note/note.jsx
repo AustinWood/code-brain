@@ -85,7 +85,7 @@ class Note extends React.Component {
     const type = this.props.footerType;
     if (type === 'ask' || type === 'answer') {
       return (
-        <div className="cancel">
+        <div className="cancel" onClick={this.props.exitStudy}>
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
         </div>
       );

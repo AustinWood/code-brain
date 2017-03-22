@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createNote, updateNote, deleteNote, updateAttr, studyAgain } from '../../actions/note_actions';
-import { addNote, toggleSearch } from '../../actions/navigation_actions';
+import { addNote, toggleSearch, exitStudy } from '../../actions/navigation_actions';
 import Note from './note';
 
 const mapStateToProps = state => ({
@@ -13,7 +13,8 @@ const mapDispatchToProps = dispatch => ({
   addNote: id => dispatch(addNote()),
   updateAttr: keyValuePair => dispatch(updateAttr(keyValuePair)),
   toggleSearch: () => dispatch(toggleSearch()),
-  studyAgain: () => dispatch(studyAgain())
+  studyAgain: () => dispatch(studyAgain()),
+  exitStudy: () => dispatch(exitStudy())
 });
 
 export default connect(
