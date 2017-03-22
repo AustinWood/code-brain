@@ -4,18 +4,11 @@ import { addNote, toggleSearch, exitStudy } from '../../actions/navigation_actio
 import Console from './console';
 
 const mapStateToProps = state => ({
-  // note: state.currentNote,
-  // footerType: state.navigation.footerType,
-  // dueNotesCount: state.study.dueNotes.length
   console: state.currentNote.console
 });
 
 const mapDispatchToProps = dispatch => ({
-  addNote: id => dispatch(addNote()),
   updateAttr: keyValuePair => dispatch(updateAttr(keyValuePair)),
-  toggleSearch: () => dispatch(toggleSearch()),
-  studyAgain: () => dispatch(studyAgain()),
-  exitStudy: () => dispatch(exitStudy()),
   runCode: () => dispatch(runCode())
 });
 
