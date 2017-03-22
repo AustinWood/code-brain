@@ -6,7 +6,6 @@ class Footer extends React.Component {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleSave = this.handleSave.bind(this);
-    // this.faceClicked = this.faceClicked.bind(this);
   }
 
   handleDelete() {
@@ -120,11 +119,6 @@ class Footer extends React.Component {
       return this.faces();
       // return;
     }
-  }
-
-  faceClicked(item, e) {
-    console.log("face clicked!");
-    console.log(item);
   }
 
   faces() {

@@ -109,12 +109,10 @@ export const finishStudying = () => ({
 ////////////////////////
 
 export const runCode = () => (dispatch, getState) => {
-  console.log("running code in note_actions ...");
   const state = getState();
   const json = state.currentNote.skeleton;
   const content = convertFromRaw(JSON.parse(json));
   let plainText = content.getPlainText();
-  console.log(plainText);
   plainText = plainText.replace(new RegExp("console.log", 'g'), "resultsArr.push");
   plainText = "let resultsArr = [];\n" + plainText + "\nresultsArr;";
   let result;
