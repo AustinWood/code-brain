@@ -68,7 +68,7 @@ class Footer extends React.Component {
   askFooter() {
     return (
       <div className="note-footer-study">
-        <div className="answer-centered">
+        <div className="ask-centered">
 
           <div onClick={this.props.runCode}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console" />
