@@ -1,35 +1,25 @@
 ####################
 ### NOW
 
-Precompile
-Push to Heroku
-Update Trello
-organize todo
-ponder questions for Luke
-писать Ума
+
 
 ####################
 ### EASY
 
-rework Navigation state (replace `footerType` with `mode`)
+grow Question <p> with line breaks
 allow for testing array equality
-'run code' and 'edit' icons shouldn't move when clicking 'reveal answer'
-go from study to edit - changes to skeleton linger in currentNote
-highlight selected tab
-'x note due' should count down *after* a note has been answered
-add hover effect to #play-img in nav_bar
-don't allow title editing during study
-bug: clicking play after editing a note does not go to play mode
-logout dropdown tooltip
-clicking study advances to next note without answering
-add RECEIVE_NOTE.note.id to study.dueNotes if new
+rework Navigation state
+  > replace `footerType` with `mode`
+  > go from study to edit - changes to skeleton linger in currentNote
+  > bug: clicking play after editing a note does not go to play mode
+  > clicking study advances to next note without answering
 
 ####################
 ### HARD
 
 refactor Note (separate editor note from quiz note)
-cursor color when editing
-confirm delete modal
+  > 'run code' and 'edit' icons shouldn't move when clicking 'reveal answer'
+Study Algorithm (see todo_1.txt)
 
 ####################
 ### QUESTIONS

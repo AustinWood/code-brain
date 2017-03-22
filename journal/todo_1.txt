@@ -1,4 +1,9 @@
 ####################
+### STUDY ALGORITHM
+
+'x notes due' should count down *after* a note has been answered
+
+####################
 ### READ
 
 https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
@@ -6,6 +11,11 @@ https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
 ####################
 ### STYLE
 
+confirm delete modal
+cursor color when editing
+logout dropdown tooltip
+highlight selected tab
+add hover effect to #play-img in nav_bar
 use off-white for unselected borders and text
 images off-white (gear, user, etc)
 hover session-input-container → change background color
@@ -20,6 +30,7 @@ set scrollbar type (force browsers to render similarly?)
 ####################
 ### CLEANUP
 
+add RECEIVE_NOTE.note.id to study.dueNotes if new
 restructure CSS resets
 DRY: receive errors in session_actions and deleteNote
 @notes = current_user.notes
