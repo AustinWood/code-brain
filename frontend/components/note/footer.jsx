@@ -71,7 +71,7 @@ class Footer extends React.Component {
         <div className="ask-centered">
 
           <div onClick={this.props.runCode}>
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console" />
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
           </div>
 
           <div onClick={this.props.revealAnswer}>
