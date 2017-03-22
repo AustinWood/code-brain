@@ -11,6 +11,7 @@ always on hover
 show syntax error in console
 highlight selected tab
 logout dropdown tooltip
+answer should not be editable during study
 allow for testing array equality
 
 ####################
@@ -27,6 +28,7 @@ rework Navigation state
 cursor color when editing
 refactor Note (separate editor note from quiz note)
 Study Algorithm (see todo_1.txt)
+consistency in hover/selected/bg color/border color across index/nav/note/etc
 
 ####################
 ### QUESTIONS

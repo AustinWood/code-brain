@@ -92,9 +92,7 @@ class Footer extends React.Component {
     return (
       <div className="footer-study">
 
-        <div onClick={this.props.runCode}>
-          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
-        </div>
+
 
         <div>
           {this.studyCenter()}

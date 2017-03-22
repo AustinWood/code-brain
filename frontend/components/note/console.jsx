@@ -46,9 +46,18 @@ class Console extends React.Component {
   //   $("#" + key).css( "background-color", "#0A0B1A" );
   // }
 
+  runCodeButton() {
+    return (
+      <div onClick={this.props.runCode} className="run-code-button">
+        <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
+      </div>
+    );
+  }
+
   render() {
     return (
       <div onClick={this.focus} className="console-container" id={this.props.attrKey}>
+        {this.runCodeButton()}
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
