@@ -68,15 +68,21 @@ class Footer extends React.Component {
   askFooter() {
     return (
       <div className="note-footer-study">
+        <div className="answer-centered">
 
-        <div className="note-footer-button" onClick={this.props.runCode}>
-          <p className="note-footer-text">Run Code</p>
+          <div onClick={this.props.runCode}>
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console" />
+          </div>
+
+          <div onClick={this.props.revealAnswer}>
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
+          </div>
+
+          <div onClick={this.props.revealAnswer}>
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="edit" />
+          </div>
+
         </div>
-
-        <div className="note-footer-button" onClick={this.props.revealAnswer}>
-          <p className="note-footer-text">Reveal Answer</p>
-        </div>
-
       </div>
     );
   }

@@ -1,13 +1,23 @@
 ####################
 ### NOW
 
-split result lines
-make output show up next to console.log
+add three images to footer
+add highlight to images
+clear the console for each new question
+highlight selected tab
+separate editor note from quiz note
+
+http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_filled_r0ijzq.png
+
+http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_filled_grjlew.png
+
+http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_filled_pcaghu.png
 
 ####################
 ### EVAL() LIMITATIONS
 
 array comparison (JS limitation)
+monkey-patching (?)
 
 ####################
 ### EASY
