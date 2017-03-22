@@ -27,6 +27,7 @@ class Note extends React.Component {
   }
 
   render() {
+    // return this.finishStudying();
     if (this.props.footerType === 'finish_studying') {
       return this.finishStudying();
     }
@@ -133,14 +134,18 @@ class Note extends React.Component {
   finishStudying() {
     return (
       <div className="note-container">
-        <div className="null-note-message">
-          <p>
-            Congratulations!
-          </p>
+        <div className="congrats-container">
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490207145/dancing_pyw0tk.png" />
+          <h1><br/>Congratulations!</h1>
+          <h2><br/>Don't you already feel so much smarter?</h2>
+          <h2><br/>
+            <span onClick={ this.props.toggleSearch }>Return to dashboard.</span>
+          </h2>
+          <div id="blank-space"></div>
         </div>
       </div>
     );
   }
 }
-
+ // or <span onClick={ this.props.studyAgain }>study some more.</span>
 export default Note;

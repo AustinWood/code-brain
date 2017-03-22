@@ -1,5 +1,5 @@
 import { STUDY, REVEAL_ANSWER } from '../actions/navigation_actions';
-import { RECEIVE_NOTES, NEXT_QUESTION, LOG_SCORE } from '../actions/note_actions';
+import { RECEIVE_NOTES, NEXT_QUESTION, LOG_SCORE, STUDY_AGAIN, RESET_DUE_NOTES } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
 const _study = Object.freeze({
@@ -40,6 +40,10 @@ const NavigationReducer = (state = _study, action) => {
       return merge({}, state, newState);
     case NEXT_QUESTION:
       return state;
+    case RESET_DUE_NOTES:
+      const id2Strs = Object.keys(action.notes);
+      const id2Ints = id2Strs.map(el => parseInt(el, 10));
+      return {dueNotes: id2Ints};
     default:
       return state;
   }

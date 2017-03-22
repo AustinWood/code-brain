@@ -12,6 +12,7 @@ export const LOG_SCORE = "LOG_SCORE";
 export const RUN_CODE = "RUN_CODE";
 export const LOG_CODE = "LOG_CODE";
 export const FINISH_STUDYING = "FINISH_STUDYING";
+export const RESET_DUE_NOTES = "RESET_DUE_NOTES";
 
 ////////////////////////
 ////////////////////////
@@ -103,6 +104,18 @@ export const logScore = score => ({
 
 export const finishStudying = () => ({
   type: FINISH_STUDYING
+});
+
+export const studyAgain = score => (dispatch, getState) => {
+  // const state = getState();
+  // const notes = state.notes;
+  dispatch(resetDueNotes());
+  dispatch(nextQuestion());
+};
+
+export const resetDueNotes = notes => ({
+  type: RESET_DUE_NOTES,
+  notes
 });
 
 ////////////////////////
