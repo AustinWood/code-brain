@@ -1,14 +1,19 @@
 ####################
 ### NOW
 
-run code after reveal answer shows console
-MVP feature audit
+Precompile
+Push to Heroku
+Update Trello
 organize todo
 ponder questions for Luke
+писать Ума
 
 ####################
 ### EASY
 
+rework Navigation state (replace `footerType` with `mode`)
+allow for testing array equality
+'run code' and 'edit' icons shouldn't move when clicking 'reveal answer'
 go from study to edit - changes to skeleton linger in currentNote
 highlight selected tab
 'x note due' should count down *after* a note has been answered
@@ -28,3 +33,6 @@ confirm delete modal
 
 ####################
 ### QUESTIONS
+
+MVP features
+Opal? https://www.sitepoint.com/opal-ruby-browser-basics/
