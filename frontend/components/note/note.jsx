@@ -49,7 +49,7 @@ class Note extends React.Component {
       return (
         <Console
           console={this.props.note.console}
-          updateAttr={null}
+          updateAttr={this.props.updateAttr}
           attrKey="console" />
       );
     } else {

@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-show message when 0 notes remain
 make console non editable
 go from study to edit - changes to skeleton linger
 cursor
