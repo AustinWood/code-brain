@@ -1,8 +1,8 @@
 ####################
 ### NOW
 
+change edit to x
 remove hover effect on console
-go from study to edit - changes to skeleton linger
 cursor
 show syntax error in console
 splash

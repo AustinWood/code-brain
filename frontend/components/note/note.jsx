@@ -81,11 +81,23 @@ class Note extends React.Component {
     );
   }
 
+  cancel() {
+    const type = this.props.footerType;
+    if (type === 'ask' || type === 'answer') {
+      return (
+        <div className="cancel">
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
+        </div>
+      );
+    }
+  }
+
   renderedNote() {
     const note = this.props.note;
     return (
       <div className="note-container">
         <div className="note">
+          {this.cancel()}
 
           {this.question()}
 
@@ -134,6 +146,7 @@ class Note extends React.Component {
   finishStudying() {
     return (
       <div className="note-container">
+
         <div className="congrats-container">
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490207145/dancing_pyw0tk.png" />
           <h1><br/>Congratulations!</h1>

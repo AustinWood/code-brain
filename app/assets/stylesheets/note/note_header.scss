@@ -50,3 +50,31 @@
   position: absolute;
   display: block;
 }
+
+// .cancel {
+//   position: absolute;
+//
+// }
+
+.cancel {
+  position: relative;
+  z-index: 5;
+  background-color: #0A0B1A;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  right: 12px;
+  bottom: 10px;
+}
+
+.cancel img {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  right: 2px;
+  bottom: 2px;
+}
+
+.cancel img:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_filled_exh902.png');
+}
