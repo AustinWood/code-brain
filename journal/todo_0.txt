@@ -1,7 +1,7 @@
 ####################
 ### NOW
 
-separate editor note from quiz note
+run code after reveal answer shows console
 MVP feature audit
 organize todo
 ponder questions for Luke
@@ -22,6 +22,7 @@ add RECEIVE_NOTE.note.id to study.dueNotes if new
 ####################
 ### HARD
 
+refactor Note (separate editor note from quiz note)
 cursor color when editing
 confirm delete modal
 

@@ -1,7 +1,7 @@
 import {
   ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH,
   STUDY, REVEAL_ANSWER } from '../actions/navigation_actions';
-import { NEXT_QUESTION } from '../actions/note_actions';
+import { NEXT_QUESTION, LOG_CODE } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({
@@ -39,6 +39,9 @@ const NavigationReducer = (state = _navigation, action) => {
         showSearch: false,
         footerType: 'ask'
       };
+      return merge({}, state, newState);
+    case LOG_CODE:
+      newState = {footerType: 'ask'};
       return merge({}, state, newState);
     default:
       return state;
