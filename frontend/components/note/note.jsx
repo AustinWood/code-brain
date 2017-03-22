@@ -1,6 +1,7 @@
 import React from 'react';
 import TextEditor from './text_editor';
 import QuestionEditor from './question_editor';
+import Console from './console';
 import FooterContainer from './footer_container';
 
 import { Editor, EditorState, ContentState,
@@ -36,9 +37,10 @@ class Note extends React.Component {
   render() {
     if (this.props.note.question === null) {
       return this.nullNoteMessage();
-    } else if (this.props.footerType === 'ask') {
-      return this.renderedNote("{\"entityMap\":{},\"blocks\":[{\"key\":\"6ks1t\",\"text\":\"> \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}]}");
     }
+    // else if (this.props.footerType === 'ask') {
+    //   return this.renderedNote("{\"entityMap\":{},\"blocks\":[{\"key\":\"6ks1t\",\"text\":\"> \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}]}");
+    // }
     return this.renderedNote();
   }
 
@@ -47,9 +49,21 @@ class Note extends React.Component {
   }
 
   rightPane() {
-    // return (
-    //
-    // );
+    if (this.props.footerType === 'ask') {
+      return (
+        <Console
+          console={this.props.note.console}
+          updateAttr={null}
+          attrKey="console" />
+      );
+    } else {
+      return (
+        <TextEditor
+          json={this.props.note.answer}
+          updateAttr={this.props.updateAttr}
+          attrKey="answer" />
+      );
+    }
   }
 
   renderedNote() {
@@ -82,10 +96,7 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-right">
                 <div className="editor-cc">
-                  <TextEditor
-                    json={this.props.note.answer}
-                    updateAttr={this.props.updateAttr}
-                    attrKey="answer" />
+                  {this.rightPane()}
                 </div>
               </div>
 

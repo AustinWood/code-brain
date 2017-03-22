@@ -38,13 +38,10 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
     case RECEIVE_NOTE:
       return action.note;
     case STUDY:
-      // return action.note;
       return state;
     case LOG_CODE:
-      // return action.note;
-      console.log("in LOG_CODE");
-      console.log(action.result);
-      return state;
+      newState = {console: String(action.result)};
+      return merge({}, state, newState);
     default:
       return state;
   }

@@ -29,11 +29,11 @@ class Console extends React.Component {
 
   updateGlobalState(editorState) {
     this.setState({ editorState });
-    const key = this.props.attrKey;
-    const val = editorState.getCurrentContent().getPlainText();
-    let newState = {};
-    newState[key] = val;
-    this.props.updateAttr(newState);
+    // const key = this.props.attrKey;
+    // const val = editorState.getCurrentContent().getPlainText();
+    // let newState = {};
+    // newState[key] = val;
+    // this.props.updateAttr(newState);
   }
 
   onFocus() {
