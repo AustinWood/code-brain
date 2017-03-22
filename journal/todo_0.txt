@@ -1,12 +1,11 @@
 ####################
 ### NOW
 
-
+grow Question <p> with line breaks
 
 ####################
 ### EASY
 
-grow Question <p> with line breaks
 allow for testing array equality
 rework Navigation state
   > replace `footerType` with `mode`
@@ -24,5 +23,6 @@ Study Algorithm (see todo_1.txt)
 ####################
 ### QUESTIONS
 
+blacklist '$' and 'ajax' (others?) from eval()
 MVP features
 Opal? https://www.sitepoint.com/opal-ruby-browser-basics/

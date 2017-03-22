@@ -4,9 +4,11 @@
 'x notes due' should count down *after* a note has been answered
 
 ####################
-### READ
+### REFERENCE
 
 https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
+
+https://card-brain.herokuapp.com/#/?_k=d7g034
 
 ####################
 ### STYLE
