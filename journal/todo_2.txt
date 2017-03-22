@@ -22,3 +22,9 @@ Toggle for line wrap
 ### LOCAL HOST OVER IP
 ping
 os x firewall set rule that allows incoming requests to port 3000
+
+####################
+### eval() LIMITATIONS
+
+array comparison (JS limitation)
+monkey-patching (?)

@@ -1,52 +1,29 @@
 ####################
 ### NOW
 
-show console and edit buttons after revealing answer
-highlight selected tab
 separate editor note from quiz note
-
-####################
-### LATER
-
-'x note due' should count down *after* a note has been answered
-'Run Code' hover text
-'Reveal Answer' hover text
-
-####################
-### EVAL() LIMITATIONS
-
-array comparison (JS limitation)
-monkey-patching (?)
+MVP feature audit
+organize todo
+ponder questions for Luke
 
 ####################
 ### EASY
 
 go from study to edit - changes to skeleton linger in currentNote
+highlight selected tab
+'x note due' should count down *after* a note has been answered
+add hover effect to #play-img in nav_bar
+don't allow title editing during study
 bug: clicking play after editing a note does not go to play mode
 logout dropdown tooltip
-don't allow title editing during study
-use console null vs "" to differentiate edit/study ?
-confirm delete
-add hover effect to #play-img in nav_bar
-refactor notes_index.jsx
-@notes = current_user.notes
-cursor color when editing
+clicking study advances to next note without answering
 add RECEIVE_NOTE.note.id to study.dueNotes if new
-reset state on login
-https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
-set scrollbar type (force browsers to render similarly?)
-clicking studies advances to next note without answering
 
 ####################
 ### HARD
 
-make two editor/console panes resizable
-note language button with dropdown and images
-add error handling to note_actions.jsx
+cursor color when editing
+confirm delete modal
 
 ####################
 ### QUESTIONS
-
-how to select random note on nextQuestion() ?
-should I have multiple footer files?
-note actions.. current and all?

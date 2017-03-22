@@ -1,5 +1,11 @@
 ####################
+### READ
+
+https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
+
+####################
 ### STYLE
+
 use off-white for unselected borders and text
 images off-white (gear, user, etc)
 hover session-input-container → change background color
@@ -7,16 +13,26 @@ add css effect to button on demo login
 style for Firefox and Safari
   > Gage said it's something about only Chrome
     auto setting div flex height's to 100% (?)
+'Run Code' hover text
+'Reveal Answer' hover text
+set scrollbar type (force browsers to render similarly?)
 
 ####################
 ### CLEANUP
+
 restructure CSS resets
 DRY: receive errors in session_actions and deleteNote
+@notes = current_user.notes
+reset state on login
 
 ####################
 ### FEATURES
 
 re-add REPL toggle
+make editor/console panes resizable
+note language button with dropdown and images
+add error handling to note_actions.jsx
+flash button when clicking if already on that tab
 
 ####################
 ### SEEDS
