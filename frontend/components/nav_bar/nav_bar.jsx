@@ -6,6 +6,7 @@ class NavBar extends React.Component {
     super(props);
   }
 
+  // <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" id="settings-img" />
   render() {
     return (
       <div className="nav-bar">
@@ -25,7 +26,6 @@ class NavBar extends React.Component {
         </div>
 
         <div className="nav-right">
-          <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" id="settings-img" />
           <button onClick={this.props.logout}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/user_dnmke9.png"} className="nav-img" id="user-img" />
           </button>

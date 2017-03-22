@@ -1,11 +1,14 @@
 ####################
 ### NOW
 
-clear the console for each new question
 click edit in footer to edit
 highlight selected tab
 separate editor note from quiz note
 
+####################
+### LATER
+
+'x note due' should count down *after* a note has been answered
 'Run Code' hover text
 'Reveal Answer' hover text
 button to go back to console after revealing answer
