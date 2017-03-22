@@ -83,20 +83,13 @@
   background-color: #1A1B25;
 }
 
-.ask-centered {
-  max-width: 550px;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 44px;
-  padding: 7px 18px;
-  margin: 7px;
-}
+// .study-center {
+//   // margin: 0px 30px;
+// }
 
-.ask-centered * {
-  margin: 0px 30px;
-}
+// .reveal-answer {
+//   margin: 0px 100px;
+// }
 
 .ask-centered *:hover {
   cursor: pointer;
@@ -114,17 +107,30 @@
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_filled_pcaghu.png');
 }
 
-.note-footer-answer {
+.footer-study {
   flex: 0 1 auto;
-  padding: 0px 60px;
+  padding: 0px 0px;
   margin: 4px 0px 6px 0px;
   align-items: center;
   display: flex;
-  justify-content: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
 
+// this used to be inside footer-study
+// .ask-centered {
+//   // max-width: 550px;
+//   display: flex;
+//   flex-flow: row;
+//   align-items: center;
+//   justify-content: space-between;
+//   height: 44px;
+//   padding: 7px 18px;
+//   margin: 7px;
+// }
+
 .answer-centered {
-  max-width: 550px;
+  // max-width: 550px;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -134,13 +140,13 @@
   margin: 7px;
 }
 
-.note-footer-answer p {
+.footer-study p {
   font-size: 18px;
   font-weight: 200;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
-.note-footer-answer img:hover {
+.footer-study img:hover {
   cursor: pointer;
 }
 

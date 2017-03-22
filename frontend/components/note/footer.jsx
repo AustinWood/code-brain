@@ -23,10 +23,8 @@ class Footer extends React.Component {
   }
 
   render() {
-    if (this.props.footerType === "ask") {
-      return this.askFooter();
-    } else if (this.props.footerType === "answer") {
-      return this.answerFooter();
+    if (this.props.footerType === "ask" || this.props.footerType === "answer") {
+      return this.studyFooter();
     } else {
       return this.editFooter();
     }
@@ -65,38 +63,71 @@ class Footer extends React.Component {
   ///// ASK FOOTER /////
   //////////////////////
 
-  askFooter() {
+  // askFooter() {
+  //   return (
+  //     <div className="note-footer-study">
+  //       <div className="ask-centered">
+  //
+  //         <div onClick={this.props.runCode}>
+  //           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
+  //         </div>
+  //
+  //         <div onClick={this.props.revealAnswer}>
+  //           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
+  //         </div>
+  //
+  //         <div onClick={this.props.toggleSearch}>
+  //           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="edit" />
+  //         </div>
+  //
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
+  ////////////////////////
+  ///// STUDY FOOTER /////
+  ////////////////////////
+
+  studyFooter() {
     return (
-      <div className="note-footer-study">
-        <div className="ask-centered">
+      <div className="footer-study">
 
-          <div onClick={this.props.runCode}>
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
-          </div>
-
-          <div onClick={this.props.revealAnswer}>
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
-          </div>
-
-          <div onClick={this.props.toggleSearch}>
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="edit" />
-          </div>
-
+        <div onClick={this.props.runCode}>
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
         </div>
+
+        <div>
+          {this.studyCenter()}
+        </div>
+
+        <div onClick={this.props.toggleSearch}>
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="edit" />
+        </div>
+
       </div>
     );
   }
 
-  /////////////////////////
-  ///// ANSWER FOOTER /////
-  /////////////////////////
+  studyCenter() {
+    if (this.props.footerType === "ask") {
+      return (
+        <div onClick={this.props.revealAnswer} className="reveal-answer">
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
+        </div>
+      );
+    } else {
+      return this.faces();
+      // return;
+    }
+  }
 
   faceClicked(item, e) {
     console.log("face clicked!");
     console.log(item);
   }
 
-  answerFooter() {
+  faces() {
     let faceUrls = [
       "http://res.cloudinary.com/oblaka/image/upload/v1490101922/face-1_d7sqvz.png",
       "http://res.cloudinary.com/oblaka/image/upload/v1490101922/face-2_cpasur.png",
@@ -106,15 +137,13 @@ class Footer extends React.Component {
     ];
 
     return (
-      <div className="note-footer-answer">
-        <div className="answer-centered">
-          <p>How well did you<br/>know this answer?</p>
-          <div onClick={this.props.nextQuestion}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
-          <div onClick={this.props.nextQuestion}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
-          <div onClick={this.props.nextQuestion}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
-          <div onClick={this.props.nextQuestion}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
-          <div onClick={this.props.nextQuestion}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
-        </div>
+      <div className="answer-centered">
+        <p>How well did you<br/>know this answer?</p>
+        <div onClick={this.props.nextQuestion}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
+        <div onClick={this.props.nextQuestion}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
+        <div onClick={this.props.nextQuestion}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
+        <div onClick={this.props.nextQuestion}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
+        <div onClick={this.props.nextQuestion}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
       </div>
     );
   }
