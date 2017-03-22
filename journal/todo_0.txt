@@ -1,7 +1,7 @@
 ####################
 ### NOW
 
-click edit in footer to edit
+show console and edit buttons after revealing answer
 highlight selected tab
 separate editor note from quiz note
 
@@ -11,7 +11,6 @@ separate editor note from quiz note
 'x note due' should count down *after* a note has been answered
 'Run Code' hover text
 'Reveal Answer' hover text
-button to go back to console after revealing answer
 
 ####################
 ### EVAL() LIMITATIONS
@@ -41,6 +40,7 @@ clicking studies advances to next note without answering
 ####################
 ### HARD
 
+make two editor/console panes resizable
 note language button with dropdown and images
 add error handling to note_actions.jsx
 

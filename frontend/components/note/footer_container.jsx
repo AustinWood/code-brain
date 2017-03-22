@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createNote, updateNote, deleteNote, runCode } from '../../actions/note_actions';
-import { revealAnswer } from '../../actions/navigation_actions';
+import { revealAnswer, toggleSearch } from '../../actions/navigation_actions';
 import { nextQuestion } from '../../actions/note_actions';
 import Footer from './footer';
 
@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => ({
   deleteNote: id => dispatch(deleteNote(id)),
   revealAnswer: id => dispatch(revealAnswer(id)),
   nextQuestion: id => dispatch(nextQuestion()),
-  runCode: () => dispatch(runCode())
+  runCode: () => dispatch(runCode()),
+  toggleSearch: () => dispatch(toggleSearch()),
 });
 
 export default connect(

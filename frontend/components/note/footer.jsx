@@ -78,7 +78,7 @@ class Footer extends React.Component {
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
           </div>
 
-          <div onClick={this.props.revealAnswer}>
+          <div onClick={this.props.toggleSearch}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="edit" />
           </div>
 
