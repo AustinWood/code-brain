@@ -9,7 +9,6 @@ export const REMOVE_NOTE = "REMOVE_NOTE";
 export const UPDATE_ATTR = "UPDATE_ATTR";
 export const NEXT_QUESTION = "NEXT_QUESTION";
 export const LOG_SCORE = "LOG_SCORE";
-export const RUN_CODE = "RUN_CODE";
 export const LOG_CODE = "LOG_CODE";
 export const FINISH_STUDYING = "FINISH_STUDYING";
 export const RESET_DUE_NOTES = "RESET_DUE_NOTES";
@@ -122,6 +121,7 @@ export const resetDueNotes = notes => ({
 ////////////////////////
 
 export const runCode = () => (dispatch, getState) => {
+  console.log("note_actions.runCode()");
   const state = getState();
   const json = state.currentNote.skeleton;
   const content = convertFromRaw(JSON.parse(json));
@@ -135,6 +135,7 @@ export const runCode = () => (dispatch, getState) => {
   } catch (e) {
     result = "Syntax error";
   }
+  console.log(result);
   dispatch(logCode(result));
 };
 

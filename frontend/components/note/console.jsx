@@ -14,15 +14,21 @@ class Console extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
     this.setEditorState(nextProps.console);
   }
 
 
-  setEditorState(plainText) {
+  setEditorState(plainText = "hello") {
+    console.log("setEditorState");
+    console.log(plainText);
     if (plainText === null) {
+      console.log("null");
         this.state = {editorState: EditorState.createEmpty()};
     } else {
-      const content = ContentState.createFromText(plainText);
+      console.log("not null");
+      const content = ContentState.createFromText("plainText");
+      // const content = ContentState.createFromText(plainText);
       this.state = ({editorState: EditorState.createWithContent(content)});
     }
   }
@@ -48,22 +54,22 @@ class Console extends React.Component {
 
   runCodeButton() {
     return (
-      <div onClick={this.props.runCode} className="run-code-button">
-        <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
+      <div onClick={this.props.runCode} className="run-code-container">
+        <div className="run-code-button">
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
+          <p>run code</p>
+        </div>
       </div>
     );
   }
 
   render() {
     return (
-      <div onClick={this.focus} className="console-container" id={this.props.attrKey}>
-        {this.runCodeButton()}
+      <div onClick={this.focus} className="console-container" id="console">
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
           ref="editor"
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
           readOnly={true} />
       </div>
     );

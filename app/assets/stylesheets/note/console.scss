@@ -12,17 +12,39 @@
   position: relative;
 }
 
-.run-code-button {
+.run-code-container {
   position: absolute;
-  width: 100px;
+  z-index: 5;
+  width: 200px;
   height: 100px;
   top: 50%;
   margin-top: -100px;
   left: 50%;
-  margin-left: -50px;
-  background-color: #00c;
+  margin-left: -100px;
+  background-color: #0A0B1A;
+}
+
+.run-code-container:hover {
+  cursor: pointer;
+}
+
+.run-code-button {
+  border-radius: 12px;
+  border: 1px solid #E3F2FC;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  // padding: 16px 24px 12px 16px;
 }
 
 #console-img:hover {
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_filled_grjlew.png');
+}
+
+.run-code-button p {
+  margin-right: 14px;
 }

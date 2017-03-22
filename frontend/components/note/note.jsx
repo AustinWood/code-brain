@@ -1,7 +1,7 @@
 import React from 'react';
 import TextEditor from './text_editor';
 import QuestionEditor from './question_editor';
-import Console from './console';
+import ConsoleContainer from './console_container';
 import FooterContainer from './footer_container';
 
 import { Editor, EditorState, ContentState,
@@ -13,7 +13,8 @@ class Note extends React.Component {
     this.state = {
       question: "",
       skeleton: "",
-      answer: "",
+      console: "",
+      answer: ""
     };
     this.updateQuestion = this.updateQuestion.bind(this);
   }
@@ -22,6 +23,7 @@ class Note extends React.Component {
     this.setState({
       question: nextProps.note.question,
       skeleton: nextProps.note.skeleton,
+      console: nextProps.note.console,
       answer: nextProps.note.answer
     });
   }
@@ -46,12 +48,7 @@ class Note extends React.Component {
 
   rightPane() {
     if (this.props.footerType === 'ask') {
-      return (
-        <Console
-          console={this.props.note.console}
-          updateAttr={this.props.updateAttr}
-          attrKey="console" />
-      );
+      return <ConsoleContainer />;
     } else {
       return (
         <TextEditor
