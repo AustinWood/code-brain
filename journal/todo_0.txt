@@ -1,7 +1,8 @@
 ####################
 ### NOW
 
-'x notes due' should count down *after* a note has been answered
+remove extraneous console logs
+show message when 0 notes remain
 make console non editable
 go from study to edit - changes to skeleton linger
 cursor

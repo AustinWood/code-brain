@@ -27,6 +27,9 @@ class Note extends React.Component {
   }
 
   render() {
+    if (this.props.footerType === 'finish_studying') {
+      return this.finishStudying();
+    }
     if (this.props.note.question === null) {
       return this.nullNoteMessage();
     }
@@ -121,6 +124,18 @@ class Note extends React.Component {
         <div className="null-note-message">
           <p>Select a note on the left,<br/>
           <span onClick={ this.props.addNote }>or create a new one.</span>
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  finishStudying() {
+    return (
+      <div className="note-container">
+        <div className="null-note-message">
+          <p>
+            Congratulations!
           </p>
         </div>
       </div>

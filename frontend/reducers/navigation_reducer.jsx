@@ -1,7 +1,7 @@
 import {
   ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH,
   STUDY, REVEAL_ANSWER } from '../actions/navigation_actions';
-import { NEXT_QUESTION, LOG_CODE } from '../actions/note_actions';
+import { NEXT_QUESTION, LOG_CODE, FINISH_STUDYING } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
 const _navigation = Object.freeze({
@@ -12,7 +12,7 @@ const _navigation = Object.freeze({
 
 const NavigationReducer = (state = _navigation, action) => {
   Object.freeze(state);
-  let newState;
+  let newState = {};
   switch(action.type) {
     case ADD_NOTE:
       newState = {
@@ -27,14 +27,12 @@ const NavigationReducer = (state = _navigation, action) => {
       };
       return merge({}, state, newState);
     case REVEAL_ANSWER:
-      console.log("in REVEAL_ANSWER");
       newState = {
         showSearch: false,
         footerType: 'answer'
       };
       return merge({}, state, newState);
     case NEXT_QUESTION:
-      console.log("in NEXT_QUESTION");
       newState = {
         showSearch: false,
         footerType: 'ask'
@@ -43,6 +41,9 @@ const NavigationReducer = (state = _navigation, action) => {
     case LOG_CODE:
       newState = {footerType: 'ask'};
       return merge({}, state, newState);
+    case FINISH_STUDYING:
+    newState = {footerType: 'finish_studying'};
+    return merge({}, state, newState);
     default:
       return state;
   }

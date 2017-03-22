@@ -11,6 +11,7 @@ export const NEXT_QUESTION = "NEXT_QUESTION";
 export const LOG_SCORE = "LOG_SCORE";
 export const RUN_CODE = "RUN_CODE";
 export const LOG_CODE = "LOG_CODE";
+export const FINISH_STUDYING = "FINISH_STUDYING";
 
 ////////////////////////
 ////////////////////////
@@ -75,9 +76,13 @@ export const deleteNote = noteId => dispatch => (
 export const nextQuestion = () => (dispatch, getState) => {
   const state = getState();
   const dueNotes = state.study.dueNotes;
-  const nextNote = state.notes[dueNotes[0]];
-  dispatch(selectNote(nextNote));
-  dispatch(revealNextQuestion());
+  if (dueNotes.length > 0) {
+    const nextNote = state.notes[dueNotes[0]];
+    dispatch(selectNote(nextNote));
+    dispatch(revealNextQuestion());
+  } else {
+    dispatch(finishStudying());
+  }
 };
 
 export const revealNextQuestion = () => ({
@@ -94,6 +99,10 @@ export const submitScore = score => (dispatch, getState) => {
 export const logScore = score => ({
   type: LOG_SCORE,
   score
+});
+
+export const finishStudying = () => ({
+  type: FINISH_STUDYING
 });
 
 ////////////////////////
