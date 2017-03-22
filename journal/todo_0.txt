@@ -1,8 +1,8 @@
 ####################
 ### NOW
 
-fix seeds
-in note_detail_reducer update console
+split result lines
+make output show up next to console.log
 
 ####################
 ### EVAL() LIMITATIONS
@@ -12,6 +12,8 @@ array comparison (JS limitation)
 ####################
 ### EASY
 
+go from study to edit - changes to skeleton linger in currentNote
+bug: clicking play after editing a note does not go to play mode
 logout dropdown tooltip
 don't allow title editing during study
 use console null vs "" to differentiate edit/study ?

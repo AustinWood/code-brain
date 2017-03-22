@@ -102,7 +102,8 @@ export const runCode = () => (dispatch, getState) => {
   plainText = "let resultsArr = [];\n" + plainText + "\nresultsArr;";
   let result;
   try {
-    result = eval(plainText);
+    const resultArr = eval(plainText);
+    result = resultArr.join("\n");
   } catch (e) {
     result = "Syntax error";
   }
