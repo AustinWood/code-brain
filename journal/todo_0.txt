@@ -1,7 +1,6 @@
 ####################
 ### NOW
 
-change edit to x
 remove hover effect on console
 cursor
 show syntax error in console
