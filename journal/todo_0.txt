@@ -1,31 +1,32 @@
 ####################
 ### NOW
 
-remove hover effect on console
-cursor
+  ## RUN CODE ##
+image in console
+only if no text
+always on hover
+'Run Code' hover text
+
+'Reveal Answer' hover text
 show syntax error in console
-splash
+highlight selected tab
+logout dropdown tooltip
+allow for testing array equality
 
 ####################
 ### EASY
 
+delete when adding note (null note id)
 show last output grayed out in console
-allow for testing array equality
 rework Navigation state
   > replace `footerType` with `mode`
-  > bug: clicking play after editing a note does not go to play mode
-  > clicking study advances to next note without answering
 
 ####################
 ### HARD
 
+cursor color when editing
 refactor Note (separate editor note from quiz note)
-  > 'run code' and 'edit' icons shouldn't move when clicking 'reveal answer'
 Study Algorithm (see todo_1.txt)
 
 ####################
 ### QUESTIONS
-
-blacklist '$' and 'ajax' (others?) from eval()
-MVP features
-Opal? https://www.sitepoint.com/opal-ruby-browser-basics/

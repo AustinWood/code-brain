@@ -14,10 +14,6 @@ https://card-brain.herokuapp.com/#/?_k=d7g034
 ### STYLE
 
 confirm delete modal
-cursor color when editing
-logout dropdown tooltip
-highlight selected tab
-add hover effect to #play-img in nav_bar
 use off-white for unselected borders and text
 images off-white (gear, user, etc)
 hover session-input-container → change background color
@@ -25,8 +21,6 @@ add css effect to button on demo login
 style for Firefox and Safari
   > Gage said it's something about only Chrome
     auto setting div flex height's to 100% (?)
-'Run Code' hover text
-'Reveal Answer' hover text
 set scrollbar type (force browsers to render similarly?)
 
 ####################
@@ -41,6 +35,8 @@ reset state on login
 ####################
 ### FEATURES
 
+blacklist '$' and 'ajax' (others?) from eval()
+Opal? https://www.sitepoint.com/opal-ruby-browser-basics/
 randomize congratulatory messages
 react-joyride
 re-add REPL toggle

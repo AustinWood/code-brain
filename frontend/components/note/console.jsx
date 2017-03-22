@@ -48,7 +48,7 @@ class Console extends React.Component {
 
   render() {
     return (
-      <div onClick={this.focus} className="editor-container" id={this.props.attrKey}>
+      <div onClick={this.focus} className="console-container" id={this.props.attrKey}>
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
