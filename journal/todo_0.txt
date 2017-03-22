@@ -1,7 +1,7 @@
 ####################
 ### NOW
 
-make console non editable
+remove hover effect on console
 go from study to edit - changes to skeleton linger
 cursor
 show syntax error in console
@@ -10,6 +10,7 @@ splash
 ####################
 ### EASY
 
+show last output grayed out in console
 allow for testing array equality
 rework Navigation state
   > replace `footerType` with `mode`

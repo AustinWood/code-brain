@@ -100,7 +100,7 @@ class Footer extends React.Component {
           {this.studyCenter()}
         </div>
 
-        <div onClick={this.props.toggleSearch}>
+        <div onClick={this.props.exitStudy}>
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="edit" />
         </div>
 

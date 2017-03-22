@@ -41,6 +41,7 @@ reset state on login
 ####################
 ### FEATURES
 
+randomize congratulatory messages
 react-joyride
 re-add REPL toggle
 make editor/console panes resizable
