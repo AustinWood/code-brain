@@ -66,11 +66,7 @@
 }
 
 #add-img:hover {
-  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/add_filled_feqvxe.png');
-}
-
-#play-img:hover {
-  // content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/play_filled_ewt9ny.png');
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_filled_y5td7r.png');
 }
 
 #settings-img:hover {
@@ -93,4 +89,8 @@
   margin-right: 20px;
   min-width: 95px;
   text-align: right;
+}
+
+.nav-center:hover img {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/play_filled_ewt9ny.png');
 }
