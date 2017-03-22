@@ -100,7 +100,6 @@ export const runCode = () => (dispatch, getState) => {
   console.log(plainText);
   plainText = plainText.replace(new RegExp("console.log", 'g'), "resultsArr.push");
   plainText = "let resultsArr = [];\n" + plainText + "\nresultsArr;";
-  // plainText = "let resultsArr = [];\n" + plainText + "\nreturn resultsArr;";
   let result;
   try {
     result = eval(plainText);

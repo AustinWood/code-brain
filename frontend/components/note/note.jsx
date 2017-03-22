@@ -39,14 +39,20 @@ class Note extends React.Component {
     } else if (this.props.footerType === 'ask') {
       return this.renderedNote("{\"entityMap\":{},\"blocks\":[{\"key\":\"6ks1t\",\"text\":\"> \",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}]}");
     }
-    return this.renderedNote(this.props.note.answer);
+    return this.renderedNote();
   }
 
   updateQuestion(e) {
     this.props.updateAttr({question: e.target.value});
   }
 
-  renderedNote(answer) {
+  rightPane() {
+    // return (
+    //
+    // );
+  }
+
+  renderedNote() {
     const note = this.props.note;
     return (
       <div className="note-container">
@@ -77,7 +83,7 @@ class Note extends React.Component {
               <div className="editor-ccc" id="editor-right">
                 <div className="editor-cc">
                   <TextEditor
-                    json={answer}
+                    json={this.props.note.answer}
                     updateAttr={this.props.updateAttr}
                     attrKey="answer" />
                 </div>

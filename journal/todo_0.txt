@@ -1,20 +1,19 @@
 ####################
 ### NOW
 
-create runCode action
-call runCode on button press, pass in plain text
+fix seeds
 in note_detail_reducer update console
 
 ####################
-### CODE_REVIEW
+### EVAL() LIMITATIONS
 
-logout dropdown tooltip
-don't allow title editing during study
-prepare for code review
+array comparison (JS limitation)
 
 ####################
 ### EASY
 
+logout dropdown tooltip
+don't allow title editing during study
 use console null vs "" to differentiate edit/study ?
 confirm delete
 add hover effect to #play-img in nav_bar
