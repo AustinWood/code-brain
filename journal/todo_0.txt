@@ -15,6 +15,7 @@ prepare for code review
 ####################
 ### EASY
 
+use console null vs "" to differentiate edit/study ?
 confirm delete
 add hover effect to #play-img in nav_bar
 refactor notes_index.jsx
@@ -24,6 +25,7 @@ add RECEIVE_NOTE.note.id to study.dueNotes if new
 reset state on login
 https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
 set scrollbar type (force browsers to render similarly?)
+clicking studies advances to next note without answering
 
 ####################
 ### HARD

@@ -12,6 +12,7 @@ const _noteDetail = Object.freeze({
   question: null,
   skeleton: null,
   answer: null,
+  console: null,
   id: null
 });
 

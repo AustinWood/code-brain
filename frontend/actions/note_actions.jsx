@@ -1,4 +1,6 @@
 import * as NoteApiUtil from '../util/note_api_util';
+import { Editor, EditorState, ContentState,
+         convertFromRaw, convertToRaw } from 'draft-js';
 
 export const RECEIVE_NOTES = "RECEIVE_NOTES";
 export const RECEIVE_NOTE = "RECEIVE_NOTE";
@@ -92,9 +94,19 @@ export const revealNextQuestion = () => ({
 export const runCode = () => (dispatch, getState) => {
   console.log("running code in note_actions ...");
   const state = getState();
-  const draftObj = state.currentNote.skeleton;
-  const plainText = "2 + 9";
-  const result = eval(plainText);
+  const json = state.currentNote.skeleton;
+  const content = convertFromRaw(JSON.parse(json));
+  let plainText = content.getPlainText();
+  console.log(plainText);
+  plainText = plainText.replace(new RegExp("console.log", 'g'), "resultsArr.push");
+  plainText = "let resultsArr = [];\n" + plainText + "\nresultsArr;";
+  // plainText = "let resultsArr = [];\n" + plainText + "\nreturn resultsArr;";
+  let result;
+  try {
+    result = eval(plainText);
+  } catch (e) {
+    result = "Syntax error";
+  }
   dispatch(logCode(result));
 };
 
