@@ -28,6 +28,15 @@
   margin: 16px;
 }
 
+.header-question {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  justify-content: center;
+  height: 80px;
+  margin: 18px 12px 0px 12px;
+}
+
 .editor-question-container .public-DraftEditor-content {
   min-height: calc(100% - 80px);
   max-height: calc(100% - 80px);
