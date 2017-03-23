@@ -29,9 +29,10 @@ class Footer extends React.Component {
     } else if (this.props.footerType === "edit") {
       return this.editFooter();
     }
-    return (
-      <div style={{height: "15px"}}></div>
-    );
+    return this.viewFooter();
+    // return (
+    //   <div style={{height: "15px"}}></div>
+    // );
   }
 
   ///////////////////////
@@ -42,6 +43,20 @@ class Footer extends React.Component {
   // <button>
   //   <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/toggle_daxw3f.png"} className="note-footer-img" id="note-footer-toggle" />
   // </button>
+  viewFooter() {
+    return (
+      <div className="note-footer">
+
+        <div className="note-footer-right">
+          <button onClick={this.props.editNote}>
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="note-footer-edit" />
+          </button>
+        </div>
+
+      </div>
+    );
+  }
+
   editFooter() {
     return (
       <div className="note-footer">
@@ -56,6 +71,9 @@ class Footer extends React.Component {
           </button>
           <button onClick={this.handleSave}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png"} className="note-footer-img" id="note-footer-save" />
+          </button>
+          <button onClick={this.handleSave}>
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" className="note-footer-img" id="note-footer-cancel" />
           </button>
         </div>
 

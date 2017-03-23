@@ -92,22 +92,8 @@ class Note extends React.Component {
         <div className="static-cc">
           <span className="header-question">{this.props.note.question}</span>
         </div>
-        {this.edit()}
       </div>
     );
-  }
-
-  edit() {
-    if (!this.props.studyMode) {
-      return (
-        <div className="edit-div" onClick={this.props.editNote}>
-          <button className="edit-button">
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" />
-          </button>
-        </div>
-      );
-    }
-    return null;
   }
 
   cancel() {
@@ -124,7 +110,7 @@ class Note extends React.Component {
     const note = this.props.note;
     let leftPaneLabel = "Skeleton";
     if (this.props.studyMode) {
-      leftPaneLabel = "Your response"
+      leftPaneLabel = "Your response";
     }
     return (
       <div className="note-container">

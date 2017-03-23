@@ -27,8 +27,13 @@ __disallow editing Editors during view mode
 __during study, 'Skeleton' should say 'Your response'
 __show syntax error in console
 __remove edit in study
-note_header .edit-button hover SLACK
-hover text for edit
+__note_header .edit-button hover SLACK
+view footer
+remove header cancel from edit view
+hover text on edit icon
+hover for trash/add/cancel icons
+hover text for add note
+title goes out right margin on resize
 update seeds (REPL compliant, HERE docs)
 add label for 'Question' during edit
 Heroku push

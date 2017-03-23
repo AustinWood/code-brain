@@ -17,39 +17,6 @@
   display: inline-flex;
   flex-direction: row;
 }
-//
-.edit-div {
-  padding: 12px 8px 0px 8px;
-  // background-color: green;
-  // height: 50px;
-  // width: 50px;
-  z-index: 10;
-}
-//
-// .edit-div:hover {
-//   background-color: blue;
-// }
-
-.edit-button {
-  // background-color: green;
-  z-index: 10;
-}
-
-.edit-button img {
-  z-index: 12;
-}
-
-// .edit-div:hover {
-.edit-button:hover,
-.edit-button img:hover {
-  cursor: pointer;
-}
-
-// .edit-div:hover > img {
-.edit-button:hover img,
-.edit-button img:hover {
-  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_filled_pcaghu.png');
-}
 
 .header-question {
   font-size: 24px;
