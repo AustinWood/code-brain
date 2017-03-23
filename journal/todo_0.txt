@@ -30,7 +30,7 @@ __remove edit in study
 __note_header .edit-button hover SLACK
 __view footer
 __remove header cancel from edit view
-hover text on edit icon
+__hover text on edit icon
 title goes out right margin on resize
 update seeds (REPL compliant, HERE docs)
 add label for 'Question' during edit
