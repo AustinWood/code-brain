@@ -39,6 +39,7 @@ prioritize todos
 ####################
 ### LATER
 
+allow for testing array equality
 placeholder text when adding note
 hover text for add note
 hover for trash/add/cancel icons
@@ -46,7 +47,6 @@ change image color on active: https://css-tricks.com/examples/IconFont/
 null note message after exit add note
 flash errors: skeleton/solution can't be blank
 smiley footer expands beyond note if screen is narrow
-allow for testing array equality
 more seeds
 Animate '5 Notes Due' button color to entice first time user to click on it. Present a modal first time, explaining what to do. Use a boolean that resets on each login IF username === demo_account
 Flash console colors on click, erase output, pause, 200 ms, print '>', pause 200ms, print output

@@ -70,9 +70,6 @@ class Footer extends React.Component {
             <p className="save-label">Save changes</p>
             <p className="cancel-label">Cancel</p>
           </div>
-            <button onClick={this.props.logSeed}>
-              <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="note-footer-log" />
-            </button>
           <button onClick={this.handleDelete}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png" className="note-footer-img" id="note-footer-trash" />
           </button>
