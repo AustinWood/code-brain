@@ -148,13 +148,15 @@ export const logCode = (result) => ({
 
 export const logSeed = () => (dispatch, getState) => {
   const state = getState();
-  const note = state.currentNote;
-  const question = note.question;
-  const skeleton = note.skeleton;
-  const answer = note.answer;
+  const notes = state.notes;
+  let seeds = "";
+  for (const id in notes) {
+    const note = notes[id];
+    const question = note.question;
+    const skeleton = note.skeleton;
+    const answer = note.answer;
 
-  const seed = `
-
+    const seed = `
 question = <<QUESTION_STRING
 ${question}
 QUESTION_STRING
@@ -167,10 +169,12 @@ answer = <<ANSWER_STRING
 ${answer}
 ANSWER_STRING
 
-Note.create!(question: question, skeleton: skeleton, answer: answer, author_id: demo.id)`;
+Note.create!(question: question, skeleton: skeleton, answer: answer, author_id: demo.id)
+`;
+    seeds += seed;
+  }
 
-
-  console.log(seed);
+  console.log(seeds);
 };
 
 ////////////////////////
