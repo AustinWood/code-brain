@@ -3,3 +3,6 @@ bundle exec guard -P livereload
 
 # Precompile
 RAILS_ENV=production bundle exec rake assets:precompile
+
+# Seed Heroku
+heroku run bundle exec rake db:seed

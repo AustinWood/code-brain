@@ -1,31 +1,29 @@
 ####################
 ### AUTH
+
 clear errors on click "Already..?"
 put 6 char limit on passwords
 verify valid email
 click anywhere in sesson-input-container to change focus
 custom error messages
-reset state when logging back in
 
 ####################
 ### CREDITS
+
 https://icons8.com
 
 ####################
 ### FEATURES
 
-Smart indetation
-Sync Atom snippets (similar to Facebook's use of Draft.js when adding tags in a comment)
-Mark certain lines as mirror-able for simplified editing
-Toggle for line wrap
+resizable editor/console panes
+note language button with dropdown and images
+smart indentation
+sync Atom snippets (similar to Facebook's use of Draft.js when adding tags in a comment)
+mark certain lines as mirror-able for simplified editing
+toggle for line wrap
 
 ####################
 ### LOCAL HOST OVER IP
+
 ping
 os x firewall set rule that allows incoming requests to port 3000
-
-####################
-### eval() LIMITATIONS
-
-array comparison (JS limitation)
-monkey-patching (?)

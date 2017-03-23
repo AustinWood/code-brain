@@ -1,88 +1,54 @@
 ####################
 ### TODAY
 
-# UI sprint No. 1
-# User test
-# UI sprint No. 2
-# User test
-# Study algorithm
-# User test
+> UI tweaks
+> User test and feedback
+> Study algorithm
+> Seeds
 
 ####################
-### NOW
+### UI TWEAKS
 
-__Change to 'Reveal SOLUTION'
-__add 'skeleton' and 'solution' labels
-__turn off side bar toggling
-__smaller 'run code' icon, center
-__nav bar text on hover
-__move add button to NotesIndex
-__style cancel button on edit
-__fix study header style
-__cancel action on edit
-__center static question text if one line
-__toggle footer on edit
-__exit edit mode after save/delete (remove footer)
-__disallow editing Editors during view mode
-__during study, 'Skeleton' should say 'Your response'
-__show syntax error in console
-__remove edit in study
-__note_header .edit-button hover SLACK
-__view footer
-__remove header cancel from edit view
-__hover text on edit icon
-__title goes out right margin on resize
-update seeds (REPL compliant, HERE docs)
+pop up blank note in index when clicking add
+autofocus on title and insert space
 add label for 'Question' during edit
-Heroku push
-prioritize todos
+cancel doesn't work for adding new note
+delete doesn't work for adding new note
+
+####################
+### STUDY ALGORITHM
+
+store currentBucket && highestBucket
+first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
+is it not randomizing? first note always the same
+
+####################
+### SEEDS
+
+allow for testing array equality
+add more seeds
+
 ####################
 ### LATER
 
-allow for testing array equality
+'Skeleton' / 'Console' / etc labels highlight on editor hover and self text hover
 placeholder text when adding note
 hover text for add note
 hover for trash/add/cancel icons
 change image color on active: https://css-tricks.com/examples/IconFont/
-null note message after exit add note
 flash errors: skeleton/solution can't be blank
 smiley footer expands beyond note if screen is narrow
-more seeds
-Animate '5 Notes Due' button color to entice first time user to click on it. Present a modal first time, explaining what to do. Use a boolean that resets on each login IF username === demo_account
-Flash console colors on click, erase output, pause, 200 ms, print '>', pause 200ms, print output
+animate '5 Notes Due' button color to entice first time user to click on it. Present a modal first time, explaining what to do. Use a boolean that resets on each login IF username === demo_account
+flash console colors on click, erase output, pause, 200 ms, print '>', pause 200ms, print output
 make console text green
 change line color to green if starts with console.log
-
-####################
-### COLORS
-
-Search, Note, and NavBar should be the only borders with that white of white
-use off-white for unselected borders and text
-images off-white (gear, user, etc)
-hover session-input-container → change background color
-https://www.fiverr.com/alex_anderson/choose-the-perfect-color-scheme-for-your-website?context=advanced_search&context_type=auto&context_referrer=search_gigs&ref_ctx_id=b9b5c07f-0b57-4ad0-963d-abdb2d1f53e9&filtered_price=&pckg_id=1&pos=2&funnel=2f7271f2-bc16-461f-89a0-3b9955d4250f
-http://lifehacker.com/learn-the-basics-of-color-theory-to-know-what-looks-goo-1608972072
-
-####################
-### EASY
-
-blend whites and 2 grays, create hierarchy of shades, similar to <h1>, etc
-is it not randomizing? first note always the same
-delete when adding note (null note id)
 show last output grayed out in console
-rework Navigation state
-  > replace `footerType` with `mode`
-
-####################
-### HARD
-
 react-joyride
 cursor color when editing
 refactor Note (separate editor note from quiz note)
-Study Algorithm (see todo_1.txt)
 consistency in hover/selected/bg color/border color across index/nav/note/etc. e.g move ADD to index from nav bar
 
 ####################
 ### QUESTIONS
 
-inheritance
+reset state when logging back in

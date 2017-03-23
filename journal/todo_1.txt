@@ -1,10 +1,4 @@
 ####################
-### STUDY ALGORITHM
-
-Store currentBucket && highestBucket
-first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
-
-####################
 ### REFERENCE
 
 https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
@@ -29,16 +23,31 @@ add RECEIVE_NOTE.note.id to study.dueNotes if new
 restructure CSS resets
 DRY: receive errors in session_actions and deleteNote
 @notes = current_user.notes
-reset state on login
 
 ####################
 ### FEATURES
 
+tab in Editor inserts 2 spaces
 blacklist '$' and 'ajax' (others?) from eval()
 Opal? https://www.sitepoint.com/opal-ruby-browser-basics/
 randomize congratulatory messages
-re-add REPL toggle
-make editor/console panes resizable
-note language button with dropdown and images
+add REPL toggle to edit footer
 add error handling to note_actions.jsx
 flash button when clicking if already on that tab
+
+####################
+### eval() LIMITATIONS
+
+array comparison (JS limitation)
+monkey-patching (?)
+
+####################
+### COLORS
+
+blend whites and 2 grays, create hierarchy of shades, similar to <h1>, etc
+Search, Note, and NavBar should be the only borders with that white of white
+use off-white for unselected borders and text
+images off-white (gear, user, etc)
+hover session-input-container → change background color
+https://www.fiverr.com/alex_anderson/choose-the-perfect-color-scheme-for-your-website?context=advanced_search&context_type=auto&context_referrer=search_gigs&ref_ctx_id=b9b5c07f-0b57-4ad0-963d-abdb2d1f53e9&filtered_price=&pckg_id=1&pos=2&funnel=2f7271f2-bc16-461f-89a0-3b9955d4250f
+http://lifehacker.com/learn-the-basics-of-color-theory-to-know-what-looks-goo-1608972072
