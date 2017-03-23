@@ -28,7 +28,7 @@ __during study, 'Skeleton' should say 'Your response'
 __show syntax error in console
 __remove edit in study
 __note_header .edit-button hover SLACK
-view footer
+__view footer
 remove header cancel from edit view
 hover text on edit icon
 hover for trash/add/cancel icons

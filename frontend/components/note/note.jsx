@@ -72,10 +72,9 @@ class Note extends React.Component {
   }
 
   question() {
-    if (this.props.footerType === 'edit') {
+    if (this.props.editMode) {
       return (
         <div className="note-header-container">
-          {this.cancel()}
           <div className="editor-cc">
             <QuestionEditor
               question={this.props.note.question}
@@ -97,7 +96,7 @@ class Note extends React.Component {
   }
 
   cancel() {
-    if (this.props.studyMode || this.props.editMode) {
+    if (this.props.studyMode) {
       return (
         <div className="cancel" onClick={this.props.exitStudy}>
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
