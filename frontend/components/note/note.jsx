@@ -119,6 +119,10 @@ class Note extends React.Component {
 
   renderedNote() {
     const note = this.props.note;
+    let leftPaneLabel = "Skeleton";
+    if (this.props.studyMode) {
+      leftPaneLabel = "Your response"
+    }
     return (
       <div className="note-container">
         <div className="note">
@@ -130,7 +134,7 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-left">
                 <div className="editor-cc">
-                  <p>Skeleton</p>
+                  <p>{leftPaneLabel}</p>
                   <TextEditor
                     json={note.skeleton}
                     updateAttr={this.props.updateAttr}
