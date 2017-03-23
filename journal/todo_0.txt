@@ -12,7 +12,7 @@
 ### BEFORE 09:00
 
 __Change to 'Reveal SOLUTION'
-add 'skeleton' and 'solution' labels
+__add 'skeleton' and 'solution' labels
 turn off side bar toggling
 smaller 'run code' icon, center
 nav bar text on hover
@@ -20,7 +20,7 @@ highlight selected tab
 move add button to NotesIndex
 store.navigation.isEditing
 {isEditing: true} toggles trash/floppy
-{isEditing: true} edit icon becomes cancel icon
+{isEditing: true} edit becomes cancel
 show syntax error in console
 update seeds (REPL compliant, HERE docs)
 Heroku push

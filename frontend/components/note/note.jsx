@@ -51,14 +51,20 @@ class Note extends React.Component {
   rightPane() {
     if (this.props.footerType === 'ask') {
       return (
-        <ConsoleContainer />
+        <div className="editor-cc">
+          <p>Console</p>
+          <ConsoleContainer />
+        </div>
       );
     } else {
       return (
-        <TextEditor
-          json={this.props.note.answer}
-          updateAttr={this.props.updateAttr}
-          attrKey="answer" />
+        <div className="editor-cc">
+          <p>Solution</p>
+            <TextEditor
+              json={this.props.note.answer}
+              updateAttr={this.props.updateAttr}
+              attrKey="answer" />
+        </div>
       );
     }
   }
@@ -67,6 +73,7 @@ class Note extends React.Component {
     if (this.props.footerType === 'edit') {
       return (
         <div className="note-header-container">
+          {this.cancel()}
           <div className="editor-cc">
             <QuestionEditor
               question={this.props.note.question}
@@ -78,7 +85,10 @@ class Note extends React.Component {
       );
     }
     return (
-      <p className="header-question">{this.props.note.question}</p>
+      <div className="note-header-container">
+        {this.cancel()}
+        <p className="header-question">{this.props.note.question}</p>
+      </div>
     );
   }
 
@@ -98,7 +108,6 @@ class Note extends React.Component {
     return (
       <div className="note-container">
         <div className="note">
-          {this.cancel()}
 
           {this.question()}
 
@@ -107,6 +116,7 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-left">
                 <div className="editor-cc">
+                  <p>Skeleton</p>
                   <TextEditor
                     json={note.skeleton}
                     updateAttr={this.props.updateAttr}
@@ -115,9 +125,7 @@ class Note extends React.Component {
               </div>
 
               <div className="editor-ccc" id="editor-right">
-                <div className="editor-cc">
-                  {this.rightPane()}
-                </div>
+                {this.rightPane()}
               </div>
 
             </div>
