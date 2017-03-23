@@ -100,7 +100,7 @@ class Footer extends React.Component {
       <div className="footer-study">
         <div className="answer-centered" id="reveal-answer" onClick={this.props.revealAnswer}>
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
-          <p>Reveal answer</p>
+          <p>Reveal solution</p>
         </div>
       </div>
     );

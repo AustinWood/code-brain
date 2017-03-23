@@ -11,7 +11,7 @@
 ####################
 ### BEFORE 09:00
 
-Change to 'Reveal SOLUTION'
+__Change to 'Reveal SOLUTION'
 add 'skeleton' and 'solution' labels
 turn off side bar toggling
 smaller 'run code' icon, center
