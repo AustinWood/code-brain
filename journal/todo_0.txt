@@ -24,11 +24,7 @@ __center static question text if one line
 __toggle footer on edit
 __exit edit mode after save/delete (remove footer)
 __disallow editing Editors during view mode
-during study, 'Skeleton' should say 'Your response'
-change image color on active
-store.navigation.isEditing
-{isEditing: true} toggles trash/floppy
-{isEditing: true} edit becomes cancel
+__during study, 'Skeleton' should say 'Your response'
 show syntax error in console
 update seeds (REPL compliant, HERE docs)
 add label for 'Question' during edit
@@ -38,6 +34,7 @@ prioritize todos
 ####################
 ### LATER
 
+change image color on active: https://css-tricks.com/examples/IconFont/
 null note message after exit add note
 flash errors: skeleton/solution can't be blank
 smiley footer expands beyond note if screen is narrow
