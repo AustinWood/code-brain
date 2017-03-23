@@ -22,7 +22,7 @@ const NavigationReducer = (state = _navigation, action) => {
       return merge({}, state, newState);
     case TOGGLE_SEARCH:
       newState = {
-        showSearch: !(state.showSearch),
+        showSearch: true,
         footerType: 'edit'
       };
       return merge({}, state, newState);
