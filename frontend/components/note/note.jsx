@@ -98,13 +98,16 @@ class Note extends React.Component {
   }
 
   edit() {
-    return (
-      <div className="edit-div" onClick={this.props.editNote}>
-        <button className="edit-button">
-          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" />
-        </button>
-      </div>
-    );
+    if (!this.props.studyMode) {
+      return (
+        <div className="edit-div" onClick={this.props.editNote}>
+          <button className="edit-button">
+            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" />
+          </button>
+        </div>
+      );
+    }
+    return null;
   }
 
   cancel() {
