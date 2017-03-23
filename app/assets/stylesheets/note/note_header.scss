@@ -22,11 +22,17 @@
   padding: 12px 8px 0px 8px;
 }
 
-.edit-div img:hover {
+.edit-button {
+  // background-color: green;
+}
+
+// .edit-div:hover {
+.edit-button:hover {
   cursor: pointer;
 }
 
-.edit-div img:hover {
+// .edit-div:hover > img {
+.edit-button:hover img {
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_filled_pcaghu.png');
 }
 
@@ -37,7 +43,7 @@
   justify-content: center;
   // height: 80px;
   color: #E3F2FC;
-  margin: 0px 18px 22px 18px;
+  margin: 6px 18px 20px 18px;
   padding-right: 16px;
   width: 100%;
 }

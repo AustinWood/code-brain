@@ -6,17 +6,22 @@ class TextEditor extends React.Component {
   constructor(props) {
     super(props);
     this.setEditorState(props.json);
-    this.focus = () => this.refs.editor.focus();
-
     this.convertToJson = this.convertToJson.bind(this);
     this.logJson = this.logJson.bind(this);
     this.updateGlobalState = this.updateGlobalState.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
+    this.focus = this.focus.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     this.setEditorState(nextProps.json);
+  }
+
+  focus() {
+    if (this.props.studyMode || this.props.editMode) {
+      this.refs.editor.focus();
+    }
   }
 
   setEditorState(json) {
@@ -31,12 +36,17 @@ class TextEditor extends React.Component {
   }
 
   updateGlobalState(editorState) {
-    this.setState({ editorState });
-    const key = this.props.attrKey;
-    const val = this.convertToJson(editorState);
-    let newState = {};
-    newState[key] = val;
-    this.props.updateAttr(newState);
+    if (this.props.studyMode || this.props.editMode) {
+      this.setState({ editorState });
+      const key = this.props.attrKey;
+      const val = this.convertToJson(editorState);
+      let newState = {};
+      newState[key] = val;
+      this.props.updateAttr(newState);
+    } else {
+      // this.setState({ editorState });
+      this.props.updateAttr(this.props.json);
+    }
   }
 
   convertToJson(editorState) {
@@ -62,8 +72,10 @@ class TextEditor extends React.Component {
   }
 
   onFocus() {
-    const key = this.props.attrKey;
-    $("#" + key).css( "background-color", "#1A1B25" );
+    if (this.props.studyMode || this.props.editMode) {
+      const key = this.props.attrKey;
+      $("#" + key).css( "background-color", "#1A1B25" );
+    }
   }
 
   onBlur() {

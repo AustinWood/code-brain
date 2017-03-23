@@ -7,7 +7,8 @@ const mapStateToProps = state => ({
   note: state.currentNote,
   footerType: state.navigation.footerType,
   dueNotesCount: state.study.dueNotes.length,
-  isEditing: state.navigation.isEditing
+  studyMode: state.navigation.studyMode,
+  editMode: state.navigation.editMode
 });
 
 const mapDispatchToProps = dispatch => ({

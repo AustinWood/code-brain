@@ -63,7 +63,9 @@ class Note extends React.Component {
             <TextEditor
               json={this.props.note.answer}
               updateAttr={this.props.updateAttr}
-              attrKey="answer" />
+              attrKey="answer"
+              editMode={this.props.editMode}
+              studyMode={this.props.studyMode} />
         </div>
       );
     }
@@ -71,9 +73,6 @@ class Note extends React.Component {
 
   question() {
     if (this.props.footerType === 'edit') {
-      // if (this.props.isEditing) {
-      //
-      // }
       return (
         <div className="note-header-container">
           {this.cancel()}
@@ -100,8 +99,8 @@ class Note extends React.Component {
 
   edit() {
     return (
-      <div className="edit-div">
-        <button onClick={this.props.editNote}>
+      <div className="edit-div" onClick={this.props.editNote}>
+        <button className="edit-button">
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" />
         </button>
       </div>
@@ -109,11 +108,13 @@ class Note extends React.Component {
   }
 
   cancel() {
-    return (
-      <div className="cancel" onClick={this.props.exitStudy}>
-        <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
-      </div>
-    );
+    if (this.props.studyMode || this.props.editMode) {
+      return (
+        <div className="cancel" onClick={this.props.exitStudy}>
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
+        </div>
+      );
+    }
   }
 
   renderedNote() {
@@ -133,7 +134,9 @@ class Note extends React.Component {
                   <TextEditor
                     json={note.skeleton}
                     updateAttr={this.props.updateAttr}
-                    attrKey="skeleton" />
+                    attrKey="skeleton"
+                    editMode={this.props.editMode}
+                    studyMode={this.props.studyMode} />
                 </div>
               </div>
 

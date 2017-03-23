@@ -22,11 +22,16 @@ class Footer extends React.Component {
   }
 
   render() {
-    if (this.props.footerType === "ask" || this.props.footerType === "answer") {
-      return this.studyFooter();
-    } else {
+    if (this.props.footerType === "ask") {
+      return this.askFooter();
+    } else if (this.props.footerType === "answer") {
+      return this.answerFooter();
+    } else if (this.props.footerType === "edit") {
       return this.editFooter();
     }
+    return (
+      <div style={{height: "15px"}}></div>
+    );
   }
 
   ///////////////////////
@@ -87,14 +92,7 @@ class Footer extends React.Component {
   ///// STUDY FOOTER /////
   ////////////////////////
 
-  studyFooter() {
-    if (this.props.footerType === "ask") {
-      return this.revealAnswer();
-    }
-    return this.faces();
-  }
-
-  revealAnswer() {
+  askFooter() {
     return (
       <div className="footer-study">
         <div className="answer-centered" id="reveal-answer" onClick={this.props.revealAnswer}>
@@ -105,7 +103,7 @@ class Footer extends React.Component {
     );
   }
 
-  faces() {
+  answerFooter() {
     let faceUrls = [
       "http://res.cloudinary.com/oblaka/image/upload/v1490101922/face-1_d7sqvz.png",
       "http://res.cloudinary.com/oblaka/image/upload/v1490101922/face-2_cpasur.png",

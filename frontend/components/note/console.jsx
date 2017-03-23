@@ -9,8 +9,6 @@ class Console extends React.Component {
     this.focus = () => this.refs.editor.focus();
 
     this.updateGlobalState = this.updateGlobalState.bind(this);
-    // this.onFocus = this.onFocus.bind(this);
-    // this.onBlur = this.onBlur.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,16 +33,6 @@ class Console extends React.Component {
     // newState[key] = val;
     this.props.updateAttr(this.props.console);
   }
-
-  // onFocus() {
-  //   const key = this.props.attrKey;
-  //   $("#" + key).css( "background-color", "#1A1B25" );
-  // }
-  //
-  // onBlur() {
-  //   const key = this.props.attrKey;
-  //   $("#" + key).css( "background-color", "#0A0B1A" );
-  // }
 
   runCodeButton() {
     return (
