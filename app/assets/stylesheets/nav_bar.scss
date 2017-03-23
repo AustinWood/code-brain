@@ -42,6 +42,9 @@
   color: #E3F2FC;
 }
 
+////////////
+////////////
+
 .nav-center {
   border-radius: 12px;
   border: 1px solid gray;
@@ -51,11 +54,29 @@
   align-items: center;
 }
 
+.nav-center .hover, .normal {
+  min-width: 100px;
+}
+
 .nav-center:hover {
   cursor: pointer;
-  // background-color: #1A1B25;
   border: 1px solid #E3F2FC;
 }
+
+.nav-center .hover {
+  display: none;
+}
+
+.nav-center:hover .normal {
+  display: none;
+}
+
+.nav-center:hover .hover {
+  display: inline;
+}
+
+////////////
+////////////
 
 .nav-right {
   margin-right: 22px;

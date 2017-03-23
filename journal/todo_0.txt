@@ -15,7 +15,7 @@ __Change to 'Reveal SOLUTION'
 __add 'skeleton' and 'solution' labels
 __turn off side bar toggling
 __smaller 'run code' icon, center
-nav bar text on hover
+__nav bar text on hover
 highlight selected tab
 move add button to NotesIndex
 store.navigation.isEditing

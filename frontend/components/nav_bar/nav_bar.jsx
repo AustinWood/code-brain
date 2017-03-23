@@ -24,7 +24,8 @@ class NavBar extends React.Component {
 
         <div className="nav-center" onClick={this.props.nextQuestion}>
           <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} id="play-img" />
-          <p className="due-text">{this.props.dueNotes.length} notes due</p>
+          <span className="normal">{this.props.dueNotes.length} notes due</span>
+          <span className="hover">Study</span>
         </div>
 
         <div className="nav-right">
