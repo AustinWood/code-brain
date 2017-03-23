@@ -1,5 +1,5 @@
 import React from 'react';
-import { Editor, EditorState, ContentState,
+import { Editor, EditorState, ContentState, Modifier,
          convertFromRaw, convertToRaw } from 'draft-js';
 
 class TextEditor extends React.Component {
@@ -12,6 +12,7 @@ class TextEditor extends React.Component {
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.focus = this.focus.bind(this);
+    this.onTab = this.onTab.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -83,6 +84,21 @@ class TextEditor extends React.Component {
     $("#" + key).css( "background-color", "#0A0B1A" );
   }
 
+  onTab(e) {
+    e.preventDefault();
+
+    let currentState = this.state.editorState;
+    let newContentState = Modifier.replaceText(
+      currentState.getCurrentContent(),
+      currentState.getSelection(),
+      "  "
+    );
+
+    this.setState({
+      editorState: EditorState.push(currentState, newContentState, 'insert-characters')
+    });
+  }
+
   // {this.logJsonButton()}
   render() {
     return (
@@ -92,7 +108,8 @@ class TextEditor extends React.Component {
           onChange={this.updateGlobalState}
           ref="editor"
           onFocus={this.onFocus}
-          onBlur={this.onBlur} />
+          onBlur={this.onBlur}
+          onTab={this.onTab} />
       </div>
     );
   }
