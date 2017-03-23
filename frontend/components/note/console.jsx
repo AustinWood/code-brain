@@ -48,7 +48,7 @@ class Console extends React.Component {
 
   runCodeButton() {
     return (
-      <div onClick={this.props.runCode} className="run-code-container">
+      <div className="run-code-container">
         <div className="run-code-button">
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" />
           <p id="run-code-text">run code</p>
@@ -59,7 +59,7 @@ class Console extends React.Component {
 
   render() {
     return (
-      <div className="console-container" id={this.props.attrKey}>
+      <div onClick={this.props.runCode} className="console-container" id={this.props.attrKey}>
         {this.runCodeButton()}
         <Editor
           editorState={this.state.editorState}

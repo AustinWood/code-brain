@@ -1,23 +1,21 @@
 ####################
 ### NOW
 
->>> Console : hover <<<
-border
-run code text
-bg color
-console text fade
-
 >>> REVEAL ANSWER <<<
 'Reveal Answer' hover text
+
 show syntax error in console
 highlight selected tab
 logout dropdown tooltip
 answer should not be editable during study
 allow for testing array equality
+more seeds
+prioritize todos
 
 ####################
 ### EASY
 
+is it not randomizing? first note always the same
 delete when adding note (null note id)
 show last output grayed out in console
 rework Navigation state

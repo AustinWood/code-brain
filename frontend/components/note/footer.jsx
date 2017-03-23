@@ -89,34 +89,21 @@ class Footer extends React.Component {
   ////////////////////////
 
   studyFooter() {
-    return (
-      <div className="footer-study">
-
-
-
-        <div>
-          {this.studyCenter()}
-        </div>
-
-        <div>
-          <p> </p>
-        </div>
-
-      </div>
-    );
+    if (this.props.footerType === "ask") {
+      return this.revealAnswer();
+    }
+    return this.faces();
   }
 
-  studyCenter() {
-    if (this.props.footerType === "ask") {
-      return (
-        <div onClick={this.props.revealAnswer} className="reveal-answer">
+  revealAnswer() {
+    return (
+      <div className="footer-study">
+        <div className="answer-centered" id="reveal-answer" onClick={this.props.revealAnswer}>
           <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190729/show_vcuxmc.png" className="note-footer-img" id="eye" />
+          <p>Reveal answer</p>
         </div>
-      );
-    } else {
-      return this.faces();
-      // return;
-    }
+      </div>
+    );
   }
 
   faces() {
@@ -129,13 +116,15 @@ class Footer extends React.Component {
     ];
 
     return (
-      <div className="answer-centered">
-        <p>How well did you<br/>know this answer?</p>
-        <div onClick={this.props.submitScore}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
-        <div onClick={this.props.submitScore}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
-        <div onClick={this.props.submitScore}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
-        <div onClick={this.props.submitScore}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
-        <div onClick={this.props.submitScore}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
+      <div className="footer-study">
+        <div className="answer-centered">
+          <p>How well did you know this answer?</p>
+          <div onClick={this.props.submitScore}><img src={faceUrls[0]} className="note-footer-img" id="face-1" /></div>
+          <div onClick={this.props.submitScore}><img src={faceUrls[1]} className="note-footer-img" id="face-2" /></div>
+          <div onClick={this.props.submitScore}><img src={faceUrls[2]} className="note-footer-img" id="face-3" /></div>
+          <div onClick={this.props.submitScore}><img src={faceUrls[3]} className="note-footer-img" id="face-4" /></div>
+          <div onClick={this.props.submitScore}><img src={faceUrls[4]} className="note-footer-img" id="face-5" /></div>
+        </div>
       </div>
     );
   }
