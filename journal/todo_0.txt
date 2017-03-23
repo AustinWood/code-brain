@@ -26,13 +26,13 @@ __exit edit mode after save/delete (remove footer)
 __disallow editing Editors during view mode
 __during study, 'Skeleton' should say 'Your response'
 __show syntax error in console
-remove edit in study
+__remove edit in study
 note_header .edit-button hover SLACK
+hover text for edit
 update seeds (REPL compliant, HERE docs)
 add label for 'Question' during edit
 Heroku push
 prioritize todos
-hover text for edit
 ####################
 ### LATER
 
