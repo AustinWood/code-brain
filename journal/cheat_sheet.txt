@@ -3,3 +3,6 @@ bundle exec guard -P livereload
 
 # Precompile
 RAILS_ENV=production bundle exec rake assets:precompile
+
+
+content: url('http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_filled_grjlew.png');

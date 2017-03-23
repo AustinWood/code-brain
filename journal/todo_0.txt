@@ -31,7 +31,7 @@ __note_header .edit-button hover SLACK
 __view footer
 __remove header cancel from edit view
 __hover text on edit icon
-title goes out right margin on resize
+__title goes out right margin on resize
 update seeds (REPL compliant, HERE docs)
 add label for 'Question' during edit
 Heroku push
@@ -39,6 +39,7 @@ prioritize todos
 ####################
 ### LATER
 
+placeholder text when adding note
 hover text for add note
 hover for trash/add/cancel icons
 change image color on active: https://css-tricks.com/examples/IconFont/
