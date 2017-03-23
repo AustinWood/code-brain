@@ -11,10 +11,10 @@ const noteComponents = (notes = [], selectNote, selectedNoteId) => (
   ))
 );
 
-const NotesIndex = ({ notes, selectNote, selectedNoteId, addNote }) => (
+const NotesIndex = ({ notes, selectNote, selectedNoteId, addNote, logSeeds }) => (
   <div className="notes-index-component">
     <div className="notes-index-header">
-      <p>Showing {notes.length} of {notes.length} notes</p>
+      <p onClick={logSeeds}>Showing {notes.length} of {notes.length} notes</p>
       <button onClick={addNote}>
         <img src={"http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_qhau1s.png"} className="nav-img" id="add-img" />
       </button>

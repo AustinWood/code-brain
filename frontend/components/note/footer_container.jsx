@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNote, updateNote, deleteNote, runCode, logSeed } from '../../actions/note_actions';
+import { createNote, updateNote, deleteNote, runCode } from '../../actions/note_actions';
 import { revealAnswer, editNote } from '../../actions/navigation_actions';
 import { submitScore } from '../../actions/note_actions';
 import Footer from './footer';
@@ -17,8 +17,7 @@ const mapDispatchToProps = dispatch => ({
   revealAnswer: id => dispatch(revealAnswer(id)),
   editNote: id => dispatch(editNote()),
   submitScore: id => dispatch(submitScore()),
-  runCode: () => dispatch(runCode()),
-  logSeed: () => dispatch(logSeed())
+  runCode: () => dispatch(runCode())
 });
 
 export default connect(

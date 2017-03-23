@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchNotes, selectNote } from '../../actions/note_actions';
+import { fetchNotes, selectNote, logSeeds } from '../../actions/note_actions';
 import { addNote } from '../../actions/navigation_actions';
 import { asArray } from '../../reducers/selectors';
 
@@ -17,7 +17,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   addNote: () => dispatch(addNote()),
   requestNotes: () => dispatch(fetchNotes()),
-  selectNote: note => dispatch(selectNote(note))
+  selectNote: note => dispatch(selectNote(note)),
+  logSeeds: note => dispatch(logSeeds(note))
 });
 
 export default connect(

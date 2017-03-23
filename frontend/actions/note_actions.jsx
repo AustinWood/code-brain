@@ -146,7 +146,7 @@ export const logCode = (result) => ({
 ////////////////////////
 ////////////////////////
 
-export const logSeed = () => (dispatch, getState) => {
+export const logSeeds = () => (dispatch, getState) => {
   const state = getState();
   const notes = state.notes;
   let seeds = "";
