@@ -22,10 +22,9 @@
   position: absolute;
   z-index: 5;
   top: 50%;
-  margin-top: -160px;
+  margin-top: -55px;
   left: 50%;
-  margin-left: -100px;
-  background-color: #0A0B1A;
+  margin-left: -40px;
 }
 
 .run-code-container:hover {
@@ -33,8 +32,8 @@
 }
 
 .run-code-container img {
-  height: 150px;
-  width: 150px;
+  height: 60px;
+  width: 60px;
 }
 
 .console-container:hover img {
@@ -55,7 +54,7 @@
 }
 
 .run-code-button p {
-  font-size: 34px;
+  font-size: 18px;
   color: #0A0B1A;
   margin-top: 8px;
 }
