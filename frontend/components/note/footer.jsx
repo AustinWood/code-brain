@@ -66,6 +66,11 @@ class Footer extends React.Component {
         </div>
 
         <div className="note-footer-right">
+          <div>
+            <p className="trash-label">Delete note</p>
+            <p className="save-label">Save changes</p>
+            <p className="cancel-label">Cancel</p>
+          </div>
           <button onClick={this.handleDelete}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png"} className="note-footer-img" id="note-footer-trash" />
           </button>

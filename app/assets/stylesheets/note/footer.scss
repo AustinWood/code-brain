@@ -37,15 +37,27 @@
   padding: 14px 0px 14px 36px;
 }
 
-#note-footer-toggle {
-
+.trash-label, .save-label, .cancel-label, .edit-label {
+  display: none;
 }
 
-#note-footer-trash {
-  // padding-right: 24px;
+#note-footer-edit:hover #edit-label {
+  display: inline;
+}
+
+#note-footer-trash:hover {
+  // background-color: green;
+}
+
+#note-footer-trash:hover .trash-label {
+  display: inline-flex;
 }
 
 #note-footer-save {
+
+}
+
+#note-footer-cancel {
 
 }
 
