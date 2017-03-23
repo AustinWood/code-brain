@@ -1,9 +1,6 @@
 ####################
 ### NOW
 
->>> REVEAL ANSWER <<<
-'Reveal Answer' hover text
-
 show syntax error in console
 highlight selected tab
 logout dropdown tooltip
