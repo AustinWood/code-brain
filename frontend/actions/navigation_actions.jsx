@@ -2,11 +2,16 @@ export const ADD_NOTE = "ADD_NOTE";
 export const SELECT_NOTE = "SELECT_NOTE";
 export const TOGGLE_SEARCH = "TOGGLE_SEARCH";
 export const EXIT_STUDY = "EXIT_STUDY";
+export const EDIT_NOTE = "EDIT_NOTE";
 // export const STUDY = "STUDY";
 export const REVEAL_ANSWER = "REVEAL_ANSWER";
 
 export const addNote = () => ({
   type: ADD_NOTE
+});
+
+export const editNote = () => ({
+  type: EDIT_NOTE
 });
 
 export const selectNote = note => ({

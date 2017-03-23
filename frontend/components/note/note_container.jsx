@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import { createNote, updateNote, deleteNote, updateAttr, studyAgain } from '../../actions/note_actions';
-import { addNote, toggleSearch, exitStudy } from '../../actions/navigation_actions';
+import { addNote, toggleSearch, exitStudy, editNote } from '../../actions/navigation_actions';
 import Note from './note';
 
 const mapStateToProps = state => ({
   note: state.currentNote,
   footerType: state.navigation.footerType,
-  dueNotesCount: state.study.dueNotes.length
+  dueNotesCount: state.study.dueNotes.length,
+  isEditing: state.navigation.isEditing
 });
 
 const mapDispatchToProps = dispatch => ({
   addNote: id => dispatch(addNote()),
+  editNote: id => dispatch(editNote()),
   updateAttr: keyValuePair => dispatch(updateAttr(keyValuePair)),
   toggleSearch: () => dispatch(toggleSearch()),
   studyAgain: () => dispatch(studyAgain()),

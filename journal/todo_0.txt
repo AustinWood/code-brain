@@ -9,7 +9,7 @@
 # User test
 
 ####################
-### BEFORE 09:00
+### NOW
 
 __Change to 'Reveal SOLUTION'
 __add 'skeleton' and 'solution' labels
@@ -20,6 +20,7 @@ __move add button to NotesIndex
 __style cancel button on edit
 __fix study header style
 cancel action on edit
+center static question text if one line
 during study, 'Skeleton' should say 'Your response'
 change image color on active
 store.navigation.isEditing
@@ -34,6 +35,7 @@ prioritize todos
 ####################
 ### LATER
 
+smiley footer expands beyond note if screen is narrow
 allow for testing array equality
 more seeds
 Animate '5 Notes Due' button color to entice first time user to click on it. Present a modal first time, explaining what to do. Use a boolean that resets on each login IF username === demo_account

@@ -71,6 +71,9 @@ class Note extends React.Component {
 
   question() {
     if (this.props.footerType === 'edit') {
+      // if (this.props.isEditing) {
+      //
+      // }
       return (
         <div className="note-header-container">
           {this.cancel()}
@@ -90,6 +93,17 @@ class Note extends React.Component {
         <div className="static-cc">
           <span className="header-question">{this.props.note.question}</span>
         </div>
+        {this.edit()}
+      </div>
+    );
+  }
+
+  edit() {
+    return (
+      <div className="edit-div">
+        <button onClick={this.props.editNote}>
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" />
+        </button>
       </div>
     );
   }
@@ -100,10 +114,6 @@ class Note extends React.Component {
         <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
       </div>
     );
-    // const type = this.props.footerType;
-    // if (type === 'ask' || type === 'answer') {
-    //
-    // }
   }
 
   renderedNote() {

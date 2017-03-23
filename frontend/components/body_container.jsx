@@ -2,7 +2,7 @@ import Body from './body';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  navigation: state.navigation
+  studyMode: state.navigation.studyMode
 });
 
 const mapDispatchToProps = dispatch => ({

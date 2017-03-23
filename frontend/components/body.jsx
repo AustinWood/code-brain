@@ -8,7 +8,7 @@ class Body extends React.Component {
   }
 
   search() {
-    if (this.props.navigation.showSearch) {
+    if (!this.props.studyMode) {
       return (<SearchContainer />);
     }
   }
