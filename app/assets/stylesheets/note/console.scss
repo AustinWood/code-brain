@@ -12,11 +12,14 @@
   position: relative;
 }
 
+.console-container:hover {
+  cursor: pointer;
+  border: 1px solid #E3F2FC;
+}
+
 .run-code-container {
   position: absolute;
   z-index: 5;
-  // width: 200px;
-  // height: 100px;
   top: 50%;
   margin-top: -160px;
   left: 50%;
@@ -51,7 +54,7 @@
 }
 
 .run-code-button p {
-  font-size: 36px;
+  font-size: 34px;
   color: #0A0B1A;
   margin-top: 8px;
 }
