@@ -16,13 +16,14 @@ __add 'skeleton' and 'solution' labels
 __turn off side bar toggling
 __smaller 'run code' icon, center
 __nav bar text on hover
-highlight selected tab
 move add button to NotesIndex
+change image color on active
 store.navigation.isEditing
 {isEditing: true} toggles trash/floppy
 {isEditing: true} edit becomes cancel
 show syntax error in console
 update seeds (REPL compliant, HERE docs)
+add label for 'Question' during edit
 Heroku push
 prioritize todos
 

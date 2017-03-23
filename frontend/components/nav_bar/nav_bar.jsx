@@ -6,9 +6,7 @@ class NavBar extends React.Component {
     super(props);
   }
 
-  // <button onClick={this.props.addNote}>
-  //   <img src={"http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_qhau1s.png"} className="nav-img" id="add-img" />
-  // </button>
+
 
   // <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" id="settings-img" />
   render() {

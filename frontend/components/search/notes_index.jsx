@@ -11,9 +11,14 @@ const noteComponents = (notes = [], selectNote, selectedNoteId) => (
   ))
 );
 
-const NotesIndex = ({ notes, selectNote, selectedNoteId }) => (
+const NotesIndex = ({ notes, selectNote, selectedNoteId, addNote }) => (
   <div className="notes-index-component">
-    <p className="notes-index-header">Showing {notes.length} of {notes.length} notes</p>
+    <div className="notes-index-header">
+      <p>Showing {notes.length} of {notes.length} notes</p>
+      <button onClick={addNote}>
+        <img src={"http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_qhau1s.png"} className="nav-img" id="add-img" />
+      </button>
+    </div>
 
     <div className="notes-index-container">
       {noteComponents(notes, selectNote, selectedNoteId)}
