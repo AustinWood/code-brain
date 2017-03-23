@@ -6,6 +6,10 @@ class NavBar extends React.Component {
     super(props);
   }
 
+  // <button onClick={this.props.addNote}>
+  //   <img src={"http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_qhau1s.png"} className="nav-img" id="add-img" />
+  // </button>
+
   // <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" id="settings-img" />
   render() {
     return (
@@ -15,9 +19,7 @@ class NavBar extends React.Component {
           <button onClick={this.props.toggleSearch}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png"} className="nav-img" id="list-img" />
           </button>
-          <button onClick={this.props.addNote}>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_qhau1s.png"} className="nav-img" id="add-img" />
-          </button>
+          <p>View notes</p>
         </div>
 
         <div className="nav-center" onClick={this.props.nextQuestion}>
@@ -26,6 +28,7 @@ class NavBar extends React.Component {
         </div>
 
         <div className="nav-right">
+          <p>Log out</p>
           <button onClick={this.props.logout}>
             <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/user_dnmke9.png"} className="nav-img" id="user-img" />
           </button>

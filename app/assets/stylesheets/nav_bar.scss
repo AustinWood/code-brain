@@ -22,6 +22,26 @@
   align-items: center;
 }
 
+.nav-left p, .nav-right p {
+  color: #0A0B1A;
+}
+
+.nav-left:hover img {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/list_filled_rt9snf.png');
+}
+
+.nav-right:hover img {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/user_filled_luttu1.png');
+}
+
+.nav-left:hover, .nav-right:hover {
+  cursor: pointer;
+}
+
+.nav-left:hover p, .nav-right:hover p {
+  color: #E3F2FC;
+}
+
 .nav-center {
   border-radius: 12px;
   border: 1px solid gray;
@@ -58,13 +78,7 @@
   padding: 0;
 }
 
-.nav-img:hover {
-  cursor: pointer;
-}
 
-#list-img:hover {
-  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/list_filled_rt9snf.png');
-}
 
 #add-img:hover {
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_filled_y5td7r.png');
@@ -72,10 +86,6 @@
 
 #settings-img:hover {
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/settings_filled_p0qaip.png');
-}
-
-#user-img:hover {
-  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/user_filled_luttu1.png');
 }
 
 #play-img {
