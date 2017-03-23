@@ -1,7 +1,8 @@
 ####################
 ### STUDY ALGORITHM
 
-
+Store currentBucket && highestBucket
+first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
 
 ####################
 ### REFERENCE
@@ -14,9 +15,6 @@ https://card-brain.herokuapp.com/#/?_k=d7g034
 ### STYLE
 
 confirm delete modal
-use off-white for unselected borders and text
-images off-white (gear, user, etc)
-hover session-input-container → change background color
 add css effect to button on demo login
 style for Firefox and Safari
   > Gage said it's something about only Chrome
@@ -38,13 +36,8 @@ reset state on login
 blacklist '$' and 'ajax' (others?) from eval()
 Opal? https://www.sitepoint.com/opal-ruby-browser-basics/
 randomize congratulatory messages
-react-joyride
 re-add REPL toggle
 make editor/console panes resizable
 note language button with dropdown and images
 add error handling to note_actions.jsx
 flash button when clicking if already on that tab
-
-####################
-### SEEDS
-use HERE docs

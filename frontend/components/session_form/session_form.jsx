@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
           {text}&nbsp;&nbsp;{link}
         </p>
         <p className="session-form-footer-text">
-          Not planning to stick around long?<br/>
+          Just want a quick tour of the best features?<br/>
         <button className="session-form-footer-link" onClick={this.demo}>
           Try the demo account.
         </button>

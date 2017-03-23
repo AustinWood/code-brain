@@ -36,7 +36,7 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  border: 1px solid gray;
+  border: 1px solid #484951;
   font-family: 'Courier New', monospace;
   color: #E3F2FC;
   text-align: left;
@@ -45,7 +45,8 @@
 
 .editor-container:hover, .editor-question-container:hover {
   // background-color: #1A1B25;
-  border: 1px solid #E3F2FC;
+  border: 1px solid gray;
+  // border: 1px solid #E3F2FC;
 }
 
 .editor-container * {
