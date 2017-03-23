@@ -46,11 +46,10 @@ class Footer extends React.Component {
   viewFooter() {
     return (
       <div className="note-footer">
-
-        <div className="note-footer-right">
-          <button onClick={this.props.editNote}>
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="note-footer-edit" />
-          </button>
+        <div className="note-footer-left"></div>
+        <div className="note-footer-right" id="edit-div" onClick={this.props.editNote}>
+          <p>Edit note</p>
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490190150/edit_l5m66j.png" className="note-footer-img" id="note-footer-edit" />
         </div>
 
       </div>
@@ -60,7 +59,7 @@ class Footer extends React.Component {
   editFooter() {
     return (
       <div className="note-footer">
-
+        <div className="note-footer-left"></div>
         <div className="note-footer-repl">
 
         </div>
