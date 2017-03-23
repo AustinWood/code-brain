@@ -48,8 +48,11 @@ class Console extends React.Component {
 
   runCodeButton() {
     return (
-      <div onClick={this.props.runCode} className="run-code-button">
-        <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" className="note-footer-img" id="console-img" />
+      <div onClick={this.props.runCode} className="run-code-container">
+        <div className="run-code-button">
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" />
+          <p>run code</p>
+        </div>
       </div>
     );
   }

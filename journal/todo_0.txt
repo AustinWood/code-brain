@@ -1,13 +1,13 @@
 ####################
 ### NOW
 
-  ## RUN CODE ##
-fix lag by one bug
-hover change image
-only if no text
-always on hover
-'Run Code' hover text
+>>> Console : hover <<<
+border
+run code text
+bg color
+console text fade
 
+>>> REVEAL ANSWER <<<
 'Reveal Answer' hover text
 show syntax error in console
 highlight selected tab
