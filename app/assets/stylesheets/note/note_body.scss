@@ -28,15 +28,31 @@
 .editor-cc {
   position: relative;
   height: 100%;
+  width: 100%;
+}
+
+.static-cc {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 14px 0px 28px 0px;
+}
+
+.static-cc > p {
+  color: #484951;
+  // height: 100%;
 }
 
 .editor-cc > p {
-  color: #484951;
+  color: gray;
   margin: 0px 0px 3px 7px;
 }
 
 .editor-cc:hover > p {
-  color: gray;
+  color: #E3F2FC;
 }
 
 .editor-container {

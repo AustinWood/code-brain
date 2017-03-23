@@ -85,22 +85,25 @@ class Note extends React.Component {
       );
     }
     return (
-      <div className="note-header-container">
+      <div className="static-note-header-container">
         {this.cancel()}
-        <p className="header-question">{this.props.note.question}</p>
+        <div className="static-cc">
+          <span className="header-question">{this.props.note.question}</span>
+        </div>
       </div>
     );
   }
 
   cancel() {
-    const type = this.props.footerType;
-    if (type === 'ask' || type === 'answer') {
-      return (
-        <div className="cancel" onClick={this.props.exitStudy}>
-          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
-        </div>
-      );
-    }
+    return (
+      <div className="cancel" onClick={this.props.exitStudy}>
+        <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" />
+      </div>
+    );
+    // const type = this.props.footerType;
+    // if (type === 'ask' || type === 'answer') {
+    //
+    // }
   }
 
   renderedNote() {

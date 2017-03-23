@@ -16,7 +16,11 @@ __add 'skeleton' and 'solution' labels
 __turn off side bar toggling
 __smaller 'run code' icon, center
 __nav bar text on hover
-move add button to NotesIndex
+__move add button to NotesIndex
+__style cancel button on edit
+__fix study header style
+cancel action on edit
+during study, 'Skeleton' should say 'Your response'
 change image color on active
 store.navigation.isEditing
 {isEditing: true} toggles trash/floppy
