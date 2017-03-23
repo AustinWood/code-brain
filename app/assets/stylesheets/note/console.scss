@@ -53,5 +53,9 @@
 .run-code-button p {
   font-size: 36px;
   color: #0A0B1A;
-  // margin-right: 14px;
+  margin-top: 8px;
+}
+
+.console-container:hover #run-code-text {
+  color: white;
 }
