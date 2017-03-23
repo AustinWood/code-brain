@@ -109,7 +109,7 @@ class Note extends React.Component {
     const note = this.props.note;
     let leftPaneLabel = "Skeleton";
     if (this.props.studyMode) {
-      leftPaneLabel = "Your response";
+      leftPaneLabel = "Attempt";
     }
     return (
       <div className="note-container">

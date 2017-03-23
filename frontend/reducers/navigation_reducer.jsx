@@ -30,7 +30,9 @@ const NavigationReducer = (state = _navigation, action) => {
       return merge({}, state, newState);
     case TOGGLE_SEARCH:
       newState = {
-        studyMode: false
+        studyMode: false,
+        editMode: false,
+        footerType: null
       };
       return merge({}, state, newState);
     case REVEAL_ANSWER:
