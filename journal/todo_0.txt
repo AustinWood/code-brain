@@ -9,12 +9,12 @@
 # User test
 
 ####################
-### NOW
-
-####################
 ### BEFORE 09:00
 
 Change to 'Reveal SOLUTION'
+add 'skeleton' and 'solution' labels
+turn off side bar toggling
+smaller 'run code' icon, center
 nav bar text on hover
 highlight selected tab
 move add button to NotesIndex
