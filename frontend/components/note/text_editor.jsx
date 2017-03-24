@@ -20,9 +20,7 @@ class TextEditor extends React.Component {
   }
 
   focus() {
-    if (this.props.studyMode || this.props.editMode) {
-      this.refs.editor.focus();
-    }
+    this.refs.editor.focus();
   }
 
   setEditorState(json) {
@@ -124,7 +122,8 @@ class TextEditor extends React.Component {
           ref="editor"
           onFocus={this.onFocus}
           onBlur={this.onBlur}
-          onTab={this.onTab} />
+          onTab={this.onTab}
+          readOnly={!this.props.studyMode && !this.props.editMode} />
       </div>
     );
   }
