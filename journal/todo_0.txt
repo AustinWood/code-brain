@@ -1,17 +1,14 @@
 ####################
 ### TODAY
 
-> UI tweaks
+x UI tweaks
 > User test and feedback
 > Study algorithm
 > Seeds
 
 ####################
-### UI TWEAKS
+### BUG_FIXES
 
-pop up blank note in index when clicking add
-autofocus on title and insert space
-add label for 'Question' during edit
 cancel doesn't work for adding new note
 delete doesn't work for adding new note
 
@@ -31,6 +28,7 @@ add more seeds
 ####################
 ### LATER
 
+pop up blank note in index when clicking add
 'Skeleton' / 'Console' / etc labels highlight on editor hover and self text hover
 placeholder text when adding note
 hover text for add note
