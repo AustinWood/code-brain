@@ -103,10 +103,12 @@
   padding: 0;
 }
 
-
-
 #add-img:hover {
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490206752/add_note_filled_y5td7r.png');
+}
+
+#add-img-green:hover {
+  content: url('http://res.cloudinary.com/oblaka/image/upload/v1490366431/add_filled_green_gi7cno.png');
 }
 
 #settings-img:hover {

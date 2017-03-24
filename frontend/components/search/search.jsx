@@ -20,7 +20,8 @@ class Search extends React.Component {
           selectNote={this.props.selectNote}
           selectedNoteId={this.props.selectedNoteId}
           addNote={this.props.addNote}
-          logSeeds={this.props.logSeeds} />
+          logSeeds={this.props.logSeeds}
+          editMode={this.props.navigation.editMode} />
 
       </div>
     );
