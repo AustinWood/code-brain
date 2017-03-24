@@ -1,5 +1,7 @@
 .note-header-container {
-  height: 130px;
+  // min-height: 130px;
+  height: 140px;
+  margin-bottom: 20px;
   // width: 100%;
   // background-color: rgba(255,0,0,0.3);
   // display: flex;
@@ -27,7 +29,8 @@
   color: #E3F2FC;
   margin: 6px 18px 20px 18px;
   padding: 0px 0px 0px 0px;
-  width: 90%;
+  width: 95%;
+  // background-color: green;
   display: block;
 }
 
@@ -51,7 +54,7 @@
   font-size: 24px;
   font-weight: 400;
   max-height: 100%;
-  margin: 16px 16px 16px 16px;
+  margin: 2px 16px 16px 16px;
   padding-bottom: 6px;
 }
 

@@ -42,17 +42,26 @@
   padding-top: 8px;
 }
 
-.static-cc > p {
+.static-cc > .editor-label {
   color: #484951;
   // height: 100%;
 }
 
-.editor-cc > p {
+.editor-cc > .editor-label {
   color: gray;
   margin: 0px 0px 3px 7px;
 }
 
-.editor-cc:hover > p {
+.editor-cc:hover > .editor-label {
+  color: #E3F2FC;
+}
+
+.editor-cc > .question-editor-label {
+  color: gray;
+  margin: 10px 0px 0px 22px;
+}
+
+.editor-cc:hover > .question-editor-label {
   color: #E3F2FC;
 }
 

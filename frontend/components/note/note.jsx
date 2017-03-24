@@ -52,14 +52,14 @@ class Note extends React.Component {
     if (this.props.footerType === 'ask') {
       return (
         <div className="editor-cc">
-          <p>Console</p>
+          <p className="editor-label">Console</p>
           <ConsoleContainer />
         </div>
       );
     } else {
       return (
         <div className="editor-cc">
-          <p>Solution</p>
+          <p className="editor-label">Solution</p>
             <TextEditor
               json={this.props.note.answer}
               updateAttr={this.props.updateAttr}
@@ -76,6 +76,7 @@ class Note extends React.Component {
       return (
         <div className="note-header-container">
           <div className="editor-cc">
+            <p className="question-editor-label">Question</p>
             <QuestionEditor
               question={this.props.note.question}
               updateAttr={this.props.updateAttr}
@@ -123,7 +124,7 @@ class Note extends React.Component {
 
               <div className="editor-ccc" id="editor-left">
                 <div className="editor-cc">
-                  <p>{leftPaneLabel}</p>
+                  <p className="editor-label">{leftPaneLabel}</p>
                   <TextEditor
                     json={note.skeleton}
                     updateAttr={this.props.updateAttr}
