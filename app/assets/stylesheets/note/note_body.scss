@@ -52,7 +52,7 @@
   margin: 0px 0px 3px 7px;
 }
 
-.editor-cc:hover > .editor-label {
+#editable  .editor-cc:hover > .editor-label {
   color: #E3F2FC;
 }
 
@@ -78,7 +78,7 @@
   max-height: 100%;
 }
 
-.editor-container:hover, .editor-question-container:hover {
+#editable .editor-container:hover, #editable .editor-question-container:hover {
   border: 1px solid gray;
 }
 

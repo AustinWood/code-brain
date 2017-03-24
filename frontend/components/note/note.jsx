@@ -106,13 +106,14 @@ class Note extends React.Component {
   }
 
   renderedNote() {
+    console.log((this.props.studyMode || this.props.editMode));
     const note = this.props.note;
     let leftPaneLabel = "Skeleton";
     if (this.props.studyMode) {
       leftPaneLabel = "Attempt";
     }
     return (
-      <div className="note-container">
+      <div className="note-container" id={(this.props.studyMode || this.props.editMode) ? "editable" : "not-editable"}>
         <div className="note">
 
           {this.question()}
