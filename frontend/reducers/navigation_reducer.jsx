@@ -1,6 +1,6 @@
 import {
   ADD_NOTE, SELECT_NOTE, TOGGLE_SEARCH,
-  STUDY, REVEAL_ANSWER, EXIT_STUDY, EDIT_NOTE } from '../actions/navigation_actions';
+  STUDY, REVEAL_ANSWER, EXIT_STUDY, EDIT_NOTE, HIDE_SOLUTION } from '../actions/navigation_actions';
 import { NEXT_QUESTION, LOG_CODE, FINISH_STUDYING, RECEIVE_NOTE, REMOVE_NOTE } from '../actions/note_actions';
 import merge from 'lodash/merge';
 
@@ -40,6 +40,13 @@ const NavigationReducer = (state = _navigation, action) => {
         studyMode: true,
         editMode: false,
         footerType: 'answer'
+      };
+      return merge({}, state, newState);
+    case HIDE_SOLUTION:
+      newState = {
+        studyMode: true,
+        editMode: false,
+        footerType: 'ask'
       };
       return merge({}, state, newState);
     case NEXT_QUESTION:

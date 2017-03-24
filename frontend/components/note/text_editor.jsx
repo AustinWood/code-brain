@@ -103,7 +103,7 @@ class TextEditor extends React.Component {
     if (this.props.studyMode && this.props.attrKey === "answer") {
       return (
         <div className="run-code-container" id="hide-solution-container">
-          <div className="run-code-button">
+          <div className="run-code-button" onClick={this.props.hideSolution}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1490363555/hide_q3eagx.png" />
             <p id="run-code-text">hide solution</p>
           </div>

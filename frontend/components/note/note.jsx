@@ -62,7 +62,8 @@ class Note extends React.Component {
               updateAttr={this.props.updateAttr}
               attrKey="answer"
               editMode={this.props.editMode}
-              studyMode={this.props.studyMode} />
+              studyMode={this.props.studyMode}
+              hideSolution={this.props.hideSolution} />
         </div>
       );
     }

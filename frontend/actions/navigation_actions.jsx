@@ -5,6 +5,7 @@ export const EXIT_STUDY = "EXIT_STUDY";
 export const EDIT_NOTE = "EDIT_NOTE";
 // export const STUDY = "STUDY";
 export const REVEAL_ANSWER = "REVEAL_ANSWER";
+export const HIDE_SOLUTION = "HIDE_SOLUTION";
 
 export const addNote = () => ({
   type: ADD_NOTE
@@ -41,4 +42,8 @@ export const exitStudy = () => (dispatch, getState) => {
 
 export const revealAnswer = () => ({
   type: REVEAL_ANSWER
+});
+
+export const hideSolution = () => ({
+  type: HIDE_SOLUTION
 });

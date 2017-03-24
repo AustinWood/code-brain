@@ -1,7 +1,7 @@
 ####################
 ### IDEAS
 
-add a 'Hide solution' button
+dispatch hide solution action
 react-joyride
 replace '6 notes due' with '|>' and 'Study mode' on hover
 
