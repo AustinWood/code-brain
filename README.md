@@ -2,8 +2,7 @@
 
 Code Brain is a flash card app designed to assist software engineers in developing language fluency by committing bite-sized chunks of information (such as algorithms or language syntaxes) to long-term memory.
 
-* [Code Brain live] [live]
-[live]: https://codebrain.herokuapp.com
+[Code Brain live](https://codebrain.herokuapp.com)
 
 ## Features & Implementation
 
