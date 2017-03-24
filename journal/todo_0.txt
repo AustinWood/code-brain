@@ -6,10 +6,10 @@ react-joyride
 ####################
 ### BUG_FIXES
 
+cancel is actually saving :o
 cancel doesn't work for adding new note
-delete doesn't work for adding new note
-cancel only on add new note
-update count after save new note
+cancel only on add new note (no delete)
+
 
 ####################
 ### ON LOGIN

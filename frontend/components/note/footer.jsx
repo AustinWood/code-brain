@@ -76,7 +76,7 @@ class Footer extends React.Component {
           <button onClick={this.handleSave}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png" className="note-footer-img" id="note-footer-save" />
           </button>
-          <button onClick={this.handleSave}>
+          <button onClick={this.props.exitStudy}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1490215536/cancel_tcfjby.png" className="note-footer-img" id="note-footer-cancel" />
           </button>
         </div>

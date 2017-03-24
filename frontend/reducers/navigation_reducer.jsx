@@ -67,6 +67,7 @@ const NavigationReducer = (state = _navigation, action) => {
       newState = {footerType: 'finish_studying'};
       return merge({}, state, newState);
     case EXIT_STUDY:
+      console.log("in nav reducer EXIT STUDY");
       newState = {
         studyMode: false,
         editMode: false,
