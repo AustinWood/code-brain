@@ -80,6 +80,13 @@ const NavigationReducer = (state = _navigation, action) => {
         footerType: null
       };
       return merge({}, state, newState);
+    case SELECT_NOTE:
+      newState = {
+        studyMode: false,
+        editMode: false,
+        footerType: null
+      };
+      return merge({}, state, newState);
     default:
       return state;
   }
