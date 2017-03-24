@@ -6,7 +6,7 @@ react-joyride
 ####################
 ### BUG_FIXES
 
-turn off hover if not editable
+fix typo seed
 
 ####################
 ### ON LOGIN
