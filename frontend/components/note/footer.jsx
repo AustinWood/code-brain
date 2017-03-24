@@ -56,6 +56,15 @@ class Footer extends React.Component {
     );
   }
 
+  deleteButton() {
+    if (this.props.note.id === null) return null;
+    return (
+      <button onClick={this.handleDelete}>
+        <img src="http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png" className="note-footer-img" id="note-footer-trash" />
+      </button>
+    );
+  }
+
   editFooter() {
     return (
       <div className="note-footer">
@@ -70,9 +79,7 @@ class Footer extends React.Component {
             <p className="save-label">Save changes</p>
             <p className="cancel-label">Cancel</p>
           </div>
-          <button onClick={this.handleDelete}>
-            <img src="http://res.cloudinary.com/oblaka/image/upload/v1489763112/trash_hr3gzp.png" className="note-footer-img" id="note-footer-trash" />
-          </button>
+          {this.deleteButton()}
           <button onClick={this.handleSave}>
             <img src="http://res.cloudinary.com/oblaka/image/upload/v1489764678/save_ukfo7q.png" className="note-footer-img" id="note-footer-save" />
           </button>

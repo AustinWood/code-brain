@@ -6,8 +6,6 @@ react-joyride
 ####################
 ### BUG_FIXES
 
-cancel doesn't work for adding new note
-cancel only on add new note (no delete)
 don't allow cursor selection unless edit mode
 
 ####################
