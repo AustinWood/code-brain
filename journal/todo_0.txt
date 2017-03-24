@@ -23,6 +23,7 @@ You can use console.log to print test cases
 etc...
 MODAL_MESSAGE
 first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
+hint for problem 0 "that's okay, js isn't my native language either"
 
 ####################
 ### SEEDS
@@ -33,6 +34,7 @@ add more seeds
 ####################
 ### LATER
 
+disable pointer cursor (and even action dispatch, for study) if already selected?
 is it not randomizing? first note always the same
 
 ####################
