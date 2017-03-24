@@ -4,11 +4,6 @@
 react-joyride
 
 ####################
-### BUG_FIXES
-
-fix typo seed
-
-####################
 ### ON LOGIN
 
 modal which says <<MODAL_MESSAGE
