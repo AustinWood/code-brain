@@ -101,10 +101,22 @@ class TextEditor extends React.Component {
     });
   }
 
+  hideSolutionButton() {
+    return (
+      <div className="run-code-container">
+        <div className="run-code-button">
+          <img src="http://res.cloudinary.com/oblaka/image/upload/v1490189938/console_wz5ioy.png" />
+          <p id="run-code-text">run code</p>
+        </div>
+      </div>
+    );
+  }
+
   // {this.logJsonButton()}
   render() {
     return (
       <div onClick={this.focus} className="editor-container" id={this.props.attrKey}>
+        {this.runCodeButton()}
         <Editor
           editorState={this.state.editorState}
           onChange={this.updateGlobalState}
