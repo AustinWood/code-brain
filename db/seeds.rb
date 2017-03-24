@@ -16,6 +16,20 @@ demo = User.create!(
 Note.destroy_all
 
 question = <<QUESTION_STRING
+Write a method that takes an integer and returns 1 more than twice the integer's value.
+QUESTION_STRING
+
+skeleton = <<SKELETON_STRING
+{"entityMap":{},"blocks":[{"key":"6i59a","text":"function doublePlusOne(int) {","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"89bqo","text":"  // Your code here","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"e83a7","text":"}","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"dnuu8","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"1bca","text":"console.log(doublePlusOne(0) === 1);","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"att20","text":"console.log(doublePlusOne(2) === 5);","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fnnjk","text":"console.log(doublePlusOne(42) === 85);","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"h7ig","text":"console.log(doublePlusOne(314) === 629);","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}
+SKELETON_STRING
+
+answer = <<ANSWER_STRING
+{"entityMap":{},"blocks":[{"key":"3mtof","text":"function doublePlusOne(int) {","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"31jve","text":" return (int * 2) + 1;","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"dd1c3","text":"}","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}
+ANSWER_STRING
+
+Note.create!(question: question, skeleton: skeleton, answer: answer, author_id: demo.id)
+
+question = <<QUESTION_STRING
 You have an unsorted array of integers. Write a recursive solution to count the number of occurrences of a specific value.
 QUESTION_STRING
 

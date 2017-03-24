@@ -129,16 +129,28 @@ export const runCode = () => (dispatch, getState) => {
   plainText = plainText.replace(new RegExp("console.log", 'g'), "resultsArr.push");
   plainText = "let resultsArr = [];\n" + plainText + "\nresultsArr;";
   let result;
+  let resultsArr;
   try {
-    const resultArr = eval(plainText);
-    result = resultArr.join("\n");
+    resultsArr = eval(plainText);
   } catch (e) {
-    result = "Syntax error";
+    resultsArr = ["Syntax error"];
   }
   dispatch(logCode(""));
+
+  let logByLine = (i = 0) => {
+    setTimeout(() => {
+      if (resultsArr.length > i) {
+        i++;
+        result = resultsArr.slice(0, i).join("\n");
+        dispatch(logCode(result));
+        logByLine(i);
+      }
+    }, 100);
+  };
+
   setTimeout(() => {
-    dispatch(logCode(result));
-  }, 500);
+    logByLine();
+  }, 180);
 };
 
 export const logCode = (result) => ({

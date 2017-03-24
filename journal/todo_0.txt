@@ -1,8 +1,7 @@
 ####################
 ### IDEAS
 
-console border match response border
-flash console colors on click, erase output, pause, 200 ms, print '>', pause 200ms, print output
+add a 'Hide solution' button
 react-joyride
 replace '6 notes due' with '|>' and 'Study mode' on hover
 
@@ -13,6 +12,7 @@ cancel doesn't work for adding new note
 delete doesn't work for adding new note
 cancel only on add new note
 update count after save new note
+can't copy if not editing
 
 ####################
 ### ON LOGIN
@@ -43,7 +43,6 @@ add more seeds
 ### LATER
 
 navigation, just buttons, in the nav bar center display '> dashboard' or 'cd study'
-add a 'Hide solution' button
 pop up blank note in index when clicking add
 'Skeleton' / 'Console' / etc labels highlight on editor hover and self text hover
 placeholder text when adding note
