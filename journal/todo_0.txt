@@ -4,19 +4,6 @@
 react-joyride
 
 ####################
-### ON LOGIN
-
-modal which says <<MODAL_MESSAGE
-Welcome to Code Brain.
-Your currently reviewing your notes.
-Try to solve the problem by typing your code on the left.
-You can use console.log to print test cases
-etc...
-MODAL_MESSAGE
-first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
-hint for problem 0 "that's okay, js isn't my native language either"
-
-####################
 ### SEEDS
 
 allow for testing array equality
@@ -31,4 +18,18 @@ is it not randomizing? first note always the same
 ####################
 ### QUESTIONS
 
+application.html.erb where to add css?
 reset state when logging back in
+
+####################
+### ON LOGIN
+
+modal which says <<MODAL_MESSAGE
+Welcome to Code Brain.
+Your currently reviewing your notes.
+Try to solve the problem by typing your code on the left.
+You can use console.log to print test cases
+etc...
+MODAL_MESSAGE
+first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
+hint for problem 0 "that's okay, js isn't my native language either"
