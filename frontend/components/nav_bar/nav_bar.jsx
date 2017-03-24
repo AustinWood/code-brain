@@ -20,14 +20,20 @@ class NavBar extends React.Component {
 
         <div className="nav-left">
           <button onClick={this.props.toggleSearch}>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png"} className="nav-img" id="list-img" />
+            <img
+              src={this.props.studyMode ? "http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png" : "http://res.cloudinary.com/oblaka/image/upload/v1490366431/list_green_azaxvr.png"}
+              className="nav-img"
+              id={this.props.studyMode ? "list-img" : "list-img-green"} />
           </button>
           <p>View notes</p>
         </div>
 
         <div className="nav-center">
           <button onClick={this.props.nextQuestion}>
-            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} className="nav-img" id="play-img" />
+            <img
+              src={this.props.studyMode ? "http://res.cloudinary.com/oblaka/image/upload/v1490366431/play_green_cbeekb.png" : "http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"}
+              className="nav-img"
+              id={this.props.studyMode ? "play-img-green" : "play-img"} />
           </button>
           <p>Study</p>
         </div>

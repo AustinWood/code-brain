@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  dueNotes: state.study.dueNotes
+  dueNotes: state.study.dueNotes,
+  studyMode: state.navigation.studyMode
 });
 
 const mapDispatchToProps = dispatch => ({
