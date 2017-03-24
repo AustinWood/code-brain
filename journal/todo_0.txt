@@ -1,7 +1,6 @@
 ####################
 ### IDEAS
 
-greenify popup text
 react-joyride
 
 ####################
@@ -11,7 +10,6 @@ cancel doesn't work for adding new note
 delete doesn't work for adding new note
 cancel only on add new note
 update count after save new note
-can't copy if not editing
 
 ####################
 ### ON LOGIN
@@ -24,13 +22,7 @@ Try to solve the problem by typing your code on the left.
 You can use console.log to print test cases
 etc...
 MODAL_MESSAGE
-
-####################
-### STUDY ALGORITHM
-
-store currentBucket && highestBucket
 first time on faces: tooltip -- the key is that your consistent in how you rate yourself. notes dont 'become due'. that's just stressful. you spend as much time each day as you see fit, and we'll make sure that study time is optimized for you.
-is it not randomizing? first note always the same
 
 ####################
 ### SEEDS
@@ -41,21 +33,7 @@ add more seeds
 ####################
 ### LATER
 
-navigation, just buttons, in the nav bar center display '> dashboard' or 'cd study'
-pop up blank note in index when clicking add
-'Skeleton' / 'Console' / etc labels highlight on editor hover and self text hover
-placeholder text when adding note
-hover text for add note
-hover for trash/add/cancel icons
-change image color on active
-flash errors: skeleton/solution can't be blank
-smiley footer expands beyond note if screen is narrow
-animate '5 Notes Due' button color to entice first time user to click on it. Present a modal first time, explaining what to do. Use a boolean that resets on each login IF username === demo_account
-make console text green
-change line color to green if starts with console.log
-show last output grayed out in console
-refactor Note (separate editor note from quiz note)
-consistency in hover/selected/bg color/border color across index/nav/note/etc. e.g move ADD to index from nav bar
+is it not randomizing? first note always the same
 
 ####################
 ### QUESTIONS
