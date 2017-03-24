@@ -2,6 +2,7 @@ import * as NoteApiUtil from '../util/note_api_util';
 import { Editor, EditorState, ContentState,
          convertFromRaw, convertToRaw } from 'draft-js';
 
+
 export const RECEIVE_NOTES = "RECEIVE_NOTES";
 export const RECEIVE_NOTE = "RECEIVE_NOTE";
 export const SELECT_NOTE = "SELECT_NOTE";
@@ -81,6 +82,7 @@ export const nextQuestion = () => (dispatch, getState) => {
     const nextNote = state.notes[dueNotes[0]];
     dispatch(selectNote(nextNote));
     dispatch(revealNextQuestion());
+    dispatch(runCode());
   } else {
     dispatch(finishStudying());
   }

@@ -41,7 +41,6 @@ const NoteDetailReducer = (state = _noteDetail, action) => {
     case STUDY:
       return state;
     case LOG_CODE:
-
       newState = {console: String(action.result)};
       return merge({}, state, newState);
     case EXIT_STUDY:
