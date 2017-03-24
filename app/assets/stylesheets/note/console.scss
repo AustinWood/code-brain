@@ -4,7 +4,7 @@
   width: 100%;
   height: calc(100% - 28px);
   border-radius: 12px;
-  border: 1px solid gray;
+  border: 1px solid #484951;
   font-family: 'Courier New', monospace;
   color: #E3F2FC;
   text-align: left;
@@ -14,7 +14,7 @@
 
 .console-container:hover {
   cursor: pointer;
-  border: 1px solid #E3F2FC;
+  border: 1px solid gray;
   // color: gray;
 }
 

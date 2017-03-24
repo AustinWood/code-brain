@@ -44,10 +44,7 @@ class Note extends React.Component {
   updateQuestion(e) {
     this.props.updateAttr({question: e.target.value});
   }
-  // <Console
-  //   console={this.props.note.console}
-  //   updateAttr={this.props.updateAttr}
-  //   attrKey="console" />
+
   rightPane() {
     if (this.props.footerType === 'ask') {
       return (
