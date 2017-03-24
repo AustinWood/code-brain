@@ -7,6 +7,13 @@ class NavBar extends React.Component {
   }
 
   // <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/settings_k4rizi.png"} className="nav-img" id="settings-img" />
+
+  // <div className="nav-center" onClick={this.props.nextQuestion}>
+  //   <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} id="play-img" />
+  //   <span className="normal">{this.props.dueNotes.length} notes due</span>
+  //   <span className="hover">Study</span>
+  // </div>
+
   render() {
     return (
       <div className="nav-bar">
@@ -18,10 +25,11 @@ class NavBar extends React.Component {
           <p>View notes</p>
         </div>
 
-        <div className="nav-center" onClick={this.props.nextQuestion}>
-          <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} id="play-img" />
-          <span className="normal">{this.props.dueNotes.length} notes due</span>
-          <span className="hover">Study</span>
+        <div className="nav-center">
+          <button onClick={this.props.nextQuestion}>
+            <img src={"http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"} className="nav-img" id="play-img" />
+          </button>
+          <p>Study</p>
         </div>
 
         <div className="nav-right">

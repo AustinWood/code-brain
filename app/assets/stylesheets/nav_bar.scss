@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.nav-left p, .nav-right p {
+.nav-left p, .nav-right p, .nav-center p {
   color: #0A0B1A;
 }
 
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.nav-left:hover p, .nav-right:hover p {
+.nav-left:hover p, .nav-right:hover p, .nav-center:hover p {
   color: #E3F2FC;
 }
 
@@ -47,7 +47,7 @@
 
 .nav-center {
   border-radius: 12px;
-  border: 1px solid gray;
+  // border: 1px solid gray;
   height: 45px;
   display: flex;
   flex-direction: row;
@@ -60,7 +60,7 @@
 
 .nav-center:hover {
   cursor: pointer;
-  border: 1px solid #E3F2FC;
+  // border: 1px solid #E3F2FC;
 }
 
 .nav-center .hover {

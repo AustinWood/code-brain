@@ -1,9 +1,10 @@
 ####################
 ### IDEAS
 
-dispatch hide solution action
-react-joyride
 replace '6 notes due' with '|>' and 'Study mode' on hover
+run code on launch
+colorize icons
+react-joyride
 
 ####################
 ### BUG_FIXES
