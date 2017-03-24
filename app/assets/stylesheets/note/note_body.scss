@@ -85,9 +85,19 @@
   max-width: calc(100% - 24px);
   padding: 6px 10px;
   margin: 6px 2px;
-  overflow: auto;
-  word-break: keep-all;
-  word-wrap: normal;
+  overflow: scroll;
+  // word-break: keep-all;
+  // word-wrap: normal;
+  // overflow-wrap: none;
   position: absolute;
   display: block;
+  white-space: nowrap;
+}
+
+.public-DraftEditor-content * {
+  // overflow-wrap: none;
+  // word-wrap:
+  // white-space: nowrap;
+  // overflow: scroll;
+
 }

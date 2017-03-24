@@ -4,6 +4,13 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import ModalContainer from './modal/modal_container';
 // import Modal from 'react-modal';
 
+// import TextEditor from './test_editor';
+//
+// const App = ({ children }) => (
+//  <div className="app">
+//    <TextEditor />
+//  </div>
+// );
 
 const App = ({ children }) => (
   <div className="app">
