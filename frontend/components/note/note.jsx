@@ -80,7 +80,8 @@ class Note extends React.Component {
               question={this.props.note.question}
               updateAttr={this.props.updateAttr}
               attrKey="question"
-              className="note-header" />
+              className="note-header"
+              noteId={this.props.note.id} />
           </div>
         </div>
       );

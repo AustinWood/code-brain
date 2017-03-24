@@ -3,3 +3,11 @@ Couldn't get image assets to load on Heroku. Tried manually precompiling. Eventu
 
 2017-03-17
 Getting multiline text to render correctly. Started by using dangerouslySetInnerHTML, realized that was not sustainable, decide to use Draft.js
+
+2017-03-23
+Cursor was invisible on lines without any text.
+Found the guilty CSS with binary search. I had written
+.null-note-message p span { ... }
+instead of
+.null-note-message p, .null-note-message span { ... }
+so it was being applied to ALL spans, including those used by Draft.js

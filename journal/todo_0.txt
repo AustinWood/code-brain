@@ -52,6 +52,3 @@ consistency in hover/selected/bg color/border color across index/nav/note/etc. e
 ### QUESTIONS
 
 reset state when logging back in
-
-Cursor
-https://github.com/facebook/draft-js/blob/master/src/component/utils/DraftStyleDefault.css

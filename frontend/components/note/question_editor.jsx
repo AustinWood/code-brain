@@ -17,6 +17,9 @@ class QuestionEditor extends React.Component {
     this.setEditorState(nextProps.question);
   }
 
+  componentDidMount() {
+    this.refs.editor.focus();
+  }
 
   setEditorState(plainText) {
     if (plainText === null) {
