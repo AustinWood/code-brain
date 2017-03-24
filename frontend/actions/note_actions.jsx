@@ -135,7 +135,10 @@ export const runCode = () => (dispatch, getState) => {
   } catch (e) {
     result = "Syntax error";
   }
-  dispatch(logCode(result));
+  dispatch(logCode(""));
+  setTimeout(() => {
+    dispatch(logCode(result));
+  }, 500);
 };
 
 export const logCode = (result) => ({

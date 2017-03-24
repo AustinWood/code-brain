@@ -18,7 +18,7 @@ class Console extends React.Component {
 
   setEditorState(plainText) {
     if (plainText === null) {
-        this.state = {editorState: EditorState.createEmpty()};
+      this.state = {editorState: EditorState.createEmpty()};
     } else {
       const content = ContentState.createFromText(plainText);
       this.state = ({editorState: EditorState.createWithContent(content)});
