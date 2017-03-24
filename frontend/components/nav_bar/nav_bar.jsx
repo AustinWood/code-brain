@@ -18,7 +18,7 @@ class NavBar extends React.Component {
     return (
       <div className="nav-bar">
 
-        <div className="nav-left">
+        <div className="nav-left" id={this.props.studyMode ? "nav-left" : "nav-left-green"}>
           <button onClick={this.props.toggleSearch}>
             <img
               src={this.props.studyMode ? "http://res.cloudinary.com/oblaka/image/upload/v1489617054/list_htttpj.png" : "http://res.cloudinary.com/oblaka/image/upload/v1490366431/list_green_azaxvr.png"}
@@ -28,7 +28,7 @@ class NavBar extends React.Component {
           <p>View notes</p>
         </div>
 
-        <div className="nav-center">
+        <div className="nav-center" id={this.props.studyMode ? "nav-center-green" : "nav-center"}>
           <button onClick={this.props.nextQuestion}>
             <img
               src={this.props.studyMode ? "http://res.cloudinary.com/oblaka/image/upload/v1490366431/play_green_cbeekb.png" : "http://res.cloudinary.com/oblaka/image/upload/v1489617054/play_wy8ebz.png"}

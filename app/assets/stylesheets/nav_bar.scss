@@ -26,6 +26,14 @@
   color: #0A0B1A;
 }
 
+#nav-left:hover p, .nav-right:hover p, #nav-center:hover p {
+  color: #E3F2FC;
+}
+
+#nav-left-green:hover p, #nav-center-green:hover p {
+  color: #7ed43a;
+}
+
 .nav-left:hover #list-img {
   content: url('http://res.cloudinary.com/oblaka/image/upload/v1490021244/list_filled_rt9snf.png');
 }
@@ -40,10 +48,6 @@
 
 .nav-left:hover, .nav-right:hover {
   cursor: pointer;
-}
-
-.nav-left:hover p, .nav-right:hover p, .nav-center:hover p {
-  color: #E3F2FC;
 }
 
 ////////////

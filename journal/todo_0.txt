@@ -1,7 +1,6 @@
 ####################
 ### IDEAS
 
-colorize icons
 greenify popup text
 react-joyride
 
