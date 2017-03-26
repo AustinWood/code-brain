@@ -78,7 +78,8 @@
   max-height: 100%;
 }
 
-#editable .editor-container:hover, #editable .editor-question-container:hover {
+#editable .editor-cc:hover .editor-container,
+#editable .editor-cc:hover .editor-question-container {
   border: 1px solid gray;
 }
 

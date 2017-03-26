@@ -12,6 +12,7 @@ add more seeds
 ####################
 ### LATER
 
+hide solution is visible if the box is selected but you hover outside it
 disable pointer cursor (and even action dispatch, for study) if already selected?
 is it not randomizing? first note always the same
 
